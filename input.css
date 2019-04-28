@@ -1,0 +1,31 @@
+
+
+html, body {height: 100%; font-family: 'Boxed'; font-weight: 900; font-size: 100vw;}
+
+@font-face {
+ font-family: 'Boxed';
+ font-style: bold;
+ font-weight: 700;
+ src: url('https://444.hu/assets/blog/static/fonts/boxed-semibold-webfont-a765a8c02811b9e0a116e7a73741c5e0.woff') format('woff2');
+}
+@font-face {
+ font-family: 'Boxed';
+ font-style: normal;
+ font-weight: 400;
+ src: url("https://444.hu/assets/blog/static/fonts/boxed-light-webfont-cc46c410c2c3fa7285ebff18981fbbf5.woff") format('woff2');
+}
+
+@font-face {
+    font-family: 'Boxed';
+    font-style: heavy;
+    font-weight: 900;
+    src: url("https://tbg444.github.io/444demo/Boxed-Heavy-webfont.woff") format('woff2');
+   }
+
+@charset "UTF-8";
+
+@media only screen and (min-width: 64.063em) {
+	
+}
+
+
