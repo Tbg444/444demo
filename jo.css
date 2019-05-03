@@ -290,22 +290,20 @@ font-family: 'Quicksand', sans-serif;*/
     justify-content: center;
     height:100%;
     border-top:0px solid black;
+    background-image: radial-gradient(circle farthest-corner at center top, rgba(76,161,166,.1), rgba(76, 161, 166, .3)), url('i/hirlevel-02.svg');
+    background-size: cover;
+    background-blend-mode: luminosity;
 }
 header .header-item div:first-child {
     background-color: #f37b76;
-    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url('i/hirlevel-02.svg');
-    background-size: cover;
+    
 }
 header .header-item div:nth-child(2) {
     background-color: #4ca1a6;
-    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url(i/jo-konyv_1.jpg);
-    background-size: cover;
 }
 
 header .header-item div:nth-child(3) {
     background-color: #fde092;
-    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url('i/jo2-02.svg');
-    background-size: cover;
     border-right:1px solid black;
 }
 header .header-item div span {
