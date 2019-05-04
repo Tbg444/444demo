@@ -11,7 +11,10 @@ header, footer {width: 100%; background-color: #FCB94B; border-bottom:0px solid 
 svg {width: 100%;
     height: 100%;
     display: block;}
-main {width: 100%; margin: 0 auto;background-image: linear-gradient(to top,  #fdba4d 0px, #fdba4d 280px, #000 281px,  #000 324px, #7ca1a3 325px, #94b2b4 100%);}
+main {width: 100%; margin: 0 auto;
+    /*background-image: linear-gradient(to top,  #fdba4d 0px, #fdba4d 280px, #000 281px,  #000 324px, #7ca1a3 325px, #94b2b4 100%);*/
+    background-color: #362f25;
+    background-image: linear-gradient(to top, #1c1813, #362f25);}
 section {display: flex; flex-direction: column; flex-wrap: wrap; width: 100%; margin:0 auto;}
 .col-1 {width: 100%;}
 .col-2 {width: 100%;}
@@ -86,37 +89,40 @@ header .header-item div {
     border-top:4px solid black;
     background-size: cover;
     background-position-y: 25%;
+    background-color: #FCB94B;
+    border-right:1px solid black;
 }
 header .header-item:first-child {
     width:100%;
     padding-top: 8px;
+    height:80px;
 }
 header .header-item:last-child {
     width:100%;
-
 }
+
 .buliajanlo {
 background-color: #f37b76;}
 
 header .header-item div:first-child {
-    background-color: #f37b76;
-    abackground-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url('i/hirlevel-02.svg');
+    /*background-color: #f37b76;
+    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url('i/hirlevel-02.svg');
     background-color: #362f25;
-    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)));
+    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)));*/
 }
 header .header-item div:nth-child(2) {
-    background-color: #4ca1a6;
-    abackground-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url(i/jo-konyv_1.jpg);
+    /*background-color: #4ca1a6;
+    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url(i/jo-konyv_1.jpg);
     background-color: #362f25;
-    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)));
+    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)));*/
 }
 
 header .header-item div:nth-child(3) {
-    background-color: #fde092;
-    abackground-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url('i/jo2-02.svg');
+    /*background-color: #fde092;
+    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url('i/jo2-02.svg');
     background-color: #362f25;
-    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)));
-    border-right:1px solid black;
+    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)));*/
+    border-right:0px solid black;
 }
 
 header .header-item div span {
@@ -156,11 +162,12 @@ padding: 48px;}
 .article_container div.divider {
 padding: 0px;
 margin: 2rem 0 3rem 0;}
-div.eddie {background-image:radial-gradient(circle at 94.46% 88.09%, #f48cff, transparent 100%),radial-gradient(circle at 8.52% 18.19%, #a634c7, transparent 100%),radial-gradient(circle at 53.89% 5.07%, #ff9cdb, transparent 100%),radial-gradient(circle at 46.84% 96.25%, #cf2132, transparent 100%),radial-gradient(circle at 50% 50%, #471a42, #471a42 100%);
+div.eddie {
+    /*background-image:radial-gradient(circle at 94.46% 88.09%, #f48cff, transparent 100%),radial-gradient(circle at 8.52% 18.19%, #a634c7, transparent 100%),radial-gradient(circle at 53.89% 5.07%, #ff9cdb, transparent 100%),radial-gradient(circle at 46.84% 96.25%, #cf2132, transparent 100%),radial-gradient(circle at 50% 50%, #471a42, #471a42 100%);*/
     font-family: 'Rubik'; 
     color:white;
     outline: 1px dashed white;
-    outline-offset: -16px;
+    outline-offset: 0;
     font-size:16px;
     width: 100%;
     height: 200px;
@@ -290,6 +297,7 @@ font-family: 'Quicksand', sans-serif;*/
     header span.header-item {font-size: 3rem;}
     header .header-item:first-child {
        width: 60%;
+       height: 120px;
     }
     header .header-item:last-child {
         width: 40%;
@@ -298,26 +306,31 @@ font-family: 'Quicksand', sans-serif;*/
     header .header-item div {
     border-left:1px solid black;
     justify-content: center;
+    width: 100%;
     height:100%;
     border-top:0px solid black;
-    background-image: radial-gradient(circle farthest-corner at center top, rgba(76,161,166,.1), rgba(76, 161, 166, .3)), url('i/hirlevel-02.svg');
+    abackground-image: radial-gradient(circle farthest-corner at center top, rgba(76,161,166,.1), rgba(76, 161, 166, .3));
     background-size: cover;
-    background-blend-mode: luminosity;
+    background-blend-mode: normal;
+    
 }
 header .header-item div:first-child {
-    background-color: #f37b76;
+    abackground-color: #f37b76;
+    background-color: rgba(0,0,0,0);
     
 }
 header .header-item div:nth-child(2) {
-    background-color: #4ca1a6;
+    abackground-color: #4ca1a6;
+    background-color: rgba(0,0,0,0);
 }
 
 header .header-item div:nth-child(3) {
-    background-color: #fde092;
-    border-right:1px solid black;
+    abackground-color: #fde092;
+    background-color: rgba(0,0,0,0);
+    
 }
 header .header-item div span {
-    font-size: 1.125rem;;
+    font-size: .875rem;;
 }
     header .header-item div img, header .header-item div svg {
         display: block;
@@ -394,7 +407,7 @@ header .header-item div span {
         initial-letter: 3;
     }
 
-    div.container, div.article_container {padding:36px 0 24px 0;margin: 0;}
+    div.container, div.article_container {padding: 96px 0; margin: 0;}
     .flex-row.container article {
         margin: 16px 0;
     }
