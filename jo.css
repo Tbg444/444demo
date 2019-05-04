@@ -11,7 +11,7 @@ header, footer {width: 100%; background-color: #FCB94B; border-bottom:0px solid 
 svg {width: 100%;
     height: 100%;
     display: block;}
-main {width: 100%; margin: 0 auto;background-image: linear-gradient(to top,  #fdba4d 0px, #fdba4d 280px, #000 281px,  #000 324px, #94b2b4 325px, #94b2b4 100%);}
+main {width: 100%; margin: 0 auto;background-image: linear-gradient(to top,  #fdba4d 0px, #fdba4d 280px, #000 281px,  #000 324px, #7ca1a3 325px, #94b2b4 100%);}
 section {display: flex; flex-direction: column; flex-wrap: wrap; width: 100%; margin:0 auto;}
 .col-1 {width: 100%;}
 .col-2 {width: 100%;}
@@ -55,7 +55,7 @@ div.container {padding: 0px;margin:0;}
     flex-direction: column;
 }
 .flex-row.container article {
-    margin: 16px 0;
+    margin: 0;
 }
 header .header-content {display: flex;
     flex-flow: row;
@@ -100,17 +100,22 @@ background-color: #f37b76;}
 
 header .header-item div:first-child {
     background-color: #f37b76;
-    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url('i/hirlevel-02.svg');
-
+    abackground-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url('i/hirlevel-02.svg');
+    background-color: #362f25;
+    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)));
 }
 header .header-item div:nth-child(2) {
     background-color: #4ca1a6;
-    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url(i/jo-konyv_1.jpg);
+    abackground-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url(i/jo-konyv_1.jpg);
+    background-color: #362f25;
+    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)));
 }
 
 header .header-item div:nth-child(3) {
     background-color: #fde092;
-    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url('i/jo2-02.svg');
+    abackground-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url('i/jo2-02.svg');
+    background-color: #362f25;
+    background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)));
     border-right:1px solid black;
 }
 
@@ -145,7 +150,7 @@ div.divider {flex-basis: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-padding: 48px 48px 12px 48px;}
+padding: 48px}
 .container article+div.divider {
 padding: 48px;}
 .article_container div.divider {
@@ -190,7 +195,7 @@ main.sponsored {
     border-bottom: 4px solid #212a63;
     text-decoration: none;}
 .sponsored p a:hover {background-color: #315391;}
-.sponsored section.article_img, header.sponsored {border-color:#417cc0; background-image: none;} header.sponsored span {
+.sponsored section.article_img, header.sponsored {border-color:#ffffff; background-image: none;} header.sponsored span {
     color: #000;}
 
 
@@ -389,7 +394,11 @@ header .header-item div span {
         initial-letter: 3;
     }
 
-	div.container, div.article_container {padding:36px 0 24px 0;margin: 0;}
+    div.container, div.article_container {padding:36px 0 24px 0;margin: 0;}
+    .flex-row.container article {
+        margin: 16px 0;
+    }
+
 	.article_container div.divider {
         margin: 2rem 2rem 3rem 2rem;}
         .article_container .article_text .divider {
