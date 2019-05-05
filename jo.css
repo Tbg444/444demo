@@ -171,6 +171,13 @@ div.container img  {object-fit: cover;     width: calc(100vw - 3rem);
 }
 
 div.grower {flex-grow: 0;height: 0;background-color: white;}
+
+.padder {flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;}
+
 .divider {flex-basis: 100%;
     display: flex;
     align-items: center;
@@ -446,7 +453,8 @@ header .header-item div span {
     .flex-row.container article {
         margin: 16px 0;
     }
-
+    .padder {
+        padding: 48px;}
     main.sponsored .divider {
         height:96px;
         margin:0;
