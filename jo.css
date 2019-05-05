@@ -12,9 +12,11 @@ svg {width: 100%;
     height: 100%;
     display: block;}
 main {width: 100%; margin: 0 auto;
-    /*background-image: linear-gradient(to top,  #fdba4d 0px, #fdba4d 280px, #000 281px,  #000 324px, #7ca1a3 325px, #94b2b4 100%);*/
+    /*background-image: linear-gradient(to top,  #fdba4d 0px, #fdba4d 280px, #000 281px,  #000 324px, #7ca1a3 325px, #94b2b4 100%);
     background-color: #362f25;
-    background-image: linear-gradient(to top, #1c1813, #362f25);}
+    background-image: linear-gradient(to top, #1c1813, #362f25);*/
+    background-color:#fff;
+}
 section {display: flex; flex-direction: column; flex-wrap: wrap; width: 100%; margin:0 auto;}
 .col-1 {width: 100%;}
 .col-2 {width: 100%;}
@@ -24,30 +26,47 @@ section {display: flex; flex-direction: column; flex-wrap: wrap; width: 100%; ma
 
 article {
     position: relative;
-    padding: 24px 16px;
+    padding: 2rem 1.5rem;
     background-color: #ffffff;
-    box-shadow: rgba(0, 0, 0, 0.2) 4px 8px 8px;
+    box-shadow: rgba(0, 0, 0, 0.0) 4px 8px 8px;
     width: 100%;
 }
+
+
+
 article::after {
     content: ' ';
-    height: 4px;
-    width: 36px;
+    height: .25rem;
+    width: 3rem;
     z-index: 100;
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: #000;
+    background-color: #444;
 }
 
 h1 {font-size: 36px; letter-spacing: -2px;  font-weight: 700;}
 h2 {font-size: 24px;  font-weight: 400; letter-spacing: 1px;}
 h3 {font-size: 20px;  font-weight: 400;}
-h4 {font-size: 24px; letter-spacing: 1px;  font-weight: 400;}
-h4 {margin-top: 1em}
-h5 {margin: .5em 0 0 0;}
+h4 {font-size: 1rem; letter-spacing: 1px;  font-weight: 400;}
 p {font-size: 16px; margin-top: .75em; letter-spacing: 1px;    line-height: 1.4}
 
+
+main h1,h3 {font-family: 'Boxed', Boxed Semibold, "Boxed Semibold", "Boxed", Boxed; line-height:1.2; }
+h4, h5, h2 {font-family: 'Bungee', 'Titan One','Baloo Paaji', 'Modak', 'Nunito'; font-weight: 100; line-height: 1.4em;margin:0;}
+h4 a {text-decoration: none; color:inherit;}
+h4 a:hover {text-decoration: underline; color:inherit;}
+h5 span {color:black;background-color: #FCB94B; font-size: inherit;padding:4px;display: inline-block;line-height: 1em;}
+p a {color:black;border-bottom:4px solid #FCB94B; text-decoration: none;}
+p a:hover {background-color: #fde092; text-decoration: none;     transition: background-color 350ms ease-out; }
+p, .date {font-family: 'Rubik'; }
+.date {text-transform: uppercase; font-size: 12px;letter-spacing: 1px;}
+.byline {    display: flex;align-items: center;margin-top: .75em;}
+.byline svg {height: 16px; width: 16px; display: inline; margin: 0 0.5rem 0 0;}
+.container .byline {display:none;}
+
+.container article h5 {font-size:.825rem; margin-top:0rem;}
+.container article p {margin-top:1.5rem; font-size: .875rem; color:#444;}
 
 div.container>*:last-child {margin-right: 0px;}
 div.solo {margin-left: 0px;}
@@ -85,12 +104,11 @@ header .header-item div {
     align-items: center;
     padding-bottom: 0px;
     box-sizing: content-box;
-    border-left:0px solid black;
+    border-left:1px solid black;
     border-top:4px solid black;
     background-size: cover;
     background-position-y: 25%;
     background-color: #FCB94B;
-    border-right:1px solid black;
 }
 header .header-item:first-child {
     width:100%;
@@ -105,6 +123,7 @@ header .header-item:last-child {
 background-color: #f37b76;}
 
 header .header-item div:first-child {
+    border-left:0px solid black;
     /*background-color: #f37b76;
     background-image: radial-gradient(circle farthest-corner at center top, rgba(0,0,0,.2), rgba(0,0,0,.5)), url('i/hirlevel-02.svg');
     background-color: #362f25;
@@ -146,27 +165,33 @@ footer .footer-content svg {
     height: 24px;
     margin-left: 24px;
 }
-div.container figure {width: 100%;height: calc(100% * .75);}
-div.container img  {object-fit: cover;     width: calc(100vw - 32px);
-    height: calc((100vw - 32px) * .75);
+div.container figure {width: 100%;}
+div.container img  {object-fit: cover;     width: calc(100vw - 3rem);
+    height: calc((100vw - 3rem) * .75);
 }
 
 div.grower {flex-grow: 0;height: 0;background-color: white;}
-div.divider {flex-basis: 100%;
+.divider {flex-basis: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-padding: 48px}
-.container article+div.divider {
-padding: 48px;}
-.article_container div.divider {
-padding: 0px;
-margin: 2rem 0 3rem 0;}
+    padding: 48px}
+
+main.sponsored .divider {
+        height:0;
+        margin:0;
+        padding:0;
+}
+
+main.sponsored .divider .eddie {
+        display:none;
+}
+
 div.eddie {
     /*background-image:radial-gradient(circle at 94.46% 88.09%, #f48cff, transparent 100%),radial-gradient(circle at 8.52% 18.19%, #a634c7, transparent 100%),radial-gradient(circle at 53.89% 5.07%, #ff9cdb, transparent 100%),radial-gradient(circle at 46.84% 96.25%, #cf2132, transparent 100%),radial-gradient(circle at 50% 50%, #471a42, #471a42 100%);*/
     font-family: 'Rubik'; 
-    color:white;
-    outline: 1px dashed white;
+    color:#FCB94B;
+    outline: 1px dashed #FCB94B;
     outline-offset: 0;
     font-size:16px;
     width: 100%;
@@ -176,25 +201,13 @@ div.eddie {
     justify-content: center;
 }
 
-main h1,h3 {font-family: 'Boxed', Boxed Semibold, "Boxed Semibold", "Boxed", Boxed; line-height:1.2; }
-h4, h5, h2 {font-family: 'Bungee', 'Titan One','Baloo Paaji', 'Modak', 'Nunito'; font-weight: 100; line-height: 1.4em;margin:0;}
-h4 a {text-decoration: none; color:inherit;}
-h4 a:hover {text-decoration: underline; color:inherit;}
-h5 span {color:black;background-color: #FCB94B; font-size: 1.25em;padding:4px;display: inline-block;line-height: 1em;}
-p a {color:black;border-bottom:4px solid #FCB94B; text-decoration: none;}
-p a:hover {background-color: #fde092; text-decoration: none;     transition: background-color 350ms ease-out; }
-p, .date {font-family: 'Rubik'; }
-.date {text-transform: uppercase; font-size: 12px;letter-spacing: 1px;}
-.byline {    display: flex;align-items: center;margin-top: .75em;}
-.byline svg {height: 16px; width: 16px; display: inline; margin: 0 0.5rem 0 0;}
-.container .byline {display:none;}
 
 main.sponsored {
     background-color: #c2d6e5;
     background-image: linear-gradient(to top, #417cc0, #212a63);;
 }
 .sponsored {background-image: linear-gradient(to bottom, #417cc0, #212a63);}
-.sponsored h2, .sponsored h4, .sponsored h5 span, .sponsored p, .sponsored span {color: #fff;}
+.sponsored h2, .sponsored h4, .sponsored h5 span, .container article.sponsored p, .article_container article.sponsored p, .sponsored span {color: #fff;}
 .sponsored h5 span {background-color: #212a63;}
 .sponsored::after {background-color:white;}
 .sponsored p a {
@@ -305,32 +318,37 @@ font-family: 'Quicksand', sans-serif;*/
  
     header .header-item div {
     border-left:1px solid black;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
     height:100%;
     border-top:0px solid black;
-    abackground-image: radial-gradient(circle farthest-corner at center top, rgba(76,161,166,.1), rgba(76, 161, 166, .3));
+    /*background-image: radial-gradient(circle farthest-corner at center top, rgba(76,161,166,.1), rgba(76, 161, 166, .3));*/
     background-size: cover;
     background-blend-mode: normal;
-    
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position-y: 25%;
+    background-position-x: 50%;
 }
 header .header-item div:first-child {
-    abackground-color: #f37b76;
-    background-color: rgba(0,0,0,0);
-    
+    /*background-color: #f37b76;*/
+    border-left:1px solid black;
+    background-image: url('i/header-items-02.svg');
 }
 header .header-item div:nth-child(2) {
-    abackground-color: #4ca1a6;
-    background-color: rgba(0,0,0,0);
+    /*background-color: #4ca1a6;*/
+    background-image: url('i/header-items-03.svg');
 }
 
+
 header .header-item div:nth-child(3) {
-    abackground-color: #fde092;
-    background-color: rgba(0,0,0,0);
-    
+    /*background-color: #fde092;*/
+    border-right: 1px solid black;
+    background-image: url('i/header-items-04.svg');
 }
 header .header-item div span {
-    font-size: .875rem;;
+    font-size: .875rem;
+    margin-bottom: .75rem;
 }
     header .header-item div img, header .header-item div svg {
         display: block;
@@ -340,17 +358,15 @@ header .header-item div span {
     .article_container h4 {font-size: 3rem;}
 
 
-	.col-1 {width: 31%;}
-	.col-2 {width: 66.6%;}
-	.col-3 {width: 100%;}
 	.flex-col {display: flex;flex-direction: column;justify-content: space-between;}
 	.flex-row {display: flex; flex-direction: row;flex-wrap: wrap;}
 	h1 {font-size: 60px;}
 	h2 {font-size: 32px;}
 	h3 {font-size: 26px;}
-	h4, h5 {font-size: 26px;}
-    h4, h5 {margin: 0em}
-    h5 span {font-size: .625em;}
+	h4, h5 {font-size: 1.625rem;}
+    .container article h5 {
+        margin-top: .5rem;}
+    h5 span {font-size: inherit;}
 	h4:first-child {margin-top: 0em;}
 
     div.container figure {
@@ -366,10 +382,29 @@ header .header-item div span {
         width: 100%;} 
 
     div.grower {flex-grow: 1;height: 24px;background-color: transparent;}
-    article {width:380px;}
+    
+    article {
+        width:380px;
+        padding: 16px 16px 24px;
+        border:1px solid #444;
+        }
+    
+    .article_container article {
+            padding: 2rem;
+            width: 100%;
+            border:1px solid #444;
+        border-right:4px solid #444;
+        }
 
-    article {padding: 16px 16px 24px;}
+    .article_container article::after {
+         height:8px;
+        }
 
+    article.sponsored {
+        border:0px solid #444;
+        border-right:4px solid #444;
+        border-color: white;}
+    
     section.article_text {
         width: calc(40em + 4rem);
         /* margin-left: auto; */
@@ -407,11 +442,16 @@ header .header-item div span {
         initial-letter: 3;
     }
 
-    div.container, div.article_container {padding: 96px 0; margin: 0;}
+    div.container, div.article_container {padding: 0; margin: 0;}
     .flex-row.container article {
         margin: 16px 0;
     }
 
+    main.sponsored .divider {
+        height:96px;
+        margin:0;
+        padding:0;
+}
 	.article_container div.divider {
         margin: 2rem 2rem 3rem 2rem;}
         .article_container .article_text .divider {
