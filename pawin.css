@@ -4,6 +4,6 @@ html { background-color: rgba(0, 0, 0, 0.8); margin:0;}
 section {display:flex; flex-direction: column; width: 100%;margin:2rem auto; align-items: center;}
 section.mobil { flex-direction: row;    justify-content: space-around;    align-items: flex-start;}
 section.txt {font-family: 'Ubuntu Mono'; padding:8rem 4rem 4rem;font-size:2rem; color:white;}
-img {margin:2rem; outline: 2rem solid black;}
+img {margin:2rem auto; outline: 2rem solid black;}
 img.desktop {width: initial;} /* WTF ILLUSTRATOR */
 img.mobil {width: initial;}
