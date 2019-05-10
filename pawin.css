@@ -5,5 +5,5 @@ section {display:flex; flex-direction: column; width: 100%;margin:2rem auto; ali
 section.mobil { flex-direction: row;    justify-content: space-around;    align-items: flex-start;}
 section.txt {font-family: 'Ubuntu Mono'; padding:8rem 4rem 4rem;font-size:2rem; color:white;}
 img {margin:2rem; outline: 2rem solid black;}
-img.desktop {width: 1441px;} /* WTF ILLUSTRATOR */
-img.mobil {width: 320px;}
+img.desktop {width: initial;} /* WTF ILLUSTRATOR */
+img.mobil {width: initial;}
