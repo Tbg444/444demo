@@ -7,3 +7,15 @@ section.txt {font-family: 'Ubuntu Mono'; padding:8rem 4rem 4rem;font-size:2rem; 
 img {margin:2rem auto; outline: 2rem solid black;}
 img.desktop {width: initial;} /* WTF ILLUSTRATOR */
 img.mobil {width: initial;}
+
+.svg {    
+    margin: 0 auto;
+    background-color: white;
+    }
+
+.svg-1440 {
+    width: 1440px;
+    height: 1800px;
+
+    background-image: url('i/SVG/pr-card-oversized.svg')
+}
