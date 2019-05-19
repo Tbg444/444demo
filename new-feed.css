@@ -11,32 +11,30 @@ body * {outline:.1px solid rgba(255, 0, 255, .1);}
 /* templates - sizing */
 
 .wrapper {width: 100%; margin:0 auto;}
-.container {padding: 1rem;}
+.container {padding: 2rem;}
 article {margin-top:1.5rem;}
 
-article.pinned .article__head {display: flex;flex-direction: column-reverse;}
+article.pinned .article__container {display: flex;flex-direction: column-reverse;}
 article.pinned figure {width: calc(100vw - 2 * 2rem); height: calc((100vw - 2 * 2rem) * .75); margin:0 auto;} /* img aspect ratio 4:3 */
 article.pinned figure img {width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%;}
 
-article.standard .article__head {display: flex;flex-direction: row-reverse;}
-article.standard.w_img.w_lead .article__head {flex-direction: row;} /* fullos article-nél fordít */
+article.standard .article__container {display: flex;flex-direction: row;}
 article.standard.w_img figure {width: 31.25%;} /* képes article-nél elosztja a teret */
-article.standard.w_img .article__lead {width: 68.75%;}
+article.standard.w_img .article__front {width: 68.75%;}
+article.standard.w_img.w_lead .article__front {width: calc(68.75% - .5rem);}
 article.standard figure img {width: 100%; height: auto; object-fit: cover; object-position: 50% 50%;}
 
-/* figure's main&constant&rotating margin and related stuff */
+/* figure's main_&_constant_&_rotating margin and related stuff */
 
 article.pinned figure {margin-bottom:.5rem;}
-article.standard.w_img figure {margin-right:.5rem;}
-article.standard.w_img.w_lead figure {margin-left:.5rem; margin-right: 0;}
-article.standard.w_img.w_lead .article__lead {width: calc(68.75% - .5rem);}
+article.standard figure {margin-left:.5rem;}
 
-/* inner paddings */
+/* paddings */
 
 article p {padding-top:.5rem;}
 article.standard figure {padding-top:.25rem;}
 
-/* outer margins */
+/* margins */
 
 article .byline {margin-top:.5rem;}
 article {margin-top:1.5rem;}
@@ -45,7 +43,7 @@ article {margin-top:1.5rem;}
 /* typo */
 
 h1,h2,h3,h4,.byline {font-family: 'Boxed';}
-h2 {line-height:1.444;}
+h2 {line-height:1.2;}
 p {font-family: 'Noticia Text'; line-height:1.444;}
 
 p {font-size: .8125rem;}
@@ -61,41 +59,56 @@ h2 {font-size: 1rem; font-weight: 700;}
 
 @media only screen and (min-width: 64.063em) {
 
+/* crazy */
+
+.standard section.article__headline {
+    padding-left: 1.25rem;
+    margin-left: .5rem;
+    margin-bottom: 1rem;
+    border-left: 1px solid black;
+}
+/* */
+
 /* templates - sizing */
 
-.wrapper {width: 720px;}
-.container {padding: 1rem;}
+.wrapper {width: 664px;}
+.container {margin: .5rem;padding: 0;}
 article {margin-top:1.5rem;}
 
-article.pinned .article__head {flex-direction: row-reverse;}
-article.pinned figure {width: auto; height: auto;} /* img aspect ratio 4:3 */
-article.pinned figure img {width: 300px; height: 225.5px;}
+article .article__front {display: flex; flex-direction: column; justify-content: space-between;}
 
-article.standard .article__head {display: flex;flex-direction: row;}
-article.standard.w_img.w_lead .article__head {flex-direction: row;} /* fullos article-nél fordít */
-article.standard.w_img .article__lead {width: 100%;}
-article.standard.w_img figure {width: 150px;} /* képes article-nél elosztja a teret */
-article.standard.w_img.w_lead .article__lead {width: 100%;}
-article.standard figure img {width: 150px; height: 112.5px;}
+article.pinned .article__container {flex-direction: row-reverse;}
+article.pinned figure {width: 250px; height: calc(250px * .75);}
+article.pinned figure img {width: inherit; height: inherit;}
+
+article.standard .article__container {display: flex;flex-direction: row;}
+article.standard.w_img .article__front, article.standard.w_img.w_lead .article__front {width: 100%;}
+article.standard.w_img figure {width: 150px;}
+article.standard figure img {width: 150px; height: 100px;}
 
 /* figure's main&constant&rotating margin and related stuff */
 
 article.pinned figure {margin:0 2rem 0 0}
-article.standard.w_img figure {margin-right:.5rem;}
-article.standard.w_img.w_lead figure {margin-left:.5rem; margin-right: 0;}
-article.standard.w_img.w_lead .article__lead {width: 100%;}
+article.standard.w_img.w_lead .article__front {width: 100%;}
 
-/* inner paddings */
+/* margins */
 
-article p {padding-top:.5rem;}
-article.pinned figure {padding-top:.5rem;}
+article .byline {margin-top:.5rem;}
+article {margin-top:3rem;}
+
+/* paddings */
+
+article p {padding-top:1rem;}
+article.pinned figure {padding-top:.325rem;}
 
 /* typo */
 
 p {font-size: 1rem;}
-h2 {font-size: 1.333rem;}
-article.pinned h2 {font-size: 2rem;}
+h2 {font-size: 20px;}
+article.pinned h2 {font-size: 28px;}
 .byline {font-size: .75rem;} 
+
+article.standard p, article.standard h2 {width: 444px;;}
 
 }
 
