@@ -126,13 +126,10 @@ grid-row: 6 / 7;
   }
 
 .pinned.noimage .front_lead {
-  grid-column: 2 / 4;
+  grid-column: 2 / 3;
   grid-row: 6 / 7;
   }
 
-.pinned.noimage .front_lead p {
-  width: 456px;
-  }
 
 .pinned img {width: 100%;  height: calc(100% * .75);object-fit: cover; }
 
@@ -204,6 +201,11 @@ img {width: 10rem; height: 7.5rem; object-fit: cover;}
   }
   .pinned img {width: 250px;
     height: calc(250px * .75);object-fit: cover; }
+
+    .pinned.noimage .front_lead p {
+      width: 456px;
+      }
+
 /* typo */
 
 p {font-size: 1rem;}
