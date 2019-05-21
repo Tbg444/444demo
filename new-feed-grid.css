@@ -150,8 +150,8 @@ p {font-family: 'Noticia Text'; line-height:1.444;}
 
 p {font-size: 0.9375rem; width: 90%;}
 .pinned p {width: initial;}
-h2 {font-size: 1.125rem;font-weight: 700;} /* font-size: 4.8vw; font-size: .9375rem; */
-.pinned h2 {font-size: 1.625rem;line-height:1.2;} /* font-size: 6.3vw; font-size: 1.25rem;  */
+h2 {font-size: 1rem;font-weight: 700;} /* font-size: 4.8vw; font-size: .9375rem; */
+.pinned h2 {font-size: 1.5rem;line-height:1.2;} /* font-size: 6.3vw; font-size: 1.25rem;  */
 .byline {font-size: .625rem; font-weight: 400;} 
 
 /* viewport */
