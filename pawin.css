@@ -1,14 +1,30 @@
-body * {outline:.0px solid rgba(0, 0, 0, 0.2);box-sizing: border-box;}
+body * {outline:.0px solid rgba(0, 0, 0, 0.2);box-sizing: border-box; font-family: 'Ubuntu Mono';  color:white; font-size:2rem;line-height: 1.444}
 a {display: inline;}
 
 html { background-color: rgba(0, 0, 0, 0.8); margin:0;}
 section {display:flex; flex-direction: column; width: 100%;margin:2rem auto; align-items: center;}
 section.mobil { flex-direction: row;    justify-content: space-around;    align-items: flex-start;}
-section.txt {font-family: 'Ubuntu Mono'; padding:8rem 4rem 4rem;font-size:2rem; color:white;}
+section.txt {font-family: 'Ubuntu Mono'; padding:8rem 4rem 4rem;}
 img {margin:2rem auto; outline: 2rem solid black;}
-img.desktop {width: initial;} /* WTF ILLUSTRATOR */
+.showreel img {width: initial;} /* WTF ILLUSTRATOR */
 img.mobil {width: initial;}
 
 img.desktop {background-color: white;}
 
 a, a:visited, a:hover {color:white;}
+
+.showreel {
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: repeat(18, auto);
+align-items: center;
+justify-items: center;
+}
+
+.showreel span {
+    width: 50%;
+    border-bottom:1px solid lightgrey;
+    margin:12rem 0 6rem;
+}
+
+.showreel span.tooltip {color:magenta;border-bottom:1px solid magenta;}
