@@ -1,12 +1,18 @@
 body {
     margin: 0;
     color: white;
+    display: grid;
+    grid-template-columns: 150px 1rem 1fr;
+    grid-template-rows: 200px minmax(auto, auto);
+    grid-template-areas: 
+    "header header header"
+    "aside . main";
+    margin:1rem;
 }
 body * {
   outline: 0px solid rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   font-family: "Ubuntu Mono";
-
 }
 a {
   display: inline;
@@ -16,43 +22,60 @@ html {
   background-color: rgba(0, 0, 0, 0.8);
   margin: 0;
 }
-section {
+aside {
+  position: relative;
+  grid-area: aside;
+}
+header {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin: 2rem auto;
+  grid-area: header;
+  border-bottom:1px solid magenta;
   align-items: center;
+  justify-content: center;
 }
-section.mobil {
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: main;
 }
 section.txt {
-  font-family: "Ubuntu Mono";
-  padding: 8rem 4rem 4rem;
+  color: magenta;
+  font-size: large;
 }
 img {
-    box-shadow: black .2rem 1.5rem 2rem;
     background-color: white;
 }
 .showreel img {
   width: initial;
-} /* WTF ILLUSTRATOR */
-img.mobil {
-  width: initial;
 }
 
-
-
-.showreel {
+.showreel, .menu {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(18, auto);
   align-items: center;
   justify-items: center;
 }
+.menu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  grid-template-rows: repeat(1, auto);
+  grid-area: aside;
+  width: 150px;
+  justify-items: start;
+  grid-gap: 2rem;
+  word-break: break-word;
+  padding:1rem;
+  border-top:1px solid magenta;
+  margin-top:-1px;
+}
 
+.menu, img {
+  box-shadow: rgba(0,0,0,.5) 0 .5rem 1rem;
+}
 .showreel span {
   width: 50%;
   border-bottom: 1px solid lightgrey;
