@@ -1,0 +1,267 @@
+:root {
+  --primary-color: #f1bb60;
+  --black-light: #111;
+  --black: #111;
+  --title-font: "Bungee";
+  --body-font: "Rubik";
+  --body-font-size: calc(1.125rem);
+  --desktop-content-width: 640px;
+  --desktop-padding-vertical: 1rem;
+  --desktop-padding-horizontal: 2rem;
+  --icon-size: 1.5rem;
+  --white-light: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font);
+  margin: 0;
+}
+.header-item,
+h2 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.625rem;
+  line-height: 1.4em;
+}
+h5 span {
+  color: var(--black-light);
+  background-color: var(--primary-color);
+  font-size: inherit;
+  padding: 0.5rem;
+  display: inline-block;
+  line-height: 1;
+}
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+body {
+  color: var(--black-light);
+  box-sizing: border-box;
+}
+body * {
+  outline: 0px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.header-item span {
+  color: var(--white-light);
+}
+body {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 4rem auto auto minmax(20rem, 40vh) auto auto 4rem;
+  grid-template-columns: 1fr 960px 1fr;
+  grid-template-areas:
+    "header header header"
+    "navigation navigation navigation"
+    "add-top add-top add-top"
+    "hero hero hero"
+    "content content content"
+    "add-bottom add-bottom add-bottom"
+    "footer footer footer";
+
+  background-color: #26323E;
+}
+.header-item {
+  font-family: var(--title-font);
+  line-height: 1;
+}
+.header, .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+.footer {
+  grid-area: footer;
+}
+.header {
+  grid-area: header;
+}
+.navigation {
+  grid-area: navigation;
+  background-color: var(--primary-color);
+}
+.hero.over-article {
+  grid-area: hero;
+}
+.hero {
+  background-size: cover;
+  background-position: center 88%;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 0,
+      rgba(0, 0, 0, 0.8) 1rem,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.8) calc(100% - 1rem),
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("https://4cdn.hu/kraken/image/upload/s--Cao2VxlK--/7JVr5oGVTPYjVIKys.jpeg");
+  display: flex;
+  flex-direction: column;
+
+}
+.hero .sponsored-item-logo {
+  width: 7.5rem;
+  height: 7.5rem;
+  align-self: flex-end;
+}
+.hero .sponsored-item-tagline {
+  font-family: "Volvo";
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 2.35rem;
+  align-self: flex-end;
+  justify-self: flex-end;
+  text-align: right;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 88%;
+}
+.article-byline .byline-author,
+.article-byline .byline-date {
+  text-transform: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: var(--body-font);
+}
+
+.content {
+  grid-area: content;
+  display: grid;
+  grid-template-rows: repeat(1, auto);
+  grid-template-columns: 1fr 320px 640px 1fr;
+  padding: var(--desktop-padding-vertical) 0;
+}
+p {
+  font-size: var(--body-font-size);
+  font-family: var(--body-font);
+  letter-spacing: 0px;
+  line-height: 1.8em;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p a {
+  color: inherit;
+  border-bottom: 4px solid var(--primary-color);
+  text-decoration: none;
+}
+p a:hover {
+  background-color: var(--primary-color);
+  text-decoration: none;
+  transition: background-color 350ms ease-out;
+}
+
+.article-byline,
+.article-foot {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.article-foot figure {
+  grid-area: byline-image;
+  margin: 0 2rem 0 0;
+  width: 100px;
+  height: 100px;
+}
+.article-foot figure img, .content figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.article-byline .byline-item {
+  border: var(--black-light);
+  border-left: 4px solid;
+  border-bottom: 4px solid;
+  padding: var(--desktop-padding-vertical);
+  flex: 0 0 auto;
+}
+.byline-item:first-child {
+  border-left: 0;
+}
+.byline-item:last-child {
+  border-left: 0;
+  flex: 1 0 auto;
+}
+.article-foot .foot-item {
+border: var(--black-light);
+border-top: 4px solid;
+padding: var(--desktop-padding-vertical);
+flex: 0 0 auto;
+}
+.foot-item:last-child {
+  flex: 1 0 auto;
+  }
+.byline-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.byline-item-icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin-right: 1rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 320px 640px 1fr;
+  padding: var(--desktop-padding-vertical) 0;
+}
+.content-bg {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  background-color: var(--white-light);
+  z-index: -1;
+}
+
+.article-head,
+.article-byline,
+.article-foot {
+  padding: var(--desktop-padding-vertical) var(--desktop-padding-horizontal);
+  margin:0;
+  grid-column: 2 / 4;
+}
+.hero.in-article {
+  grid-column: 1 / 5;
+  height: 500px;
+  margin: var(--desktop-padding-vertical) 0;
+  border-bottom: 2rem solid  #26323E;
+  border-top: 2rem solid  #26323E;
+}
+.content > p,
+.content > h2,
+.content > figure.article-standard,
+.content > figure.article-large {
+  grid-column: 3 / 4;
+
+  padding: var(--desktop-padding-vertical) var(--desktop-padding-horizontal);
+  margin:0;
+}
+.content > figure.article-large {
+  grid-column: 2 / 4;
+}
+.content > h2 {
+  padding-top: calc(var(--desktop-padding-vertical) * 2);
+}
+
+@font-face {
+  font-family: "Volvo";
+  font-style: bold;
+  font-weight: 700;
+  src: url("https://tbg444.github.io/444demo/VolvoBroad.woff") format("woff2");
+}
