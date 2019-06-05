@@ -4,12 +4,16 @@
   --black: #111;
   --title-font: "Bungee";
   --body-font: "Rubik";
-  --body-font-size: calc(1.125rem);
+  --body-font-size: 1.125rem;
+  --body-font-size-large: 1.5rem;
   --desktop-content-width: 640px;
-  --desktop-padding-vertical: 1rem;
-  --desktop-padding-horizontal: 2rem;
+  --desktop-gap-vertical: 1rem;
+  --desktop-gap-horizontal: 2rem;
   --icon-size: 1.5rem;
   --white-light: #fff;
+  --sponsored-primary-color:#144171;
+  --sponsored-light-color:#fff;
+  --sponsored-background-color:#0e1f31;
 }
 h1,
 h2,
@@ -36,6 +40,10 @@ h5 span {
   display: inline-block;
   line-height: 1;
 }
+body.sponsored h5 span {
+  background-color: var(--sponsored-primary-color);
+  color: var(--sponsored-light-color)
+}
 h1 {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -60,24 +68,36 @@ body {
   grid-template-areas:
     "header header header"
     "navigation navigation navigation"
-    "add-top add-top add-top"
+    "advert-top advert-top advert-top"
     "hero hero hero"
     "content content content"
-    "add-bottom add-bottom add-bottom"
+    ". advert-bottom ."
     "footer footer footer";
-
-  background-color: #26323E;
+}
+body.sponsored {
+  background-color: var(--sponsored-background-color);
+}
+body.sponsored .advert-bottom {
+  height: 12rem;
+}
+.sponsored.banner {
+  color:var(--sponsored-light-color);
+  margin: var(--desktop-gap-vertical) var(--desktop-gap-horizontal);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size-large);
 }
 .header-item {
   font-family: var(--title-font);
   line-height: 1;
 }
 .header, .footer {
+  background-color: var(--primary-color);
+}
+.header, .footer, .advert {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary-color);
 }
 .footer {
   grid-area: footer;
@@ -94,7 +114,7 @@ body {
 }
 .hero {
   background-size: cover;
-  background-position: center 88%;
+  background-position: center 66%;
   background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 1) 0,
@@ -103,7 +123,7 @@ body {
       rgba(0, 0, 0, 0.8) calc(100% - 1rem),
       rgba(0, 0, 0, 1) 100%
     ),
-    url("https://4cdn.hu/kraken/image/upload/s--Cao2VxlK--/7JVr5oGVTPYjVIKys.jpeg");
+    url("https://4cdn.hu/kraken/image/upload/s--XVVVV398--/7JX40vtjy4WzUyKTs.jpeg");
   display: flex;
   flex-direction: column;
 
@@ -141,7 +161,13 @@ body {
   display: grid;
   grid-template-rows: repeat(1, auto);
   grid-template-columns: 1fr 320px 640px 1fr;
-  padding: var(--desktop-padding-vertical) 0;
+  margin: var(--desktop-gap-vertical) 0;
+}
+.advert-top {
+  grid-area: advert-top;
+}
+.advert-bottom {
+  grid-area: advert-bottom;
 }
 p {
   font-size: var(--body-font-size);
@@ -187,7 +213,7 @@ p a:hover {
   border: var(--black-light);
   border-left: 4px solid;
   border-bottom: 4px solid;
-  padding: var(--desktop-padding-vertical);
+  padding: var(--desktop-gap-vertical);
   flex: 0 0 auto;
 }
 .byline-item:first-child {
@@ -200,7 +226,7 @@ p a:hover {
 .article-foot .foot-item {
 border: var(--black-light);
 border-top: 4px solid;
-padding: var(--desktop-padding-vertical);
+padding: var(--desktop-gap-vertical);
 flex: 0 0 auto;
 }
 .foot-item:last-child {
@@ -220,7 +246,7 @@ flex: 0 0 auto;
 .content {
   display: grid;
   grid-template-columns: 1fr 320px 640px 1fr;
-  padding: var(--desktop-padding-vertical) 0;
+  margin: var(--desktop-gap-vertical) 0;
 }
 .content-bg {
   grid-column: 2 / 3;
@@ -232,14 +258,13 @@ flex: 0 0 auto;
 .article-head,
 .article-byline,
 .article-foot {
-  padding: var(--desktop-padding-vertical) var(--desktop-padding-horizontal);
-  margin:0;
+  margin: var(--desktop-gap-vertical) var(--desktop-gap-horizontal);
   grid-column: 2 / 4;
 }
 .hero.in-article {
   grid-column: 1 / 5;
   height: 500px;
-  margin: var(--desktop-padding-vertical) 0;
+  margin: var(--desktop-gap-vertical) 0;
   border-bottom: 2rem solid  #26323E;
   border-top: 2rem solid  #26323E;
 }
@@ -249,14 +274,13 @@ flex: 0 0 auto;
 .content > figure.article-large {
   grid-column: 3 / 4;
 
-  padding: var(--desktop-padding-vertical) var(--desktop-padding-horizontal);
-  margin:0;
+  margin: var(--desktop-gap-vertical) var(--desktop-gap-horizontal);
 }
 .content > figure.article-large {
   grid-column: 2 / 4;
 }
 .content > h2 {
-  padding-top: calc(var(--desktop-padding-vertical) * 2);
+  padding-top: calc(var(--desktop-gap-vertical) * 2);
 }
 
 @font-face {
