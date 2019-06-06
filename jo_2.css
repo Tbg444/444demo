@@ -126,7 +126,7 @@ body.tamog .menubar {
   grid-area: hero;
   grid-column: 1 / 2;
   grid-row: 4 / 6;
-  max-height: 46vh;
+  max-height: 58vh;
   z-index: -2;
   position: sticky;
   position: -webkit-sticky;
@@ -136,15 +136,7 @@ body.tamog .menubar {
 .hero {
   background-size: cover;
   background-position: center 84%;
-  background-image: linear-gradient(
-      to top,
-      rgba(17, 17, 17, 1) 0,
-      rgba(17, 17, 17, 0.8) 5rem,
-      rgba(17, 17, 17, 0) 50%,
-      rgba(17, 17, 17, 0.8) calc(100% - 1rem),
-      rgba(17, 17, 17, 1) 100%
-    ),
-    url(https://4cdn.hu/kraken/image/upload/s--XVVVV398--/7JX40vtjy4WzUyKTs.jpeg);
+  background-image: linear-gradient( to top, rgba(17, 17, 17, 1) 0, rgba(17, 17, 17, 0.8) 1rem, rgba(17, 17, 17, 0) 50%, rgba(17, 17, 17, 0.8) calc(100% - 1rem), rgba(17, 17, 17, 1) 100% ), url(https://4cdn.hu/kraken/image/upload/s--XVVVV398--/7JX40vtjy4WzUyKTs.jpeg);
   box-shadow: rgba(17, 17, 17, 0.4) 0 0.5rem 1rem;
 }
 .tamog-container {
