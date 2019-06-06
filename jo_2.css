@@ -13,9 +13,9 @@
   --desktop-gap-large: 2rem;
   --icon-size: 1.5rem;
   --white-light: #fff;
-  --sponsored-primary-color: #144171;
-  --sponsored-light-color: #fff;
-  --sponsored-background-color: #111;
+  --tamog-primary-color: #144171;
+  --tamog-light-color: #fff;
+  --tamog-background-color: #111;
 }
 h1,
 h2,
@@ -53,9 +53,9 @@ h5 span {
   display: inline-block;
   line-height: 1;
 }
-body.sponsored h5 span {
-  background-color: var(--sponsored-primary-color);
-  color: var(--sponsored-light-color);
+body.tamog h5 span {
+  background-color: var(--tamog-primary-color);
+  color: var(--tamog-light-color);
 }
 h1 {
   font-size: 2.5rem;
@@ -82,8 +82,8 @@ body {
   grid-template-areas: "header" "navigation" "reklam-top" "hero" "content" "reklam-bottom" "footer";
 }
 
-body.sponsored {
-  background-color: var(--sponsored-background-color);
+body.tamog {
+  background-color: var(--tamog-background-color);
 }
 
 .header-item {
@@ -102,7 +102,7 @@ body.sponsored {
   justify-content: center;
   align-items: center;
 }
-body.sponsored .reklam {
+body.tamog .reklam {
   justify-content: flex-end;
 }
 .footer {
@@ -139,11 +139,11 @@ body.sponsored .reklam {
     url(https://4cdn.hu/kraken/image/upload/s--XVVVV398--/7JX40vtjy4WzUyKTs.jpeg);
   box-shadow: rgba(17, 17, 17, 0.4) 0 0.5rem 1rem;
 }
-.sponsored-container {
+.tamog-container {
   display: flex;
   flex-direction: column;
 }
-.sponsored-container2 {
+.tamog-container2 {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
   z-index: -1;
@@ -156,18 +156,18 @@ body.sponsored .reklam {
   align-items: flex-end;
 }
 
-.sponsored-item {
+.tamog-item {
   display: flex;
   flex-flow: column;
   margin: var(--desktop-gap-large);
   align-items: center;
 }
-.sponsored-item-logo {
+.tamog-item-logo {
   display: block;
   width: 7.5rem;
   height: 7.5rem;
 }
-.sponsored-item-tagline {
+.tamog-item-tagline {
   display: block;
   font-family: "Volvo";
   color: #fff;
@@ -175,11 +175,11 @@ body.sponsored .reklam {
   margin: 0 auto;
   text-align: center;
 }
-body.sponsored .reklam-bottom {
+body.tamog .reklam-bottom {
   height: 42rem;
 }
-.sponsored.banner {
-  color: var(--sponsored-light-color);
+.tamog.zaszlo {
+  color: var(--tamog-light-color);
   margin: calc(var(--desktop-gap-large) * 2);
   font-family: var(--body-font);
   font-size: var(--body-font-size-large);
@@ -357,10 +357,10 @@ a:hover {
 
 @media only screen and (min-width: 40rem) {
 
-  .sponsored.banner {
+  .tamog.zaszlo {
     margin: calc(var(--desktop-gap-large) * 4);
   }
-  body.sponsored .reklam-bottom {
+  body.tamog .reklam-bottom {
     height: 62rem;
   }
   .content {
@@ -368,7 +368,7 @@ a:hover {
     grid-template-columns: auto 1fr 640px auto;
     padding: var(--desktop-gap-large) 0;
   }
-  .sponsored-container2 {
+  .tamog-container2 {
     grid-column: 1 / 4;
     grid-row: 4 / 5;
     z-index: -1;
@@ -415,7 +415,7 @@ a:hover {
     position: sticky;
     top: 1rem;
   }
-  .sponsored-container2 {
+  .tamog-container2 {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
     z-index: -1;
@@ -436,7 +436,7 @@ a:hover {
 }
 
 @media only screen and (min-width: 85.375rem) {
-  .sponsored-container2 {
+  .tamog-container2 {
     grid-column: 3 / 4;
     z-index: -1;
     display: flex;
