@@ -7,6 +7,7 @@
   --body-font-size: 1.125rem;
   --body-font-size-large: calc(var(--body-font-size) * 1.25);
   --body-font-size-small: calc(var(--body-font-size) / 1.25);
+  --body-font-size-small-xx:  calc(var(--body-font-size) * .75);
   --desktop-content-width: 640px;
   --desktop-gap-small: 0.5rem;
   --desktop-gap-normal: 1rem;
@@ -42,9 +43,10 @@ h2 {
   
 }
 h5 {
-  font-size: 1.625rem;
+  font-size: .875rem;
   line-height: 1.4em;
 }
+          
 h5 span {
   color: var(--black-light);
   background-color: var(--primary-color);
@@ -58,8 +60,11 @@ body.tamog h5 span {
   color: var(--tamog-light-color);
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   line-height: 1.2;
+}
+.byline-item-text {
+  font-size: var(--body-font-size-small-xx);
 }
 body {
   color: var(--black-light);
@@ -216,7 +221,7 @@ body.tamog .menubar-bottom {
   grid-area: menubar-bottom;
 }
 p {
-  font-size: var(--body-font-size);
+  font-size: var(--body-font-size-small);
   font-family: var(--body-font);
   letter-spacing: 0px;
   line-height: 1.8em;
@@ -259,7 +264,7 @@ a:hover {
 .byline-item,
 .foot-item {
   border: 4px var(--black-light);
-  padding: var(--desktop-gap-normal);
+  padding: var(--desktop-gap-small);
   flex: 0 0 auto;
 }
 .article-byline .byline-item {
@@ -270,11 +275,10 @@ a:hover {
   border-top: 4px solid;
   border-left: 4px solid;
 }
-.byline-item:first-child {
-  border-left: 0;
-}
+
 .byline-item:last-child {
   flex: 1 0 auto;
+  border-bottom: 0;
 }
 .foot-item:first-child {
   border-left: 0;
@@ -333,8 +337,9 @@ a:hover {
   margin: var(--desktop-gap-normal) var(--desktop-gap-large);
   grid-column: 2 / 4;
 }
+
 .article-byline {
-  margin-bottom: var(--desktop-gap-large);
+  margin-bottom: var(--desktop-gap-normal);
 }
 .article-foot {
   margin-top: var(--desktop-gap-large);
@@ -360,6 +365,39 @@ a:hover {
 /* viewport */
 
 @media only screen and (min-width: 40rem) {
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  h5 {
+    font-size: 1.625rem;
+    line-height: 1.4em;
+  }
+  p {
+    font-size: var(--body-font-size);
+    font-family: var(--body-font);
+    letter-spacing: 0px;
+    line-height: 1.8em;
+  }
+  .byline-item-text {
+    font-size: var(--body-font-size);
+  }
+  .byline-item, .foot-item {
+    border: 4px var(--black-light);
+    padding: var(--desktop-gap-small);
+    flex: 0 0 auto;
+  }
+  .byline-item:first-child {
+    border-left: 0;
+  }
+  .byline-item:last-child {
+    flex: 1 0 auto;
+    border-bottom: 4px solid;
+  }
+  .article-byline {
+    margin-bottom: var(--desktop-gap-large);
+  }
 
   .tamog.zaszlo {
     margin: calc(var(--desktop-gap-large) * 4);
