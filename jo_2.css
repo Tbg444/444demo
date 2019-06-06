@@ -79,7 +79,7 @@ body {
   display: grid;
   grid-template-rows: 4rem auto auto minmax(20rem, 40vh) auto auto auto;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "navigation" "reklam-top" "hero" "content" "reklam-bottom" "footer";
+  grid-template-areas: "header" "navigation" "menubar-top" "hero" "content" "menubar-bottom" "footer";
 }
 
 body.tamog {
@@ -96,13 +96,13 @@ body.tamog {
 }
 .header,
 .footer,
-.reklam {
+.menubar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-body.tamog .reklam {
+body.tamog .menubar {
   justify-content: flex-end;
 }
 .footer {
@@ -175,7 +175,7 @@ body.tamog .reklam {
   margin: 0 auto;
   text-align: center;
 }
-body.tamog .reklam-bottom {
+body.tamog .menubar-bottom {
   height: 42rem;
 }
 .tamog.zaszlo {
@@ -205,11 +205,11 @@ body.tamog .reklam-bottom {
   grid-template-rows: repeat(1, auto);
   grid-template-columns: 1fr auto 640px 1fr;
 }
-.reklam-top {
-  grid-area: reklam-top;
+.menubar-top {
+  grid-area: menubar-top;
 }
-.reklam-bottom {
-  grid-area: reklam-bottom;
+.menubar-bottom {
+  grid-area: menubar-bottom;
 }
 p {
   font-size: var(--body-font-size);
@@ -360,7 +360,7 @@ a:hover {
   .tamog.zaszlo {
     margin: calc(var(--desktop-gap-large) * 4);
   }
-  body.tamog .reklam-bottom {
+  body.tamog .menubar-bottom {
     height: 62rem;
   }
   .content {
@@ -393,10 +393,10 @@ a:hover {
     grid-template-areas:
       "header header header"
       "navigation navigation navigation"
-      "reklam-top reklam-top reklam-top"
+      "menubar-top menubar-top menubar-top"
       "hero hero hero"
       "content content content"
-      "reklam-bottom reklam-bottom reklam-bottom"
+      "menubar-bottom menubar-bottom menubar-bottom"
       "footer footer footer";
   }
   .content {
