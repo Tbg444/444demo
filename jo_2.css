@@ -67,7 +67,7 @@ body {
   font-family: var(--body-font);
 }
 body * {
-  outline: 0.2px solid rgba(255, 255, 255, 0.2);
+  outline: 0px solid rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
 }
 
