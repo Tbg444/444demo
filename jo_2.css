@@ -38,7 +38,7 @@ svg {
 }
 .header-item,
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.4;
 }
 .header-item {
@@ -133,7 +133,7 @@ body.tamog .hero.over-article {
   grid-area: hero;
   grid-column: 1 / 2;
   grid-row: 4 / 6;
-  height: calc(var(--hero-frame-size-tamog) / 2);
+  height: calc(var(--hero-frame-size-tamog) / 3);
   z-index: -2;
   position: sticky;
   position: -webkit-sticky;
@@ -173,25 +173,25 @@ body.tamog .hero.over-article {
   position: -webkit-sticky;
   top: 0;
   align-items: flex-end;
-  height: calc(var(--hero-frame-size-tamog) / 2);
+  height: calc(var(--hero-frame-size-tamog) / 3);
 }
 
 .tamog-item {
   display: flex;
   flex-flow: column;
-  margin: var(--desktop-gap-large);
+  margin: var(--desktop-gap-normal);
   align-items: center;
 }
 .tamog-item-logo {
   display: block;
-  width: 7.5rem;
-  height: 7.5rem;
+  width: 5rem;
+  height: 5rem;
 }
 .tamog-item-tagline {
   display: block;
   font-family: "Volvo";
   color: var(--tamog-dark-color);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -203,7 +203,7 @@ body.tamog .menubar-bottom {
   color: var(--tamog-light-color);
   margin: calc(var(--desktop-gap-large) * 2);
   font-family: var(--body-font);
-  font-size: var(--body-font-size-large);
+  font-size: var(--body-font-size-normal);
 }
 
 .hero img {
@@ -434,6 +434,12 @@ a:hover {
     position: -webkit-sticky;
 
     align-items: flex-end;
+  }
+  .tamog.zaszlo {
+    color: var(--tamog-light-color);
+    margin: calc(var(--desktop-gap-large) * 2);
+    font-family: var(--body-font);
+    font-size: var(--body-font-size-large);
   }
 }
 
