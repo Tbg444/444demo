@@ -79,7 +79,7 @@ body {
   display: grid;
   grid-template-rows: 4rem auto auto minmax(20rem, 40vh) auto auto auto;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "navigation" "advert-top" "hero" "content" "advert-bottom" "footer";
+  grid-template-areas: "header" "navigation" "reklam-top" "hero" "content" "reklam-bottom" "footer";
 }
 
 body.sponsored {
@@ -96,13 +96,13 @@ body.sponsored {
 }
 .header,
 .footer,
-.advert {
+.reklam {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-body.sponsored .advert {
+body.sponsored .reklam {
   justify-content: flex-end;
 }
 .footer {
@@ -175,7 +175,7 @@ body.sponsored .advert {
   margin: 0 auto;
   text-align: center;
 }
-body.sponsored .advert-bottom {
+body.sponsored .reklam-bottom {
   height: 42rem;
 }
 .sponsored.banner {
@@ -205,11 +205,11 @@ body.sponsored .advert-bottom {
   grid-template-rows: repeat(1, auto);
   grid-template-columns: 1fr auto 640px 1fr;
 }
-.advert-top {
-  grid-area: advert-top;
+.reklam-top {
+  grid-area: reklam-top;
 }
-.advert-bottom {
-  grid-area: advert-bottom;
+.reklam-bottom {
+  grid-area: reklam-bottom;
 }
 p {
   font-size: var(--body-font-size);
@@ -360,7 +360,7 @@ a:hover {
   .sponsored.banner {
     margin: calc(var(--desktop-gap-large) * 4);
   }
-  body.sponsored .advert-bottom {
+  body.sponsored .reklam-bottom {
     height: 62rem;
   }
   .content {
@@ -393,10 +393,10 @@ a:hover {
     grid-template-areas:
       "header header header"
       "navigation navigation navigation"
-      "advert-top advert-top advert-top"
+      "reklam-top reklam-top reklam-top"
       "hero hero hero"
       "content content content"
-      "advert-bottom advert-bottom advert-bottom"
+      "reklam-bottom reklam-bottom reklam-bottom"
       "footer footer footer";
   }
   .content {
