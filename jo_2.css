@@ -8,7 +8,6 @@
   --body-font-size-large: calc(var(--body-font-size) * 1.25);
   --body-font-size-small: calc(var(--body-font-size) / 1.25);
   --body-font-size-small-xx: calc(var(--body-font-size) * 0.75);
-  --desktop-content-width: 640px;
   --desktop-gap-small: 0.5rem;
   --desktop-gap-normal: 1rem;
   --desktop-gap-large: 2rem;
@@ -19,6 +18,7 @@
   --tamog-dark-color: #111;
   --tamog-background-color: #111;
   --hero-frame-size: 62rem;
+  --header-height:6rem;
 }
 h1,
 h2,
@@ -83,7 +83,7 @@ body * {
 body {
   margin: 0;
   display: grid;
-  grid-template-rows: 4rem auto auto minmax(20rem, 40vh) auto auto auto;
+  grid-template-rows: var(--header-height) auto auto auto auto auto auto;
   grid-template-columns: 1fr;
   grid-template-areas: "header" "navigation" "menubar-top" "hero" "content" "menubar-bottom" "footer";
   z-index: 0;
@@ -127,7 +127,7 @@ body.tamog .menubar {
   grid-area: hero;
   grid-column: 1 / 2;
   grid-row: 4 / 6;
-  max-height: var(--hero-frame-size);
+  height: calc(var(--hero-frame-size) / 2);
   z-index: -2;
   position: sticky;
   position: -webkit-sticky;
@@ -168,16 +168,15 @@ body.tamog .menubar {
   flex-direction: column;
   justify-content: flex-start;
   position: sticky;
-  top: 1rem;
-  bottom: 1rem;
+  top: var(--header-height);
   align-items: flex-end;
+  height: calc(var(--hero-frame-size) / 2);
 }
 
 .tamog-item {
   display: flex;
   flex-flow: column;
   margin: var(--desktop-gap-large);
-  margin-top: calc(var(--desktop-gap-large) * 2);
   align-items: center;
 }
 .tamog-item-logo {
@@ -288,7 +287,6 @@ a:hover {
 
 .byline-item:last-child {
   flex: 1 0 auto;
-  border-bottom: 0;
 }
 .foot-item:first-child {
   border-left: 0;
@@ -400,7 +398,7 @@ a:hover {
   .byline-item,
   .foot-item {
     border: 4px var(--black-light);
-    padding: var(--desktop-gap-small);
+    padding: var(--desktop-gap-normal);
     flex: 0 0 auto;
   }
   .byline-item:first-child {
@@ -438,7 +436,7 @@ a:hover {
 
 @media only screen and (min-width: 64rem) {
   body {
-    grid-template-rows: 4rem auto auto minmax(20rem, 40vh) auto auto auto;
+    grid-template-rows: var(--header-height) auto auto auto auto auto auto;
     grid-template-columns: 1fr 960px 1fr;
     grid-template-areas:
       "header header header"
@@ -469,6 +467,7 @@ a:hover {
     grid-row: 4 / 5;
     justify-content: flex-start;
     align-items: flex-end;
+    height: calc(var(--hero-frame-size) / 2);
   }
   .tamog-item-logo {
     display: block;
