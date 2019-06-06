@@ -80,6 +80,8 @@ body {
   grid-template-rows: 4rem auto auto minmax(20rem, 40vh) auto auto auto;
   grid-template-columns: 1fr;
   grid-template-areas: "header" "navigation" "menubar-top" "hero" "content" "menubar-bottom" "footer";
+  z-index: 0;
+  -webkit-transform: translate3d(0px, 0px, 0px);
 }
 
 body.tamog {
