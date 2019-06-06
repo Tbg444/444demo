@@ -7,7 +7,7 @@
   --body-font-size: 1.125rem;
   --body-font-size-large: calc(var(--body-font-size) * 1.25);
   --body-font-size-small: calc(var(--body-font-size) / 1.25);
-  --body-font-size-small-xx:  calc(var(--body-font-size) * .75);
+  --body-font-size-small-xx: calc(var(--body-font-size) * 0.75);
   --desktop-content-width: 640px;
   --desktop-gap-small: 0.5rem;
   --desktop-gap-normal: 1rem;
@@ -16,7 +16,9 @@
   --white-light: #fff;
   --tamog-primary-color: #144171;
   --tamog-light-color: #fff;
+  --tamog-dark-color: #111;
   --tamog-background-color: #111;
+  --hero-frame-size: 62rem;
 }
 h1,
 h2,
@@ -39,14 +41,13 @@ h2 {
   line-height: 1.4;
 }
 .header-item {
-  border:0;
-  
+  border: 0;
 }
 h5 {
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.4em;
 }
-          
+
 h5 span {
   color: var(--black-light);
   background-color: var(--primary-color);
@@ -126,17 +127,33 @@ body.tamog .menubar {
   grid-area: hero;
   grid-column: 1 / 2;
   grid-row: 4 / 6;
-  max-height: 58vh;
+  max-height: var(--hero-frame-size);
   z-index: -2;
   position: sticky;
   position: -webkit-sticky;
-  top: 1rem;
+  top: 0;
 }
 
 .hero {
   background-size: cover;
-  background-position: center 84%;
-  background-image: linear-gradient( to top, rgba(17, 17, 17, 1) 0, rgba(17, 17, 17, 0.8) 1rem, rgba(17, 17, 17, 0) 50%, rgba(17, 17, 17, 0.8) calc(100% - 1rem), rgba(17, 17, 17, 1) 100% ), url(https://4cdn.hu/kraken/image/upload/s--XVVVV398--/7JX40vtjy4WzUyKTs.jpeg);
+  background-position: center center;
+  background-image: linear-gradient(
+      to top,
+      rgba(17, 17, 17, 1) 0,
+      rgba(17, 17, 17, 0.8) 1rem,
+      rgba(17, 17, 17, 0) 50%,
+      rgba(17, 17, 17, 0.8) calc(100% - 1rem),
+      rgba(17, 17, 17, 1) 100%
+    ),
+    url("https://4cdn.hu/kraken/image/upload/s--xDKM7xER--/7JYXx0a7hG7x2DG1TWs.jpeg");
+  background-image: linear-gradient(
+      to bottom,
+      
+      rgba(17, 17, 17, 0) 50%,
+      rgba(17, 17, 17, 0.8) calc(100% - 1rem),
+      rgba(17, 17, 17, 1) 100%
+    ),
+    url("https://4cdn.hu/kraken/image/upload/s--xDKM7xER--/7JYXx0a7hG7x2DG1TWs.jpeg");
   box-shadow: rgba(17, 17, 17, 0.4) 0 0.5rem 1rem;
 }
 .tamog-container {
@@ -146,7 +163,7 @@ body.tamog .menubar {
 .tamog-container2 {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
-  z-index: -1;
+  z-index: -2;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -160,6 +177,7 @@ body.tamog .menubar {
   display: flex;
   flex-flow: column;
   margin: var(--desktop-gap-large);
+  margin-top: calc(var(--desktop-gap-large) * 2);
   align-items: center;
 }
 .tamog-item-logo {
@@ -170,7 +188,7 @@ body.tamog .menubar {
 .tamog-item-tagline {
   display: block;
   font-family: "Volvo";
-  color: #fff;
+  color: var(--tamog-dark-color);
   font-size: 1rem;
   margin: 0 auto;
   text-align: center;
@@ -323,7 +341,6 @@ a:hover {
   z-index: -1;
 }
 
-
 .article-head,
 .article-byline,
 .article-foot {
@@ -358,13 +375,13 @@ a:hover {
 /* viewport */
 
 @media only screen and (min-width: 40rem) {
-
   h1 {
     font-size: 2.5rem;
     line-height: 1.2;
   }
-  h2 {
-    font-size: 1rem;
+  h2,
+  .header-item {
+    font-size: 2rem;
     line-height: 1.4;
   }
   h5 {
@@ -380,7 +397,8 @@ a:hover {
   .byline-item-text {
     font-size: var(--body-font-size);
   }
-  .byline-item, .foot-item {
+  .byline-item,
+  .foot-item {
     border: 4px var(--black-light);
     padding: var(--desktop-gap-small);
     flex: 0 0 auto;
@@ -400,7 +418,7 @@ a:hover {
     margin: calc(var(--desktop-gap-large) * 4);
   }
   body.tamog .menubar-bottom {
-    height: 62rem;
+    height: var(--hero-frame-size);
   }
   .content {
     display: grid;
@@ -410,17 +428,13 @@ a:hover {
   .tamog-container2 {
     grid-column: 1 / 4;
     grid-row: 4 / 5;
-    z-index: -1;
-
     justify-content: flex-start;
     position: sticky;
     position: -webkit-sticky;
 
     align-items: flex-end;
+  }
 }
-
-}
-
 
 @media only screen and (min-width: 64rem) {
   body {
@@ -439,25 +453,21 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr 320px 640px 1fr;
     padding: var(--desktop-gap-large) 0;
-      background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
   }
   .hero.over-article {
     grid-area: hero;
     /* sullyesztes */
     grid-column: 1 / 4;
-    grid-row: 4 / 6;
-    max-height: 56vh;
+    grid-row: 4 / 8;
+    height: var(--hero-frame-size);
     z-index: -2;
-  
   }
 
   .tamog-container2 {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
-    z-index: -1;
-
     justify-content: flex-start;
-
     align-items: flex-end;
   }
   .tamog-item-logo {
@@ -466,12 +476,8 @@ a:hover {
     height: 7.5rem;
   }
   .tamog-item-tagline {
-    display: block;
-    font-family: "Volvo";
-    color: #fff;
+
     font-size: 1.5rem;
-    margin: 0 auto;
-    text-align: center;
   }
   .content-bg {
     grid-column: 2 / 3;
@@ -484,10 +490,10 @@ a:hover {
 @media only screen and (min-width: 85.375rem) {
   .tamog-container2 {
     grid-column: 3 / 4;
-    z-index: -1;
-
-    justify-content: center;
     align-items: center;
+  }
+  .tamog-item {
+    margin-top: var(--desktop-gap-large);
   }
 }
 
