@@ -321,6 +321,7 @@ a:hover {
   display: grid;
   grid-template-columns: auto auto 1fr auto;
   padding: var(--desktop-gap-large) 0;
+  background-color: var(--white-light);
 }
 
 .content-bg {
@@ -442,6 +443,7 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr 320px 640px 1fr;
     padding: var(--desktop-gap-large) 0;
+      background-color: rgba(0,0,0,0);
   }
   .hero.over-article {
     grid-area: hero;
