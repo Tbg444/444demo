@@ -168,6 +168,7 @@ body.tamog .menubar {
   flex-direction: column;
   justify-content: flex-start;
   position: sticky;
+  position: -webkit-sticky;
   top: var(--header-height);
   align-items: flex-end;
   height: calc(var(--hero-frame-size) / 2);
