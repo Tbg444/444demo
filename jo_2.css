@@ -39,13 +39,15 @@ figure {
 svg {
   display: block;
 }
-.header-item,
 h2 {
   font-size: 1.5rem;
   line-height: 1.4;
 }
 .header-item {
+  font-size: 2rem;
   border: 0;
+  grid-area: title;
+  margin: var(--desktop-gap-normal);
 }
 h5 {
   font-size: 0.875rem;
@@ -126,14 +128,17 @@ body.tamog .menubar {
 }
 .header {
   grid-area: header;
+  grid-template-areas: ". title .";
+}
+.navigation, .header {
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
 }
 .navigation {
+  grid-template-areas: "nav-minus mitem nav-plus";
   grid-area: navigation;
   background-color: #FEE191;
   background-color: #222;
-  display: grid;
-  grid-template-columns: 3rem 1fr 3rem;
-  grid-template-areas: "nav-minus . mitem . nav-plus";
   border-top: 4px solid var(--black-light);
   border-bottom: 1px solid var(--black-light);
 }
@@ -432,7 +437,9 @@ a:hover {
 .content > figure.article-large {
   grid-column: 2 / 4;
 }
-
+.article-large.over {
+  height: 575px;
+}
 /* viewport */
 
 @media only screen and (min-width: 40rem) {
@@ -445,10 +452,12 @@ a:hover {
     font-size: 2.5rem;
     line-height: 1.2;
   }
-  h2,
-  .header-item {
+  h2 {
     font-size: 2rem;
     line-height: 1.4;
+  }
+  .header-item {
+    font-size: 3rem;
   }
   h5 {
     font-size: 1.625rem;
@@ -526,7 +535,7 @@ a:hover {
       "menubar-bottom menubar-bottom menubar-bottom"
       "footer footer footer";
   }
-  .navigation {
+  .navigation, .header {
   grid-template-columns: 1fr 960px 1fr;
 }
 .navigation-item-text {
