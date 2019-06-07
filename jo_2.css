@@ -124,6 +124,7 @@ body.tamog {
 }
 body.tamog .menubar {
   justify-content: flex-end;
+  background-image: linear-gradient(to top, rgba(1,1,1,.4) 0, rgba(0,0,0,0));
 }
 .footer {
   grid-area: footer;
