@@ -18,7 +18,7 @@
   --tamog-primary-color: #144171;
   --tamog-light-color: #fff;
   --tamog-dark-color: #111;
-  --background-color:#fff;
+  --background-color: #fff;
   --tamog-background-color: #111;
   --hero-frame-size: 4em;
   --hero-frame-size-tamog: 62rem;
@@ -90,7 +90,10 @@ body * {
 body {
   margin: 0;
   display: grid;
-  grid-template-rows: var(--header-height) auto auto auto auto minmax(2rem, auto) auto;
+  grid-template-rows: var(--header-height) auto auto auto auto minmax(
+      2rem,
+      auto
+    ) auto;
   grid-template-columns: 1fr;
   grid-template-areas: "header" "navigation" "menubar-top" "hero" "content" "menubar-bottom" "footer";
   z-index: 0;
@@ -124,29 +127,35 @@ body.tamog {
 }
 body.tamog .menubar {
   justify-content: flex-end;
-  background-image: linear-gradient(to top, rgba(1,1,1,.4) 0, rgba(0,0,0,0));
+  background-image: linear-gradient(
+    to top,
+    rgba(1, 1, 1, 0.4) 0,
+    rgba(0, 0, 0, 0) 50%
+  );
 }
 .footer {
   grid-area: footer;
-  border-top:var(--black-light) 4px solid;
+  border-top: var(--black-light) 4px solid;
 }
 .header {
   grid-area: header;
   grid-template-areas: ". title .";
 }
-.navigation, .header {
+.navigation,
+.header {
   display: grid;
   grid-template-columns: 3rem 1fr 3rem;
 }
 .navigation {
   grid-template-areas: "nav-minus mitem nav-plus";
   grid-area: navigation;
-  background-color: #FEE191;
+  background-color: #fee191;
   background-color: #222;
   border-top: 4px solid var(--black-light);
   border-bottom: 1px solid var(--black-light);
 }
-.nav-minus, .nav-plus {
+.nav-minus,
+.nav-plus {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,17 +179,19 @@ body.tamog .menubar {
   margin: 0 var(--desktop-gap-small-xx);
   display: inline;
 }
-.navigation-item a, .header-item a {
-  border:0;
+.navigation-item a,
+.header-item a {
+  border: 0;
 }
-.navigation-item a:hover, .header-item a:hover {
+.navigation-item a:hover,
+.header-item a:hover {
   background-color: rgba(0, 0, 0, 0);
 }
 .navigation-item-text a {
   border: 0;
 }
 .navigation-item-text.active {
-  color:#E73C57;
+  color: #e73c57;
 }
 .navigation-item-text a:hover {
   color: var(--white-light);
@@ -444,10 +455,11 @@ a:hover {
 /* viewport */
 
 @media only screen and (min-width: 40rem) {
-  
   body {
-    grid-template-rows: 
-    var(--header-height) 3rem auto minmax(3rem, auto) auto minmax(3rem, auto) auto;
+    grid-template-rows: var(--header-height) 3rem auto minmax(3rem, auto) auto minmax(
+        3rem,
+        auto
+      ) auto;
   }
   h1 {
     font-size: 2.5rem;
@@ -539,10 +551,11 @@ a:hover {
       "menubar-bottom menubar-bottom menubar-bottom"
       "footer footer footer";
   }
-  .navigation, .header {
-  grid-template-columns: 1fr 960px 1fr;
-}
-.navigation-item-text {
+  .navigation,
+  .header {
+    grid-template-columns: 1fr 960px 1fr;
+  }
+  .navigation-item-text {
     font-size: var(--body-font-size);
     margin: 0 var(--desktop-gap-normal);
     height: inherit;
