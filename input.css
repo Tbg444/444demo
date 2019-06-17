@@ -1,31 +1,161 @@
-
-
-html, body {height: 100%; font-family: 'Boxed'; font-weight: 900; font-size: 100vw;}
-
-@font-face {
- font-family: 'Boxed';
- font-style: bold;
- font-weight: 700;
- src: url('https://444.hu/assets/blog/static/fonts/boxed-semibold-webfont-a765a8c02811b9e0a116e7a73741c5e0.woff') format('woff2');
-}
-@font-face {
- font-family: 'Boxed';
- font-style: normal;
- font-weight: 400;
- src: url("https://444.hu/assets/blog/static/fonts/boxed-light-webfont-cc46c410c2c3fa7285ebff18981fbbf5.woff") format('woff2');
+::-moz-focus-inner {
+  border: 0;
 }
 
+:root {
+  --font: 400 1rem/1.4 "Roboto";
+  --font__title: 700 3rem/1.4 "Nunito";
+  --font__action: 900 1rem/1 "Nunito";
+  --font__display: 400 0.75rem/1.2 "Roboto";
+
+  --color__hue: 221;
+  --color__sat: 77%;
+  --color__lt: 56%;
+  --color__ap: 1;
+
+  --color: hsla(
+    var(--color__hue),
+    var(--color__sat),
+    var(--color__lt),
+    var(--color__ap)
+  );
+
+  --color--bg: hsla(
+    var(--color__hue),
+    var(--color__sat),
+    calc(var(--color__lt) * 0 + 100%),
+    var(--color__ap)
+  );
+  --color--fg: hsla(
+    var(--color__hue),
+    calc(var(--color__sat) * 0),
+    calc(var(--color__lt) * 0 + 0.5%),
+    var(--color__ap)
+  );
+  --color--mg: hsla(
+    var(--color__hue),
+    calc(var(--color__sat) * 0),
+    calc(var(--color__lt) * 0 + 50%),
+    var(--color__ap)
+  );
+  --color--null: hsla(var(--color__hue), var(--color__sat), var(--color__lt), calc)
+    (var(--color__ap) * 0);
+
+  --opacity: 1;
+  --color-01: hsla(221, 77%, 56%, var(--opacity));
+  --color-02: hsla(224, 100%, 74%, var(--opacity));
+  --color-03: hsla(217, 100%, 35%, var(--opacity));
+  --color-04: hsla(353, 0, 63%, var(--opacity));
+  --t-rounded: 1;
+
+  --icon-size: 1.25rem;
+}
+
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+svg {
+  display: block;
+  width: inherit;
+}
+
+body {
+  background-color: var(--color--mg);
+  color: var(--color--bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  font: var(--font);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.lbl {
+  font: var(--font__display);
+  align-self: baseline;
+}
+.btn {
+  background: var(--color--bg);
+  color: var(--color);
+  border-color: var(--color);
+  border: 1px solid;
+
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  margin: 1rem;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.btn.btn--hi {
+  background: var(--color);
+  color: var(--color--bg);
+  border-color: var(--color--bg);
+  border: 1px solid var(--color--bg);
+}
+.btn__shell {
+  border-bottom: 1px solid;
+  height: var(--icon-size);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn__icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin-right: 0.25rem;
+  padding-bottom: calc(var(--icon-size) / 5);
+}
+
+.btn__text {
+  font: var(--font__action);
+  letter-spacing: .03125rem;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 0.25rem var(--color-02);
+  outline: 0;
+  transition: box-shadow 200ms ease-in;
+}
+
 @font-face {
-    font-family: 'Boxed';
-    font-style: heavy;
-    font-weight: 900;
-    src: url("https://tbg444.github.io/444demo/Boxed-Heavy-webfont.woff") format('woff2');
-   }
+  font-family: "Boxed";
+  font-style: bold;
+  font-weight: 700;
+  src: url("https://444.hu/assets/blog/static/fonts/boxed-semibold-webfont-a765a8c02811b9e0a116e7a73741c5e0.woff")
+    format("woff2");
+}
+@font-face {
+  font-family: "Boxed";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://444.hu/assets/blog/static/fonts/boxed-light-webfont-cc46c410c2c3fa7285ebff18981fbbf5.woff")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Boxed";
+  font-style: heavy;
+  font-weight: 900;
+  src: url("https://tbg444.github.io/444demo/Boxed-Heavy-webfont.woff")
+    format("woff2");
+}
 
 @charset "UTF-8";
 
 @media only screen and (min-width: 64.063em) {
-	
 }
-
-
