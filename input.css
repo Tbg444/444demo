@@ -10,36 +10,54 @@
 
   --color__hue: 221;
   --color__sat: 77%;
-  --color__lt: 56%;
+  --color__ltn: 56%;
   --color__ap: 1;
 
   --color: hsla(
     var(--color__hue),
     var(--color__sat),
-    var(--color__lt),
+    var(--color__ltn),
     var(--color__ap)
   );
 
   --color__bg: hsla(
     var(--color__hue),
     var(--color__sat),
-    calc(var(--color__lt) * 0 + 100%),
+    calc(var(--color__ltn) * 0 + 100%),
     var(--color__ap)
   );
   --color__fg: hsla(
     var(--color__hue),
     calc(var(--color__sat) * 0),
-    calc(var(--color__lt) * 0 + 0.5%),
+    calc(var(--color__ltn) * 0 + 0.5%),
     var(--color__ap)
   );
   --color__mg: hsla(
     var(--color__hue),
     calc(var(--color__sat) * 0),
-    calc(var(--color__lt) * 0 + 49.5%),
+    calc(var(--color__ltn) * 0 + 49.5%),
     var(--color__ap)
   );
-  --color__null: hsla(var(--color__hue), var(--color__sat), var(--color__lt), calc)
+  --color__null: hsla(var(--color__hue), var(--color__sat), var(--color__ltn), calc)
     (var(--color__ap) * 0);
+
+    /*
+    --color--light
+    --color--dark
+    --color__2ry
+    --color__2ry--light
+    --color__2ry--dark
+
+    ? --border__width
+    ? --border__color
+    ? --border__style
+    --rounded
+    --rounded__radius
+
+    --space__pad
+    --space__gut
+
+    */
 
   --opacity: 1;
   --color-01: hsla(221, 77%, 56%, var(--opacity));
@@ -70,17 +88,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-main {
   font: var(--font);
+}
+.container {
+  color: hsla(300,100%,75%,1);
+}
+.container__item {
   display: flex;
   flex-flow: column;
   align-items: center;
+  margin:.5rem 0;
 }
+
 .lbl {
   font: var(--font__display);
   align-self: baseline;
+  margin:.5rem 0;
 }
 .btn {
   background: var(--color__bg);
@@ -103,11 +126,17 @@ main {
   border-color: var(--color__bg);
   border: 1px solid var(--color__bg);
 }
+.wrapper__btn {
+  background: var(--color__bg);
+}
+.wrapper__btn.btn--hi {
+  background: var(--color);
+}
 .btn__shell {
   border-bottom: 1px solid;
   height: var(--icon-size);
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   align-items: center;
 }
 
