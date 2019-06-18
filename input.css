@@ -7,66 +7,9 @@
   --font__title: 700 3rem/1.4 "Nunito";
   --font__action: 900 1rem/1 "Nunito";
   --font__display: 400 0.75rem/1.2 "Roboto";
+  --font__show: 400 0.75rem/1.2 "Ubuntu Mono"; 
 
-  --color__hue: 221;
-  --color__sat: 77%;
-  --color__ltn: 56%;
-  --color__ap: 1;
-
-  --color: hsla(
-    var(--color__hue),
-    var(--color__sat),
-    var(--color__ltn),
-    var(--color__ap)
-  );
-
-  --color__bg: hsla(
-    var(--color__hue),
-    var(--color__sat),
-    calc(var(--color__ltn) * 0 + 100%),
-    var(--color__ap)
-  );
-  --color__fg: hsla(
-    var(--color__hue),
-    calc(var(--color__sat) * 0),
-    calc(var(--color__ltn) * 0 + 0.5%),
-    var(--color__ap)
-  );
-  --color__mg: hsla(
-    var(--color__hue),
-    calc(var(--color__sat) * 0),
-    calc(var(--color__ltn) * 0 + 49.5%),
-    var(--color__ap)
-  );
-  --color__null: hsla(var(--color__hue), var(--color__sat), var(--color__ltn), calc)
-    (var(--color__ap) * 0);
-
-    /*
-    --color--light
-    --color--dark
-    --color__2ry
-    --color__2ry--light
-    --color__2ry--dark
-
-    ? --border__width
-    ? --border__color
-    ? --border__style
-    --rounded
-    --rounded__radius
-
-    --space__pad
-    --space__gut
-
-    */
-
-  --opacity: 1;
-  --color-01: hsla(221, 77%, 56%, var(--opacity));
-  --color-02: hsla(224, 100%, 74%, var(--opacity));
-  --color-03: hsla(217, 100%, 35%, var(--opacity));
-  --color-04: hsla(353, 0, 63%, var(--opacity));
-  --t-rounded: 1;
-
-  --icon-size: 1.25rem;
+  --icon-size:1.5rem;
 }
 
 html,
@@ -78,9 +21,12 @@ body,
 }
 svg {
   display: block;
-  width: inherit;
+  fill:currentColor;
 }
-
+svg.icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
 body {
   background-color: var(--color__mg);
   color: var(--color__bg);
@@ -90,23 +36,12 @@ body {
   align-items: center;
   font: var(--font);
 }
-.container {
-  color: hsla(300,100%,75%,1);
-}
-.container__item {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  margin:.5rem 0;
+body * {
+  outline:0px solid grey;
 }
 
-.lbl {
-  font: var(--font__display);
-  align-self: baseline;
-  margin:.5rem 0;
-}
 .btn {
-  background: var(--color__bg);
+  background: var(--color__null);
   color: var(--color);
   border-color: var(--color);
   border: 1px solid;
@@ -120,45 +55,45 @@ body {
   justify-content: center;
   align-items: center;
 }
-.btn.btn--hi {
+.btn--hi {
   background: var(--color);
   color: var(--color__bg);
-  border-color: var(--color__bg);
-  border: 1px solid var(--color__bg);
+  border: 1px solid;
+  border-color: var(--color);
 }
-.wrapper__btn {
-  background: var(--color__bg);
+.btn--lo {
+  background: var(--color--null);
+  color: var(--color);
+  border-color: var(--color--null);
+  border: 1px solid var(--color--null);
 }
-.wrapper__btn.btn--hi {
-  background: var(--color);
+.inverse .btn {
+  color:var(--color__bg);
+  border-color:var(--color__bg)
 }
-.btn__shell {
-  border-bottom: 1px solid;
+.btn__content {
+  border-bottom: 0px solid;
   height: var(--icon-size);
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-
 .btn__icon {
   width: var(--icon-size);
   height: var(--icon-size);
   margin-right: 0.25rem;
-  padding-bottom: calc(var(--icon-size) / 5);
 }
-
 .btn__text {
   font: var(--font__action);
   letter-spacing: .03125rem;
 }
-
 button:focus,
 a:focus,
 input:focus,
 textarea:focus {
-  box-shadow: 0 0 0 0.25rem var(--color-02);
-  outline: 0;
-  transition: box-shadow 200ms ease-in;
+  box-shadow: 0 0 0 0.25rem var(--color--light);
+  outline: 1px solid var(--color__null);
+  transition: box-shadow 50ms ease-out;
 }
 
 @font-face {
@@ -183,8 +118,6 @@ textarea:focus {
   src: url("https://tbg444.github.io/444demo/Boxed-Heavy-webfont.woff")
     format("woff2");
 }
-
-@charset "UTF-8";
 
 @media only screen and (min-width: 64.063em) {
 }
