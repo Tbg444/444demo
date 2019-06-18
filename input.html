@@ -1,175 +1,194 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+
 <head>
+	<title>input</title>
 
-<title>input</title>
+	<link href="https://fonts.googleapis.com/css?family=Noticia+Text&amp;subset=latin-ext" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400|Nunito:700,900" rel="stylesheet" type="text/css"
+		media="all" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;subset=latin-ext" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" />
 
+	<link rel="stylesheet" type="text/css" href="input.css" />
+	<link rel="stylesheet" type="text/css" href="colors.css" />
+	<link rel="stylesheet" type="text/css" href="show.css" />
+	<link rel="stylesheet" type="text/css" href="typo.css" />
 
-
-<link href="https://fonts.googleapis.com/css?family=Noticia+Text&amp;subset=latin-ext" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400|Nunito:700,900" rel="stylesheet" type="text/css" media="all">
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;subset=latin-ext" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-
-<link rel="stylesheet" type="text/css" href="input.css">
-<link rel="stylesheet" type="text/css" href="colors.css">
-<link rel="stylesheet" type="text/css" href="show.css">
-<link rel="stylesheet" type="text/css" href="typo.css">
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/plain; charset=dropbox-cors-hack">
-<svg style="display: none;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<defs>
-		<symbol id="icon__donation--filled" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-			<title>icon</title>
-			<path  class="color" d="M161.76,35.42A57.69,57.69,0,0,0,120.22,53a58.13,58.13,0,1,0-79.81,84.45l79.81,72.12L200,137.48A58.32,58.32,0,0,0,161.76,35.42Zm-5.93,93.75H129.17v26.66a9.17,9.17,0,1,1-18.34,0V129.17H84.17a9.17,9.17,0,0,1,0-18.34h26.66V84.17a9.17,9.17,0,1,1,18.34,0v26.66h26.66a9.17,9.17,0,0,1,0,18.34Z">
-			</path>
-		</symbol>
-	</defs>
-</svg>
-
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/plain; charset=dropbox-cors-hack" />
+	<svg style="display: none;" version="1.1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink">
+		<defs>
+			<symbol id="icon__donation--filled" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+				<title>icon</title>
+				<path class="color"
+					d="M161.76,35.42A57.69,57.69,0,0,0,120.22,53a58.13,58.13,0,1,0-79.81,84.45l79.81,72.12L200,137.48A58.32,58.32,0,0,0,161.76,35.42Zm-5.93,93.75H129.17v26.66a9.17,9.17,0,1,1-18.34,0V129.17H84.17a9.17,9.17,0,0,1,0-18.34h26.66V84.17a9.17,9.17,0,1,1,18.34,0v26.66h26.66a9.17,9.17,0,0,1,0,18.34Z">
+				</path>
+			</symbol>
+		</defs>
+	</svg>
 </head>
 
 <body>
 	<main>
-			<section class="container">
-					<label class="lbl">Szinek</label>
-					<div class="container__item">
-							<label class="lbl">Primary</label>
-							<div class="wrapper color">
+		<section class="container">
+			<label class="lbl">Szinek</label>
+			<div class="container__item">
+				<label class="lbl">Primary</label>
+				<div class="wrapper color"></div>
+				<div class="wrapper color--light"></div>
+				<div class="wrapper color--dark"></div>
+			</div>
+			<div class="container__item">
+				<label class="lbl">Secondary</label>
+				<div class="wrapper color-2ry"></div>
+				<div class="wrapper color-2ry--light"></div>
+				<div class="wrapper color-2ry--dark"></div>
+			</div>
 
-							</div>
-							<div class="wrapper color--light">
-
-							</div>
-							<div class="wrapper color--dark">
-
-							</div>
-					</div>
-					<div class="container__item">
-							<label class="lbl">Secondary</label>
-							<div class="wrapper color-2ry">
-									
-							</div>
-							<div class="wrapper color-2ry--light">
-
-							</div>
-							<div class="wrapper color-2ry--dark">
-
-							</div>
-					</div>
-					
-					<div class="container__item">
-							<label class="lbl">Grounds</label>
-							<div class="wrapper color__fg">
-								
-							</div>
-							<div class="wrapper color__bg">
-	
-							</div>
-							<div class="wrapper color__mg">
-	
-							</div>
-					</div>
-					<div class="container__item">
-							<label class="lbl">Warning</label>
-							<div class="wrapper color__warning">
-	
-								</div>
-					</div>
-		
-				</section>
-			<section class="container">
-				<label class="lbl">Gombok</label>
-				<div class="container__item">
-					<label class="lbl">Low</label>
-					<div class="wrapper">
-					<button class="btn btn--lo">
-						<div class="btn__content">
+			<div class="container__item">
+				<label class="lbl">Grounds</label>
+				<div class="wrapper color__fg"></div>
+				<div class="wrapper color__bg"></div>
+				<div class="wrapper color__mg"></div>
+			</div>
+			<div class="container__item">
+				<label class="lbl">Warning</label>
+				<div class="wrapper color__warning"></div>
+			</div>
+		</section>
+		<section class="container">
+			<label class="lbl">Gombok</label>
+			<div class="container__item">
+				<label class="lbl">Low</label>
+				<div class="wrapper">
+					<div class="btn__area">
+						<a href="#"><button class="btn btn--lo">
+							<div class="btn__content">
 								<span class="btn__icon">
-										<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" class="">
+									<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+										preserveAspectRatio="xMidYMid" class="">
+										<use xlink:href="#icon__donation--filled"></use>
+									</svg>
+								</span>
+								<span class="btn__text">Gomb</span>
+							</div>
+						</button></a>
+					</div>
+				</div>
+			</div>
+			<div class="container__item">
+				<label class="lbl">Medium</label>
+				<div class="wrapper">
+					<div class="btn__area">
+						<a href="#"><button class="btn">
+							<div class="btn__content">
+								<span class="btn__icon">
+									<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+										preserveAspectRatio="xMidYMid" class="">
+										<use xlink:href="#icon__donation--filled"></use>
+									</svg>
+								</span>
+								<span class="btn__text">Gomb</span>
+							</div>
+						</button></a>
+					</div>
+				</div>
+			</div>
+			<div class="container__item">
+				<label class="lbl">Hi</label>
+				<div class="wrapper">
+					<div class="btn__area">
+						<a href="#"><button class="btn btn--hi">
+							<div class="btn__content">
+								<span class="btn__icon">
+									<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+										preserveAspectRatio="xMidYMid" class="">
+										<use xlink:href="#icon__donation--filled"></use>
+									</svg>
+								</span>
+								<span class="btn__text">Gomb</span>
+							</div>
+						</button></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="container__item">
+				<label class="lbl">Low</label>
+				<div class="wrapper inverse">
+					<div class="btn__area">
+						<a href="#"><button class="btn btn--lo">
+							<div class="btn__content">
+								<span class="btn__icon">
+									<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+										preserveAspectRatio="xMidYMid" class="">
+										<use xlink:href="#icon__donation--filled"></use>
+									</svg>
+								</span>
+								<span class="btn__text">Gomb</span>
+							</div>
+						</button></a>
+					</div>
+				</div>
+			</div>
+			<div class="container__item">
+				<label class="lbl">Medium</label>
+				<div class="wrapper inverse">
+					<div class="btn__area">
+						<a href="#"><button class="btn">
+							<div class="btn__content">
+								<span class="btn__icon">
+									<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+										preserveAspectRatio="xMidYMid" class="">
+										<use xlink:href="#icon__donation--filled"></use>
+									</svg>
+								</span>
+								<span class="btn__text">Gomb</span>
+							</div>
+						</button></a>
+					</div>
+				</div>
+			</div>
+			<div class="container__item">
+				<label class="lbl">Hi</label>
+				<div class="wrapper inverse">
+					<div class="btn__area">
+						<a href="#"><button class="btn btn--hi">
+							<div class="btn__content">
+								<span class="btn__icon">
+									<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+										preserveAspectRatio="xMidYMid" class="">
+										<use xlink:href="#icon__donation--filled"></use>
+									</svg>
+								</span>
+								<span class="btn__text">Nyomógomb</span>
+							</div>
+						</button></a>
+					</div>
+				</div>
+			</div>
+			<div class="container__item">
+					<label class="lbl">Warning</label>
+					<div class="wrapper warning">
+						<div class="btn__area">
+							<a href="#"><button class="btn btn--hi btn--warning">
+								<div class="btn__content">
+									<span class="btn__icon">
+										<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+											preserveAspectRatio="xMidYMid" class="">
 											<use xlink:href="#icon__donation--filled"></use>
 										</svg>
-								</span>
-								<span class="btn__text">GOMB</span>	
-							</div>
-					</button>
-					</div>
-				</div>
-				<div class="container__item">
-					<label class="lbl">Medium</label>
-					<div class="wrapper">
-					<button class="btn">
-						<div class="btn__content">
-								<span class="btn__icon">
-										<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" class="">
-											<use xlink:href="#icon__donation--filled"></use>
-										</svg>								</span>
-							<span class="btn__text">GOMB</span>	
-							</div>
-					</button>
-					</div>
-				</div>
-				<div class="container__item">
-					<label class="lbl">Hi</label>
-					<div class="wrapper">
-							<button class="btn btn--hi">
-								<div class="btn__content">
-										<span class="btn__icon">
-												<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" class="">
-													<use xlink:href="#icon__donation--filled"></use>
-												</svg>										</span>
-									<span class="btn__text">GOMB</span>	
-									</div>
-							</button>
-					</div>
-				</div>
-
-				<div class="container__item">
-						<label class="lbl">Low</label>
-						<div class="wrapper inverse">
-						<button class="btn btn--lo">
-							<div class="btn__content">
-									<span class="btn__icon">
-											<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" class="">
-												<use xlink:href="#icon__donation--filled"></use>
-											</svg>									</span>
-								<span class="btn__text">GOMB</span>	
+									</span>
+									<span class="btn__text">Pánikgomb</span>
 								</div>
-						</button>
+							</button></a>
 						</div>
 					</div>
-					<div class="container__item">
-						<label class="lbl">Medium</label>
-						<div class="wrapper inverse">
-						<button class="btn">
-							<div class="btn__content">
-									<span class="btn__icon">
-											<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" class="">
-												<use xlink:href="#icon__donation--filled"></use>
-											</svg>									</span>
-								<span class="btn__text">GOMB</span>	
-								</div>
-						</button>
-						</div>
-					</div>
-					<div class="container__item">
-						<label class="lbl">Hi</label>
-						<div class="wrapper inverse">
-								<button class="btn btn--hi">
-									<div class="btn__content">
-											<span class="btn__icon">
-													<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" class="">
-														<use xlink:href="#icon__donation--filled"></use>
-													</svg>											</span>
-										<span class="btn__text">GOMB</span>	
-										</div>
-								</button>
-						</div>
-					</div>
-
-				</section>
+				</div>
+		</section>
 	</main>
 </body>
 
