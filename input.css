@@ -11,6 +11,9 @@
   --font__action: 900 calc(var(--icon-size) / 1.5) / 1 "Nunito";
   --font__display: 400 0.75/1.2 "Roboto";
   --font__show: 400 0.75rem/1.2 "Ubuntu Mono";
+
+  --rounded:1;
+
 }
 a {
   text-decoration: none;
@@ -55,7 +58,7 @@ body * {
   border: 1px solid;
   padding: calc(var(--icon-size) * 0.375) calc(var(--icon-size) / 1.5)
     calc(var(--icon-size) * 0.29167) calc(var(--icon-size) / 1.5);
-  border-radius: var(--icon-size);
+  border-radius: calc(var(--icon-size) * var(--rounded));
   text-transform: uppercase;
 
   display: flex;
