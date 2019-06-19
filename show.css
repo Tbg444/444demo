@@ -1,5 +1,11 @@
 body {
-  background-color: var(--color__mg);
+  background-color: 
+  hsla(
+    var(--color__hue),
+    calc(var(--color__sat) * 0),
+    calc(var(--color__ltn) * 0 + 39.5%),
+    var(--color__ap)
+  );
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,7 +21,7 @@ body * {
 
 }
 .container>*, main>* {
-  outline: .1px solid hsla(0,0%,40%,.3);
+  outline: .1px solid hsla(0,0%,25%,.3);
 }
 .container__item {
   display: flex;
