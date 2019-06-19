@@ -9,7 +9,7 @@
   --font: 400 1rem/1.4 "Roboto";
   --font__title: 700 3rem/1.4 "Nunito";
   --font__action: 900 calc(var(--icon-size) / 1.5) / 1 "Nunito";
-  --font__display: 400 0.75/1.2 "Roboto";
+  --font__display: 400 0.75rem/1.2 "Roboto";
   --font__show: 400 0.75rem/1.2 "Ubuntu Mono";
   
   --rounded:1;
@@ -55,6 +55,7 @@ svg.icon {
   align-items: center;
   cursor: pointer;
 
+  transition:background-color 350ms ease-in;
 }
 .btn--only-icon {
   padding: calc(var(--icon-size) / 3);
@@ -62,7 +63,7 @@ svg.icon {
 .btn--hi  {
   box-shadow: inset 
   0 
-  calc(var(--icon-size) / 12 * -1)
+  0
   calc(var(--icon-size) / 3)
   calc(var(--icon-size) / 24)
           hsla(calc(var(--color__hue) * 1), calc(var(

@@ -2,7 +2,7 @@
 
 :root {
   --color__hue: 221;
-  --color__sat: 77%;
+  --color__sat: 100%;
   --color__ltn: 56%;
   --color__ap: 1;
 
@@ -97,32 +97,43 @@
 }
 
 .wrapper.color {
+  font: var(--font__display);
+  color: var(--color__bg);
   background: var(--color);
 }
 .wrapper.color--light {
   background: var(--color--light);
+  color: var(--color__fg)
 }
 .wrapper.color--dark {
   background: var(--color--dark);
+  color: var(--color__bg)
 }
 .wrapper.color-2ry {
   background: var(--color-2ry);
+  color: var(--color__fg)
 }
 .wrapper.color-2ry--light {
   background: var(--color-2ry--light);
+  color: var(--color__fg)
 }
 .wrapper.color-2ry--dark {
   background: var(--color-2ry--dark);
+  color: var(--color__bg)
 }
 .wrapper.color__fg {
   background: var(--color__fg);
+  color: var(--color__bg)
 }
 .wrapper.color__bg {
   background: var(--color__bg);
+  color: var(--color__fg)
 }
 .wrapper.color__mg {
   background: var(--color__mg);
+  color: var(--color__bg)
 }
 .wrapper.color__warning {
   background: var(--color__warning);
+  color: var(--color__bg)
 }

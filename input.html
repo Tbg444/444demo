@@ -11,9 +11,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" />
 
 	<link rel="stylesheet" type="text/css" href="input.css" />
-	<link rel="stylesheet" type="text/css" href="colors.css" />
+
 	<link rel="stylesheet" type="text/css" href="show.css" />
-	<link rel="stylesheet" type="text/css" href="typo.css" />
+	<link rel="stylesheet" type="text/css" href="colors.css" />
+
 
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +25,7 @@
 			<symbol id="icon__donation--filled" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
 				<title>icon</title>
 				<path class="color"
-					d="M161.76,35.42A57.69,57.69,0,0,0,120.22,53a58.13,58.13,0,1,0-79.81,84.45l79.81,72.12L200,137.48A58.32,58.32,0,0,0,161.76,35.42Zm-5.93,93.75H129.17v26.66a9.17,9.17,0,1,1-18.34,0V129.17H84.17a9.17,9.17,0,0,1,0-18.34h26.66V84.17a9.17,9.17,0,1,1,18.34,0v26.66h26.66a9.17,9.17,0,0,1,0,18.34Z">
+				d="M161.76,35.42A57.69,57.69,0,0,0,120.22,53a58.13,58.13,0,1,0-79.81,84.45l79.81,72.12L200,137.48A58.32,58.32,0,0,0,161.76,35.42Zm-11.93,93.75H129.17v20.66a9.17,9.17,0,1,1-18.34,0V129.17H90.17a9.17,9.17,0,0,1,0-18.34h20.66V90.17a9.17,9.17,0,1,1,18.34,0v20.66h20.66a9.17,9.17,0,0,1,0,18.34Z">
 				</path>
 			</symbol>
 		</defs>
@@ -49,7 +50,12 @@
 						<label class="lbl">@Tbg</label>
 						<ul class="notes">
 							<li>
-								box-shadow transition 2x probléma: <br> 1:) oda vissza esetben page reloadnál villognak a transiitionök. <br> 2:) a hover effekt a hi buttonon szintén box shadow, amely keveredik az outline:focus-szal. amit nem tudok lekezelni külön, az all meg túlzás 
+								box-shadow transition 2x probléma: 
+								<br> 
+								1:) oda vissza esetben page reloadnál villognak a transiitionök. 
+								<br>
+								2:) a hover effekt a hi buttonon szintén box shadow, amely keveredik az outline:focus-szal. amit nem tudok lekezelni külön, az all meg túlzás  <br>
+								3:) offon vannak most.
 							</li>
 						</ul>
 					</div>
@@ -58,26 +64,26 @@
 			<label class="lbl">Szinek</label>
 			<div class="container__item">
 				<label class="lbl">Primary</label>
-				<div class="wrapper color"></div>
-				<div class="wrapper color color--light"></div>
-				<div class="wrapper color color--dark"></div>
+				<div class="wrapper color">C1</div>
+				<div class="wrapper color color--light">L</div>
+				<div class="wrapper color color--dark">D</div>
 			</div>
 			<div class="container__item">
 				<label class="lbl">Secondary</label>
-				<div class="wrapper color color-2ry"></div>
-				<div class="wrapper color color-2ry--light"></div>
-				<div class="wrapper color color-2ry--dark"></div>
+				<div class="wrapper color color-2ry">C2</div>
+				<div class="wrapper color color-2ry--light">L</div>
+				<div class="wrapper color color-2ry--dark">D</div>
 			</div>
 
 			<div class="container__item">
 				<label class="lbl">Grounds</label>
-				<div class="wrapper color color__fg"></div>
-				<div class="wrapper color color__bg"></div>
-				<div class="wrapper color color__mg"></div>
+				<div class="wrapper color color__fg">F</div>
+				<div class="wrapper color color__mg">M</div>
+				<div class="wrapper color color__bg">G</div>
 			</div>
 			<div class="container__item">
 				<label class="lbl">Warning</label>
-				<div class="wrapper color color__warning"></div>
+				<div class="wrapper color color__warning">W</div>
 			</div>
 		</section>
 		<section class="container">
