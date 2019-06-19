@@ -41,7 +41,7 @@ body {
   font: var(--font);
 }
 body * {
-  outline: 0px solid grey;
+  outline: .0px solid grey;
 }
 .btn__area {
   display: flex;
@@ -138,14 +138,17 @@ body * {
 .btn__content {
   border-bottom: 0px solid;
   height: var(--icon-size);
-  display: flex;
-  flex-flow: row nowrap;
+
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
+  justify-content: center;
+  grid-gap: calc(var(--icon-size) / 6);
 }
 .btn__icon {
   width: var(--icon-size);
   height: var(--icon-size);
-  margin-right: 0.25rem;
+
 }
 .btn__text {
   font: var(--font__action);
@@ -186,6 +189,7 @@ body * {
   transition: background-color 200ms ease-out, background-size 200ms ease-out;
 }
 button:focus,
+a:focus,
 input:focus,
 textarea:focus, .btn:focus {
   box-shadow: 0 0 0 0.25rem var(--color--light);
