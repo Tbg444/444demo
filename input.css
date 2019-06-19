@@ -55,7 +55,6 @@ svg.icon {
   align-items: center;
   cursor: pointer;
 
-  transition:background-color 350ms ease-in;
 }
 .btn--only-icon {
   padding: calc(var(--icon-size) / 3);
