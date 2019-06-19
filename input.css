@@ -67,28 +67,6 @@ body * {
   transition: background-color 350ms ease-out, box-shadow 350ms ease-out;
 }
 .btn--hi {
-  
-  /*background-image: linear-gradient(
-      var(--color__null),
-      var(--color__null),
-      hsla(
-        var(--color__hue),
-        var(--color__sat),
-        calc(var(--color__ltn) * 0 + 44%),
-        .5
-      )
-    ),
-    radial-gradient(
-      ellipse farthest-corner at center top,
-      var(--color__null),
-      var(--color__null),
-      hsla(
-        var(--color__hue),
-        var(--color__sat),
-        calc(var(--color__ltn) * 0 + 38%),
-        1
-      )
-    );*/
     box-shadow:inset 0 -0.125rem .5rem 0.0625rem 
     hsla(
     calc(var(--color__hue) * 1),
