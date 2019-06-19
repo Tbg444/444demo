@@ -33,57 +33,107 @@
 
 <body>
 	<main>
+			<section class="container">
+					<label class="lbl">Feedback</label>
+					<div class="container__item">
+						<label class="lbl">@Acsi</label>
+						<ul class="notes">
+							<li>box-shadow optikai csalodasok. /* ezen még töröm a fejem! -- Tbg */</li>
+						</ul>
+						<label class="lbl">@István</label>
+						<ul class="notes">
+							<li>
+									document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR');
+							</li>
+						</ul>
+						<label class="lbl">@Tbg</label>
+						<ul class="notes">
+							<li>
+								box-shadow transition 2x probléma: <br> 1:) oda vissza esetben page reloadnál villognak a transiitionök. <br> 2:) a hover effekt a hi buttonon szintén box shadow, amely keveredik az outline:focus-szal. amit nem tudok lekezelni külön, az all meg túlzás 
+							</li>
+						</ul>
+					</div>
+				</section>
 		<section class="container">
 			<label class="lbl">Szinek</label>
 			<div class="container__item">
 				<label class="lbl">Primary</label>
 				<div class="wrapper color"></div>
-				<div class="wrapper color--light"></div>
-				<div class="wrapper color--dark"></div>
+				<div class="wrapper color color--light"></div>
+				<div class="wrapper color color--dark"></div>
 			</div>
 			<div class="container__item">
 				<label class="lbl">Secondary</label>
-				<div class="wrapper color-2ry"></div>
-				<div class="wrapper color-2ry--light"></div>
-				<div class="wrapper color-2ry--dark"></div>
+				<div class="wrapper color color-2ry"></div>
+				<div class="wrapper color color-2ry--light"></div>
+				<div class="wrapper color color-2ry--dark"></div>
 			</div>
 
 			<div class="container__item">
 				<label class="lbl">Grounds</label>
-				<div class="wrapper color__fg"></div>
-				<div class="wrapper color__bg"></div>
-				<div class="wrapper color__mg"></div>
+				<div class="wrapper color color__fg"></div>
+				<div class="wrapper color color__bg"></div>
+				<div class="wrapper color color__mg"></div>
 			</div>
 			<div class="container__item">
 				<label class="lbl">Warning</label>
-				<div class="wrapper color__warning"></div>
+				<div class="wrapper color color__warning"></div>
 			</div>
 		</section>
 		<section class="container">
 			<label class="lbl">Gombok</label>
 			<div class="container__item">
-				<label class="lbl">Low</label>
+				<label class="lbl">Low /wo icon</label>
 				<div class="wrapper">
 					<div class="btn__area">
-						<a href="#"><button class="btn btn--lo">
+						<button class="btn btn--lo">
 							<div class="btn__content">
-								<span class="btn__icon">
-									<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
-										preserveAspectRatio="xMidYMid" class="">
-										<use xlink:href="#icon__donation--filled"></use>
-									</svg>
-								</span>
 								<span class="btn__text">Gomb</span>
 							</div>
-						</button></a>
+						</button>
 					</div>
 				</div>
 			</div>
 			<div class="container__item">
+					<label class="lbl">Low</label>
+					<div class="wrapper">
+						<div class="btn__area">
+							<button class="btn btn--lo">
+								<div class="btn__content">
+									<span class="btn__icon">
+										<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+											preserveAspectRatio="xMidYMid" class="">
+											<use xlink:href="#icon__donation--filled"></use>
+										</svg>
+									</span>
+									<span class="btn__text">Gomb</span>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="container__item">
+						<label class="lbl">Low only icon</label>
+						<div class="wrapper">
+							<div class="btn__area">
+								<button class="btn btn--lo btn--only-icon">
+									<div class="btn__content">
+										<span class="btn__icon">
+											<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+												preserveAspectRatio="xMidYMid" class="">
+												<use xlink:href="#icon__donation--filled"></use>
+											</svg>
+										</span>
+									</div>
+								</button>
+							</div>
+						</div>
+					</div>
+			<div class="container__item">
 				<label class="lbl">Medium</label>
 				<div class="wrapper">
 					<div class="btn__area">
-						<a href="#"><button class="btn">
+						<button class="btn">
 							<div class="btn__content">
 								<span class="btn__icon">
 									<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -93,7 +143,7 @@
 								</span>
 								<span class="btn__text">Gomb</span>
 							</div>
-						</button></a>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -101,7 +151,7 @@
 				<label class="lbl">Hi</label>
 				<div class="wrapper">
 					<div class="btn__area">
-						<a href="#"><button class="btn btn--hi">
+						<button class="btn btn--hi">
 							<div class="btn__content">
 								<span class="btn__icon">
 									<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -111,7 +161,7 @@
 								</span>
 								<span class="btn__text">Gomb</span>
 							</div>
-						</button></a>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -120,7 +170,7 @@
 				<label class="lbl">Low</label>
 				<div class="wrapper inverse">
 					<div class="btn__area">
-						<a href="#"><button class="btn btn--lo">
+						<button class="btn btn--lo">
 							<div class="btn__content">
 								<span class="btn__icon">
 									<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -130,7 +180,7 @@
 								</span>
 								<span class="btn__text">Gomb</span>
 							</div>
-						</button></a>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -138,7 +188,7 @@
 				<label class="lbl">Medium</label>
 				<div class="wrapper inverse">
 					<div class="btn__area">
-						<a href="#"><button class="btn">
+						<button class="btn">
 							<div class="btn__content">
 								<span class="btn__icon">
 									<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -148,15 +198,27 @@
 								</span>
 								<span class="btn__text">Gomb</span>
 							</div>
-						</button></a>
+						</button>
 					</div>
 				</div>
 			</div>
 			<div class="container__item">
+					<label class="lbl">Hi /wo icon</label>
+					<div class="wrapper inverse">
+						<div class="btn__area">
+							<button class="btn btn--hi">
+								<div class="btn__content">
+									<span class="btn__text">Nyomógomb</span>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+			<div class="container__item">
 				<label class="lbl">Hi</label>
 				<div class="wrapper inverse">
 					<div class="btn__area">
-						<a href="#"><button class="btn btn--hi">
+						<button class="btn btn--hi">
 							<div class="btn__content">
 								<span class="btn__icon">
 									<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -166,15 +228,32 @@
 								</span>
 								<span class="btn__text">Nyomógomb</span>
 							</div>
-						</button></a>
+						</button>
 					</div>
 				</div>
 			</div>
 			<div class="container__item">
+					<label class="lbl">Hi only icon</label>
+					<div class="wrapper inverse">
+						<div class="btn__area">
+							<button class="btn btn--hi btn--only-icon">
+								<div class="btn__content">
+									<span class="btn__icon">
+										<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+											preserveAspectRatio="xMidYMid" class="">
+											<use xlink:href="#icon__donation--filled"></use>
+										</svg>
+									</span>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+			<div class="container__item">
 					<label class="lbl">Warning</label>
 					<div class="wrapper warning">
 						<div class="btn__area">
-							<a href="#"><button class="btn btn--hi btn--warning">
+							<button class="btn btn--hi btn--warning">
 								<div class="btn__content">
 									<span class="btn__icon">
 										<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -184,7 +263,7 @@
 									</span>
 									<span class="btn__text">Pánikgomb</span>
 								</div>
-							</button></a>
+							</button>
 						</div>
 					</div>
 			</div>
@@ -192,7 +271,7 @@
 					
 					<div class="wrapper inverse warning">
 						<div class="btn__area">
-							<a href="#"><button class="btn btn--hi btn--warning">
+							<button class="btn btn--hi btn--warning">
 								<div class="btn__content">
 									<span class="btn__icon">
 										<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
@@ -202,7 +281,7 @@
 									</span>
 									<span class="btn__text">Pánikgomb</span>
 								</div>
-							</button></a>
+							</button>
 						</div>
 					</div>
 				</div>

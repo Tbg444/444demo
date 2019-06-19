@@ -11,9 +11,8 @@
   --font__action: 900 calc(var(--icon-size) / 1.5) / 1 "Nunito";
   --font__display: 400 0.75/1.2 "Roboto";
   --font__show: 400 0.75rem/1.2 "Ubuntu Mono";
-
+  
   --rounded:1;
-
 }
 a {
   text-decoration: none;
@@ -34,18 +33,7 @@ svg.icon {
   width: var(--icon-size);
   height: var(--icon-size);
 }
-body {
-  background-color: var(--color__mg);
-  color: var(--color__bg);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font: var(--font);
-}
-body * {
-  outline: 0px solid grey;
-}
+
 .btn__area {
   display: flex;
   align-items: center;
@@ -67,7 +55,9 @@ body * {
   align-items: center;
   cursor: pointer;
 
-  transition: background-color 50ms ease-out, box-shadow 350ms ease-out;
+}
+.btn--only-icon {
+  padding: calc(var(--icon-size) / 3);
 }
 .btn--hi  {
   box-shadow: inset 
@@ -85,7 +75,10 @@ body * {
   color: var(--color__bg);
   border: 0px solid;
   border-color: var(--color__null);
-  transition: background-color 50ms ease-out, box-shadow 350ms ease-out;
+
+}
+.btn--hi:link  {
+
 }
 .btn--warning {
   background-color: var(--color__warning);
@@ -136,7 +129,7 @@ transition: background-color 0ms ease-out, box-shadow 350ms ease-out;
     calc(var(--color__ap) * 0.2)
   );
 
-  transition: background-color 100ms ease-out;
+  transition: background-color 200ms ease-out;
 }
 .btn--hi:hover {
   background-color: hsla(
@@ -156,7 +149,7 @@ transition: background-color 0ms ease-out, box-shadow 350ms ease-out;
       calc(var(--color__ltn) * 0 + 30%),
       0.3
     );
-  transition: background-color 200ms ease-out, box-shadow 200ms ease-out;
+  transition: background-color 200ms ease-out;
 }
 
 .btn--warning:hover {
@@ -167,7 +160,7 @@ transition: background-color 0ms ease-out, box-shadow 350ms ease-out;
   calc(var(--icon-size) / 3)
   calc(var(--icon-size) / 24)
   hsla(353, 97%, 36%, 0.3);
-  transition: background-color 200ms ease-out, box-shadow 200ms ease-out;
+  transition: background-color 200ms ease-out;
 }
 button:focus,
 a:focus,
