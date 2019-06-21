@@ -23,7 +23,7 @@ body {
 
 .container {
   color: hsl(300, 100%, 100%);
-  width: 15rem;
+  width: 100%;
 }
 .feedback {
   align-self: end;
@@ -85,5 +85,8 @@ main {
 
         grid-auto-flow: column;
 
+      }
+      .container {
+        width: 15rem;
       }
 }
