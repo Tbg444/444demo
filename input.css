@@ -26,7 +26,7 @@
  grid-gap: .25rem;
 }
 .caption {
-  color:var(--color__fg);
+  color:var(--color__fg--20);
   height: calc(var(--size) * .75);
   font: var(--font__display);
   text-transform: uppercase;

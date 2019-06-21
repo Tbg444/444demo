@@ -11,7 +11,7 @@
     
     /* padding: full sync, vertical-horizontal 1:2, top/bottom async solution @btns, @inputs: top/bottom equal! */
 
-    --pad_icon-size__ratio: .75;
+    --pad_icon-size__ratio: calc(2 / 3);
     --pad_vertical_horizontal__ratio: .5;
     --pad: calc(var(--icon-size) * var(--pad_icon-size__ratio));
     --pad__vertical--sync: calc(var(--icon-size) * calc(var(--pad_icon-size__ratio) * var(--pad_vertical_horizontal__ratio)));
