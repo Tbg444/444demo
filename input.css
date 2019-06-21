@@ -1,199 +1,34 @@
-::-moz-focus-inner {
-  border: 0;
+
+
+.in {
+  padding: var(--pad__vertical--sync) var(--pad__horizontal--sync);
 }
 
-:root {
-  --size: 1rem;
-  --icon-size: 1.5rem;
-
-  --font: 400 1rem/1.4 "Roboto";
-  --font__title: 700 3rem/1.4 "Nunito";
-  --font__action: 900 calc(var(--icon-size) / 1.5) / 1 "Nunito";
-  --font__display: 400 0.75rem/1.2 "Roboto";
-  --font__show: 400 0.75rem/1.2 "Ubuntu Mono";
-  
-  --rounded:1;
-}
-a {
-  text-decoration: none;
-  border-radius: var(--icon-size);
-}
-html,
-body,
-* {
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-svg {
-  display: block;
-  fill: currentColor;
-}
-svg.icon {
-  width: var(--icon-size);
-  height: var(--icon-size);
-}
-
-.btn__area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.btn {
-  background-color: var(--color__null);
-  color: var(--color);
+.in {
+  transition: box-shadow 100ms ease-out;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  border-style: var(--border__style);
+  border-width: calc(var(--border__width) * var(--bordered));
   border-color: var(--color);
-  border: 1px solid;
-  padding: calc(var(--icon-size) * 0.375) calc(var(--icon-size) / 1.5)
-    calc(var(--icon-size) * 0.29167) calc(var(--icon-size) / 1.5);
+  height: calc(var(--button__height) + var(--border__width));
   border-radius: calc(var(--icon-size) * var(--rounded));
+  width: 100%;
+
+  font:var(--font);
+}
+.in--filled {
+  border-width: 1px;
+}
+.in__area {
+ display: grid;
+ grid-auto-flow: row;
+ grid-gap: .25rem;
+}
+.caption {
+  color:var(--color__fg);
+  height: calc(var(--size) * .75);
+  font: var(--font__display);
   text-transform: uppercase;
-
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
-}
-.btn--only-icon {
-  padding: calc(var(--icon-size) / 3);
-}
-.btn--hi  {
-  box-shadow: inset 
-  0 
-  0
-  calc(var(--icon-size) / 3)
-  calc(var(--icon-size) / 24)
-          hsla(calc(var(--color__hue) * 1), calc(var(
-            --color__sat
-          ) * 0 + 77%), calc(var(--color__ltn) * 0 + 30%), 0.5);
-
-  background-color: var(--color);
-  background-size: 100%;
-  background-position-x: 50%;
-  color: var(--color__bg);
-  border: 0px solid;
-  border-color: var(--color__null);
-
-}
-.btn--hi:link  {
-
-}
-.btn--warning {
-  background-color: var(--color__warning);
-  box-shadow: inset 0 
-  calc(var(--icon-size) / 12 * -1)
-  calc(var(--icon-size) / 3)
-  calc(var(--icon-size) / 24)
-hsla(353, 97%, 36%, 0.5);
-transition: background-color 0ms ease-out, box-shadow 350ms ease-out;
-}
-.btn--lo {
-  background: var(--color--null);
-  color: var(--color);
-  border-color: var(--color--null);
-  border: 1px solid var(--color--null);
-}
-.inverse .btn {
-  color: var(--color__bg);
-}
-.inverse .btn--hi {
-  border-color: var(--color__bg);
-  border: 1px solid;
-}
-.btn__content {
-  border-bottom: 0px solid;
-  height: var(--icon-size);
-
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: center;
-  grid-gap: calc(var(--icon-size) / 6);
-}
-.btn__icon {
-  width: var(--icon-size);
-  height: var(--icon-size);
-}
-.btn__text {
-  font: var(--font__action);
-  letter-spacing: 0.03125rem;
-}
-/* HOVER */
-.btn:hover {
-  background-color: hsla(
-    var(--color__hue),
-    calc(var(--color__sat) * 0 + 100%),
-    calc(var(--color__ltn) * 0 + 80%),
-    calc(var(--color__ap) * 0.2)
-  );
-
-  transition: background-color 200ms ease-out;
-}
-.btn--hi:hover {
-  background-color: hsla(
-    var(--color__hue),
-    calc(var(--color__sat) * 0 + 88%),
-    calc(var(--color__ltn) * 0 + 60%),
-    var(--color__ap)
-  );
-  box-shadow: inset 
-  0 
-  0
-  calc(var(--icon-size) / 3)
-  calc(var(--icon-size) / 24)
-    hsla(
-      calc(var(--color__hue) * 1),
-      calc(var(--color__sat) * 0 + 77%),
-      calc(var(--color__ltn) * 0 + 30%),
-      0.3
-    );
-  transition: background-color 200ms ease-out;
-}
-
-.btn--warning:hover {
-  background-color: hsla(353, 100%, 68%, 1);
-  box-shadow: inset 
-  0 
-  0
-  calc(var(--icon-size) / 3)
-  calc(var(--icon-size) / 24)
-  hsla(353, 97%, 36%, 0.3);
-  transition: background-color 200ms ease-out;
-}
-button:focus,
-a:focus,
-input:focus,
-textarea:focus,
-.btn:focus {
-  box-shadow: 0 0 0 0.25rem var(--color--light);
-  outline: 1px solid var(--color__null);
-  transition: box-shadow 50ms ease-out;
-}
-
-@font-face {
-  font-family: "Boxed";
-  font-style: bold;
-  font-weight: 700;
-  src: url("https://444.hu/assets/blog/static/fonts/boxed-semibold-webfont-a765a8c02811b9e0a116e7a73741c5e0.woff")
-    format("woff2");
-}
-@font-face {
-  font-family: "Boxed";
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://444.hu/assets/blog/static/fonts/boxed-light-webfont-cc46c410c2c3fa7285ebff18981fbbf5.woff")
-    format("woff2");
-}
-
-@font-face {
-  font-family: "Boxed";
-  font-style: heavy;
-  font-weight: 900;
-  src: url("https://tbg444.github.io/444demo/Boxed-Heavy-webfont.woff")
-    format("woff2");
-}
-
-@media only screen and (min-width: 64.063em) {
+  padding: 0 var(--pad__horizontal--sync);
 }

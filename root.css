@@ -1,0 +1,41 @@
+:root {
+    --size: 1rem;
+    --icon-size: 1.5rem;
+    
+    --rounded:1;
+    --bordered:1;
+    
+    /* button/input size: icon + vertical padding @input: ++border /w border-box */
+    
+    --button__height: calc(var(--icon-size) + var(--icon-size) / 1.5) ;
+    
+    /* padding: full sync, vertical-horizontal 1:2, top/bottom async solution @btns, @inputs: top/bottom equal! */
+
+    --pad_icon-size__ratio: .75;
+    --pad_vertical_horizontal__ratio: .5;
+    --pad: calc(var(--icon-size) * var(--pad_icon-size__ratio));
+    --pad__vertical--sync: calc(var(--icon-size) * calc(var(--pad_icon-size__ratio) * var(--pad_vertical_horizontal__ratio)));
+    --pad__horizontal--sync: calc(var(--icon-size) * var(--pad_icon-size__ratio));
+
+    /* i.e. in case of 24 px icon size, and vertical-horizontal 1:2, top is 9px, bottom is 7px --> 24/9, 24/7; */
+
+    --pad__top--async: calc(var(--icon-size) /  calc(var(--pad_icon-size__ratio)) * 1.125 * var(--pad_vertical_horizontal__ratio));
+    --pad__bottom--async: calc(var(--icon-size) /  calc(var(--pad_icon-size__ratio)) * .875 * var(--pad_vertical_horizontal__ratio));
+
+    --border__style:solid;
+    --border__width:4px;
+
+    --line-height: 1.4;
+    --line-height__null: 1;
+    --line-height__narrow: calc(var(--line-height) / 1.16666666667);
+    --line-height__large: calc(var(--line-height) / .375);
+
+    --font__action_icon-size__ratio: 1.5;
+
+    --font: 400 calc(var(--size) * 1)/var(--line-height__large) "Roboto";
+    --font__title: 700 calc(var(--size) * 3)/var(--line-height) "Nunito";
+    --font__action: 900 calc(var(--icon-size) / var(--font__action_icon-size__ratio)) / var(--line-height__null) "Nunito";
+    --font__display: 400 calc(var(--size) * .75)/var(--line-height__null) "Roboto";
+    --font__show: 400 calc(var(--size) * .75)/var(--line-height__narrow) "Ubuntu Mono";
+
+}

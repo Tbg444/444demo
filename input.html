@@ -10,11 +10,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;subset=latin-ext" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" />
 
+	<link rel="stylesheet" type="text/css" href="root.css" />
 	<link rel="stylesheet" type="text/css" href="input.css" />
-
 	<link rel="stylesheet" type="text/css" href="show.css" />
-	<link rel="stylesheet" type="text/css" href="colors.css" />
-
+	<link rel="stylesheet" type="text/css" href="color.css" />
+	<link rel="stylesheet" type="text/css" href="button.css" />
+	<link rel="stylesheet" type="text/css" href="typo.css" />
 
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -79,7 +80,7 @@
 				<label class="lbl">Grounds</label>
 				<div class="wrapper color color__fg">F</div>
 				<div class="wrapper color color__mg">M</div>
-				<div class="wrapper color color__bg">G</div>
+				<div class="wrapper color color__bg">B</div>
 			</div>
 			<div class="container__item">
 				<label class="lbl">Warning</label>
@@ -291,6 +292,28 @@
 						</div>
 					</div>
 				</div>
+		</section>
+		<!--inputs-->
+		<section class="container">
+			<label class="lbl">Inputok</label>
+			<div class="container__item">
+				<label class="lbl">Empty</label>
+				<div class="wrapper">		
+					<div class="in__area">
+						<label class="caption">Név</label>
+						<input class="in">
+					</div>
+				</div>
+			</div>
+			<div class="container__item">
+				<label class="lbl">Filled</label>
+				<div class="wrapper">
+					<div class="in__area">
+						<label class="caption">Név</label>
+						<input class="in in--filled" value="nemakarokregisztralni@gmail.com">
+					</div>
+				</div>
+			</div>
 		</section>
 	</main>
 </body>
