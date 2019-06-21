@@ -155,7 +155,27 @@ a:focus,
 input:focus,
 textarea:focus,
 .btn:focus {
+  /* full solid -- szép */
   box-shadow: 0 0 0 0.25rem var(--color--light);
+/* 1/3 solid -- szebb */
+  box-shadow: 0 0 0 0.25rem 
+  hsla(
+    calc(var(--color__hue) * 1.01357466063),
+    calc(var(--color__sat) * 0 + 100%),
+    calc(var(--color__ltn) * 0 + 74%),
+    calc(var(--color__ap) * .5)
+  );
+  /* full solid, blur4px -- korrektebb a border miatt */
+  box-shadow: 0 0 .25rem 0.125rem 
+  hsla(
+    calc(var(--color__hue) * 1.01357466063),
+    calc(var(--color__sat) * 0 + 100%),
+    calc(var(--color__ltn) * 0 + 74%),
+    calc(var(--color__ap) * .5)
+  );
+
+
+  
   outline: 1px solid var(--color__null);
   transition: box-shadow 50ms ease-out;
 }
