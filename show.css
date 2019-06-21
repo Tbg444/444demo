@@ -57,13 +57,14 @@ main {
 .wrapper {
   background-color: var(--color__bg);
   
-
-  min-height: 6rem;
-  min-width: 100%;
+  min-height: 4rem;
+  min-width: calc(100% - calc(var(--pad) * 2));
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding:var(--pad);
 
 }
 .wrapper.color {
