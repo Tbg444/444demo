@@ -22,6 +22,9 @@ https://www.geeksforgeeks.org/css-to-put-icon-inside-an-input-element-in-a-form/
 
   font:var(--font);
   color:var(--color__fg);
+
+  -webkit-text-fill-color:var(--color__fg);
+  opacity: 1; 
 }
 .in--filled {
   border-width: 1px;
