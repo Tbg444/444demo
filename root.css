@@ -1,3 +1,9 @@
+/*
+B-O-TTONS 
+_NPUTS
+SE[]ECT
+CHCKX
+*/
 :root {
     --size: 1rem;
     --icon-size: 1.5rem;
@@ -9,18 +15,20 @@
     
     --button__height: calc(var(--icon-size) + var(--icon-size) / 1.5) ;
     
-    /* padding: full sync, vertical-horizontal 1:2, top/bottom async solution @btns, @inputs: top/bottom equal! */
-
+    /* padding: full sync, vertical-horizontal 1:2, top/bottom async solution @btns, @inputs(?): top/bottom equal! */
+    /* ratios */
     --pad_icon-size__ratio: calc(2 / 3);
-    --pad_vertical_horizontal__ratio: .5;
+    --pad_vertical_horizontal__ratio: calc(1 / 2);
+    /* pads */
     --pad: calc(var(--icon-size) * var(--pad_icon-size__ratio));
     --pad__vertical--sync: calc(var(--icon-size) * calc(var(--pad_icon-size__ratio) * var(--pad_vertical_horizontal__ratio)));
     --pad__horizontal--sync: calc(var(--icon-size) * var(--pad_icon-size__ratio));
 
-    /* i.e. in case of 24 px icon size, and vertical-horizontal 1:2, top is 9px, bottom is 7px --> 24/9, 24/7; */
-
-    --pad__top--async: calc(var(--icon-size) /  calc(var(--pad_icon-size__ratio)) * 1.125 * var(--pad_vertical_horizontal__ratio));
-    --pad__bottom--async: calc(var(--icon-size) /  calc(var(--pad_icon-size__ratio)) * .875 * var(--pad_vertical_horizontal__ratio));
+    /* ASYNC PAD FOR BTNS
+    i.e. in case of 24 px icon size, and vertical-horizontal 1:2, top is 9px, bottom is 7px --> 24/9, 24/7; 
+    2 async pads = 1 vertical sync pad */
+    --pad__top--async: calc(var(--icon-size) *  calc(var(--pad_icon-size__ratio)) * var(--pad_vertical_horizontal__ratio) * 1.125);
+    --pad__bottom--async: calc(var(--icon-size) *  calc(var(--pad_icon-size__ratio)) * var(--pad_vertical_horizontal__ratio) * .875);
 
     --border__style:solid;
     --border__width:4px;
@@ -30,7 +38,7 @@
     --line-height__narrow: calc(var(--line-height) / 1.16666666667);
     --line-height__large: calc(var(--line-height) / .375);
 
-    --font__action_icon-size__ratio: 1.5;
+    --font__action_icon-size__ratio: calc(3 / 2);
 
     --font: 400 calc(var(--size) * 1)/var(--line-height__large) "Roboto";
     --font__title: 700 calc(var(--size) * 3)/var(--line-height) "Nunito";

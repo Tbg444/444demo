@@ -35,32 +35,7 @@
 
 <body>
 	<main>
-			<section class="container">
-					<label class="lbl">Feedback</label>
-					<div class="container__item">
-						<label class="lbl">@Acsi</label>
-						<ul class="notes">
-							<li>box-shadow optikai csalodasok. /* ezen még töröm a fejem! -- Tbg */</li>
-						</ul>
-						<label class="lbl">@István</label>
-						<ul class="notes">
-							<li>
-									document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR');
-							</li>
-						</ul>
-						<label class="lbl">@Tbg</label>
-						<ul class="notes">
-							<li>
-								box-shadow transition 2x probléma: 
-								<br> 
-								1:) oda vissza esetben page reloadnál villognak a transiitionök. 
-								<br>
-								2:) a hover effekt a hi buttonon szintén box shadow, amely keveredik az outline:focus-szal. amit nem tudok lekezelni külön, az all meg túlzás  <br>
-								3:) offon vannak most.
-							</li>
-						</ul>
-					</div>
-				</section>
+			
 		<section class="container">
 			<label class="lbl">Szinek</label>
 			<div class="container__item">
@@ -75,7 +50,6 @@
 				<div class="wrapper color color-2ry--light">L</div>
 				<div class="wrapper color color-2ry--dark">D</div>
 			</div>
-
 			<div class="container__item">
 				<label class="lbl">Grounds</label>
 				<div class="wrapper color color__fg">F</div>
@@ -86,6 +60,12 @@
 				<label class="lbl">Warning</label>
 				<div class="wrapper color color__warning">W</div>
 			</div>
+			<label class="lbl"></label>
+			<label class="lbl">Eltartások (pads&gaps)</label>
+			<div class="container__item">
+					<label class="lbl">Pads (dead space inside)</label>
+					<label class="lbl">Gaps (dead space outside)</label>
+				</div>
 		</section>
 		<section class="container">
 			<label class="lbl">Gombok</label>
@@ -314,6 +294,33 @@
 					</div>
 				</div>
 			</div>
+		</section>
+		<section class="container">
+				<label class="lbl">Feedback</label>
+				<div class="container__item">
+					<label class="lbl">@Acsi</label>
+					<ul class="notes">
+							<li>"Az a jó CSS, ha nincs CSS" - Acsi</li>
+						<li>box-shadow optikai csalodasok. /* ezen még töröm a fejem! -- Tbg */</li>
+					</ul>
+					<label class="lbl">@István</label>
+					<ul class="notes">
+						<li>
+								document.documentElement.style.setProperty('--your-variable', '#YOURCOLOR');
+						</li>
+					</ul>
+					<label class="lbl">@Tbg</label>
+					<ul class="notes">
+						<li>
+							box-shadow transition 2x probléma: 
+							<br> 
+							1:) oda vissza esetben page reloadnál villognak a transiitionök. 
+							<br>
+							2:) a hover effekt a hi buttonon szintén box shadow, amely keveredik az outline:focus-szal. amit nem tudok lekezelni külön, az all meg túlzás  <br>
+							3:) offon vannak most.
+						</li>
+					</ul>
+				</div>
 		</section>
 	</main>
 </body>
