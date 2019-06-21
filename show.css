@@ -25,6 +25,9 @@ body {
   color: hsl(300, 100%, 100%);
   width: 15rem;
 }
+.feedback {
+  align-self: end;
+}
 .container__item {
   display: flex;
   flex-flow: row wrap;
@@ -74,9 +77,7 @@ main {
 .wrapper.inverse {
   background-color: var(--color__fg);
 }
-.wrapper.warning {
-  
-}
+
 
 @media only screen and (min-width: 40rem) {
 
