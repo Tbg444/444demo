@@ -27,6 +27,7 @@ https://www.w3schools.com/js/js_htmldom_events.asp
   -webkit-text-fill-color:var(--color__fg);
   opacity: 1; 
   text-rendering: optimizeSpeed;
+  transform: translateZ(0);
 }
 .in {
   padding: var(--pad__vertical--sync) 
