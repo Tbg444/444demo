@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  color: hsl(300, 100%, 100%);
+
   width: 100%;
 }
 .feedback {
@@ -47,6 +47,7 @@ body {
   overflow-x:hidden;
   width: 100%;
   display: block;
+  color: hsl(300, 100%, 100%);
 }
 li {
   color: var(--color-2ry--light);
@@ -61,13 +62,13 @@ main {
   background-color: var(--color__bg);
   
   min-height: 4rem;
-  min-width: calc(100% - calc(var(--pad) * 2));
+  min-width: calc(100% - calc(var(--pad) * 4));
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding:var(--pad);
+  padding:calc(var(--pad) * 2);
 
 }
 .wrapper.color {
@@ -87,6 +88,6 @@ main {
 
       }
       .container {
-        width: 15rem;
+        width: 20rem;
       }
 }

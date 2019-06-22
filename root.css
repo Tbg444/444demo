@@ -31,11 +31,11 @@ CHCKX
     --pad__bottom--async: calc(var(--icon-size) *  calc(var(--pad_icon-size__ratio)) * var(--pad_vertical_horizontal__ratio) * .875);
 
     --border__style:solid;
-    --border__width:4px;
+    --border__width:calc(var(--icon-size) / 6);
 
     --line-height: 1.4;
     --line-height__null: 1;
-    --line-height__narrow: calc(var(--line-height) / 1.16666666667);
+    --line-height__narrow: calc(var(--line-height) * calc(12 / 14));
     --line-height__large: calc(var(--line-height) / .375);
 
     --font__action_icon-size__ratio: calc(3 / 2);
@@ -43,7 +43,7 @@ CHCKX
     --font: 400 calc(var(--size) * 1)/var(--line-height__large) "Roboto";
     --font__title: 700 calc(var(--size) * 3)/var(--line-height) "Nunito";
     --font__action: 900 calc(var(--icon-size) / var(--font__action_icon-size__ratio)) / var(--line-height__null) "Nunito";
-    --font__display: 400 calc(var(--size) * .75)/var(--line-height__null) "Roboto";
+    --font__display: 400 calc(var(--size) * .75)/var(--line-height__narrow) "Roboto";
     --font__show: 400 calc(var(--size) * .75)/var(--line-height__narrow) "Ubuntu Mono";
 
 }

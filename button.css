@@ -90,19 +90,20 @@ transition: background-color 0ms ease-out, box-shadow 350ms ease-out;
   border-color: var(--color__bg);
   border: 1px solid;
 }
+.btn__content, .info {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: calc(var(--icon-size) / 6);
+}
 .btn__content {
   border-bottom: 0px solid;
   height: var(--icon-size);
-
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
   justify-content: center;
-  grid-gap: calc(var(--icon-size) / 6);
+  align-items: center;
 }
 .btn__icon {
-  width: var(--icon-size);
-  height: var(--icon-size);
+  /*width: var(--icon-size);
+  height: var(--icon-size);*/
 }
 .btn__text {
   font: var(--font__action);
@@ -165,7 +166,7 @@ textarea:focus,
     calc(var(--color__ltn) * 0 + 74%),
     calc(var(--color__ap) * .5)
   );
-  /* full solid, blur4px -- korrektebb a border miatt */
+  /* full solid, blur4px -- korrektebb a border miatt 
   box-shadow: 0 0 .25rem 0.125rem 
   hsla(
     calc(var(--color__hue) * 1.01357466063),
@@ -173,7 +174,7 @@ textarea:focus,
     calc(var(--color__ltn) * 0 + 74%),
     calc(var(--color__ap) * .5)
   );
-
+  */
 
   
   outline: 1px solid var(--color__null);

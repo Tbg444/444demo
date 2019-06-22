@@ -24,10 +24,14 @@
 		xmlns:xlink="http://www.w3.org/1999/xlink">
 		<defs>
 			<symbol id="icon__donation--filled" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-				<title>icon</title>
+				<title>icon__donation</title>
 				<path class="color"
 				d="M161.76,35.42A57.69,57.69,0,0,0,120.22,53a58.13,58.13,0,1,0-79.81,84.45l79.81,72.12L200,137.48A58.32,58.32,0,0,0,161.76,35.42Zm-11.93,93.75H129.17v20.66a9.17,9.17,0,1,1-18.34,0V129.17H90.17a9.17,9.17,0,0,1,0-18.34h20.66V90.17a9.17,9.17,0,1,1,18.34,0v20.66h20.66a9.17,9.17,0,0,1,0,18.34Z">
 				</path>
+			</symbol>
+			<symbol id="icon__info--filled" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+				<title>icon__info</title>
+				<path class="color" d="M120,20A100,100,0,1,0,220,120,100,100,0,0,0,120,20Zm12.23,149.31a12.43,12.43,0,1,1-24.85,0V120.08a12.43,12.43,0,1,1,24.85,0Zm.15-98.7A12.35,12.35,0,0,1,120,83h0a12.35,12.35,0,0,1-12.35-12.35h0A12.35,12.35,0,0,1,120,58.26h0a12.35,12.35,0,0,1,12.35,12.35Z"/>
 			</symbol>
 		</defs>
 	</svg>
@@ -294,7 +298,26 @@
 					</div>
 				</div>
 			</div>
+			<div class="container__item">
+				<label class="lbl">Filled</label>
+				<div class="wrapper">
+					<div class="in__area">
+						<label class="caption">Email</label>
+						<input class="in in--filled" value="nemakarokregisztralni@gmail.com">
+						<div class="info">
+							<span class="info__icon">
+								<svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1"
+								preserveAspectRatio="xMidYMid" class="">
+								<use xlink:href="#icon__info--filled"></use>
+							</svg>
+						</span>
+							<span class="info__text">Kötelező mező, kitöltése kötelező. Lekötelezne, ha kitöltené!</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
+		<!--feedback-->
 		<section class="container feedback">
 				<label class="lbl">Feedback</label>
 				<div class="container__item">
