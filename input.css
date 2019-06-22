@@ -5,13 +5,16 @@
 }
 
 /*
-ICON
+ICON, in text, scripts
 https://www.geeksforgeeks.org/css-to-put-icon-inside-an-input-element-in-a-form/
+https://dev.to/neshaz/input-text-everything-you-should-know-7b4
+https://www.w3schools.com/js/js_htmldom_events.asp
 */
 
 .in {
   transition: box-shadow 100ms ease-out;
   -webkit-appearance: none;
+  appearance: none;
   box-sizing: border-box;
   border-style: var(--border__style);
   border-width: calc(var(--border__width) * var(--bordered));
@@ -22,6 +25,7 @@ https://www.geeksforgeeks.org/css-to-put-icon-inside-an-input-element-in-a-form/
 
   font:var(--font);
   color:var(--color__fg);
+  background-color: var(--color__bg);
 
   -webkit-text-fill-color:var(--color__fg);
   opacity: 1; 
