@@ -23,7 +23,10 @@ https://www.w3schools.com/js/js_htmldom_events.asp
   font:var(--font);
   color:var(--color__fg);
   background-color: var(--color__bg);
-
+/*
+nálam ez volt, régi vlt a chrome-om
+https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-aaf66c7ba3f8
+*/
   -webkit-text-fill-color:var(--color__fg);
   opacity: 1; 
   text-rendering: optimizeSpeed;
