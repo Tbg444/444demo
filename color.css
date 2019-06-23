@@ -78,7 +78,7 @@
     var(--color__ap)
   );
 
-  --color__fg--20: hsla(
+  --color__fg--light: hsla(
     var(--color__hue),
     calc(var(--color__sat) * 0),
     calc(var(--color__ltn) * 0 + 20%),

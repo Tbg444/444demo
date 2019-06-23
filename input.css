@@ -42,11 +42,22 @@ https://www.w3schools.com/js/js_htmldom_events.asp
  grid-auto-flow: row;
  grid-gap: calc(var(--icon-size) / 3);
  width: 100%;
+ color: var(--color);
+}
+.in__area.in--warning {
+  color: var(--color__warning);
+}
+.in--warning {
+  border-color: var(--color__warning);
+}
+
+.caption, .display {
+  color:var(--color__fg--light);
 }
 .caption {
-  color:var(--color__fg--20);
+
   height: calc(var(--size) * .75);
-  font: var(--font__display);
+  font: var(--font__caption);
   text-transform: uppercase;
   padding: 0 var(--pad__horizontal--sync);
 }
@@ -60,11 +71,9 @@ https://www.w3schools.com/js/js_htmldom_events.asp
   /* 24px --> 16px */
   width: calc(var(--icon-size) * calc(4 / 6));
   height: calc(var(--icon-size) * calc(4 / 6));
-  color:var(--color);
   fill:currentColor;
 }
 
-.info__text {
+.display {
   font: var(--font__display);
-  line-height: 16px;
 }
