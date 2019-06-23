@@ -27,7 +27,9 @@
     <link rel="stylesheet" type="text/css" href="show.css" />
     <link rel="stylesheet" type="text/css" href="color.css" />
     <link rel="stylesheet" type="text/css" href="button.css" />
-    <link rel="stylesheet" type="text/css" href="typo.css" />
+	<link rel="stylesheet" type="text/css" href="typo.css" />
+	
+	<script src="input.js"></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -81,41 +83,6 @@
 		</symbol>
       </defs>
     </svg>
-
-    <script>
-      function fillInput() {
-        document.getElementById("input01").className = "in in--filled";
-      }
-      function emptiedInput() {
-        var empt = document.getElementById("input01").value;
-        if (empt == "") {
-          document.getElementById("input01").className = "in";
-        }
-      }
-      function mustInput() {
-        var empt = document.getElementById("input02").value;
-        if (empt == "") {
-          document.getElementById("input02").className = "in in--warning";
-          document.getElementById("input02Area").className =
-            "in__area in--warning";
-        }
-		else {
-			document.getElementById("input02").className = "in";
-          document.getElementById("input02Area").className =
-            "in__area";
-		}
-      }
-      function normalizeInput() {
-        document.getElementById("input03").className = "in in--filled";
-        document.getElementById("input03Area").className = "in__area";
-        document.getElementById("input03Info").style =
-          "opacity:0; transition: opacity 350ms ease-out";
-        var empt = document.getElementById("input02").value;
-        if (empt == "") {
-          document.getElementById("input02").className = "in";
-        }
-      }
-    </script>
   </head>
 
   <body>
@@ -418,9 +385,10 @@
               <input
                 class="in"
                 id="input01"
-                value=""
-                oninput="fillInput()"
-                onchange="emptiedInput()"
+				value=""
+
+                oninput="fillInput(event)"
+                onchange="leaveInput(event)"
               />
             </div>
           </div>
@@ -431,8 +399,11 @@
             <div class="in__area">
               <label class="caption">Számlázási cím</label>
               <input
-                class="in in--filled"
-                value="nemakarokregisztralni@gmail.com"
+				class="in in--filled"
+
+				value="nemakarokregisztralni@gmail.com"
+				oninput="fillInput(event)"
+				onchange="leaveInput(event)" 
               />
             </div>
           </div>
@@ -442,7 +413,14 @@
           <div class="wrapper">
             <div class="in__area" id="input02Area">
               <label class="caption">Email</label>
-              <input class="in" id="input02" value="" onchange="mustInput()" />
+			  <input 
+			  class="in" 
+			  id="input02" 
+			  required
+			  value="" 
+			  oninput="fillInput(event)"
+			  onchange="leaveInput(event)" 
+			  />
               <div class="info" id="input02Info">
                 <span class="info__icon">
                   <svg
@@ -470,7 +448,8 @@
               <label class="caption">Születési jelszó</label>
               <input
                 class="in in--warning"
-                id="input03"
+				id="input03"
+				oninput="fillInput(event)"
                 onchange="normalizeInput()"
                 value="nem@dommeg@adom"
               />
