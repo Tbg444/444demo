@@ -81,11 +81,28 @@
           document.getElementById("input01").className = "in";
         }
       }
+      function mustInput() {
+        var empt = document.getElementById("input02").value;
+        if (empt == "") {
+          document.getElementById("input02").className = "in in--warning";
+          document.getElementById("input02Area").className =
+            "in__area in--warning";
+        }
+		else {
+			document.getElementById("input02").className = "in";
+          document.getElementById("input02Area").className =
+            "in__area";
+		}
+      }
       function normalizeInput() {
-        document.getElementById("input02").className = "in in--filled";
-        document.getElementById("inputArea02").className = "in__area";
-        document.getElementById("inputInfo02").style =
+        document.getElementById("input03").className = "in in--filled";
+        document.getElementById("input03Area").className = "in__area";
+        document.getElementById("input03Info").style =
           "opacity:0; transition: opacity 350ms ease-out";
+        var empt = document.getElementById("input02").value;
+        if (empt == "") {
+          document.getElementById("input02").className = "in";
+        }
       }
     </script>
   </head>
@@ -389,8 +406,8 @@
               <label class="caption">Név</label>
               <input
                 class="in"
-				id="input01"
-				value=""
+                id="input01"
+                value=""
                 oninput="fillInput()"
                 onchange="emptiedInput()"
               />
@@ -412,13 +429,10 @@
         <div class="container__item">
           <label class="lbl">Filled /w info</label>
           <div class="wrapper">
-            <div class="in__area">
+            <div class="in__area" id="input02Area">
               <label class="caption">Email</label>
-              <input
-                class="in in--filled"
-                value=""
-              />
-              <div class="info">
+              <input class="in" id="input02" value="" onchange="mustInput()" />
+              <div class="info" id="input02Info">
                 <span class="info__icon">
                   <svg
                     class="icon"
@@ -441,15 +455,15 @@
         <div class="container__item">
           <label class="lbl">Warning</label>
           <div class="wrapper">
-            <div class="in__area in--warning" id="inputArea02">
+            <div class="in__area in--warning" id="input03Area">
               <label class="caption">Email</label>
               <input
                 class="in in--warning"
-                id="input02"
+                id="input03"
                 onchange="normalizeInput()"
                 value="nem@dommeg@adom"
               />
-              <div class="info" id="inputInfo02">
+              <div class="info" id="input03Info">
                 <span class="info__icon">
                   <svg
                     class="icon"
