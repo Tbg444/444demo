@@ -371,7 +371,15 @@
               </button>
             </div>
           </div>
-        </div>
+		</div>
+		<div class="container__item">
+				<label class="lbl">alap-, funkcionális és esztétitkai Dizájn szintek (aD, fD, eD)</label>
+			<ul><li>
+				a box-shadow nem vehet részt az esztétikaiDizájnban, csak a funkcionálisDizájnban.
+				A hi emphasis btn árnykolás eD, a :focus outline-boxshadowja fD.
+				Ezért eD-re inkább svg filtert kéne használni, feGaussian pl. de ezt nehéz lesz olyanná csinálni h kövesse a dizájn (pl. roundness)de nem biztos, mert lehet vágja a html box átlátszó részeit (mint a filter drop shadow vs box shadow)
+			</li></ul>
+		</div>
       </section>
 
       <!--inputs-->
@@ -446,12 +454,13 @@
           <div class="wrapper">
             <div class="in__area in--warning" id="input03Area">
               <label class="caption">Születési jelszó</label>
-              <input
+			  <input
+			  	value="nemadom"
+			  	name="inputEmail"
                 class="in in--warning"
-				id="input03"
 				oninput="fillInput(event)"
-                onchange="normalizeInput()"
-                value="nem@dommeg@adom"
+                onchange="leaveInput(event)"
+
               />
               <div class="info" id="input03Info">
                 <span class="info__icon">
@@ -466,12 +475,18 @@
                   </svg>
                 </span>
                 <span class="display"
-                  >Nem talált.</span
+                  >Nem talált, legyen benne @!</span
                 >
               </div>
             </div>
           </div>
-        </div>
+		</div>
+		<div class="container__item">
+				<label class="lbl">onchange on Input vagy Form?</label>
+			<ul><li>
+				UX szempontból nem mindegy, mikor és mivel kapcsolatban kötekedünk a userrel: rögtön egy input elhagyása vagy a form submit eseménynél. 
+			</li></ul>
+		</div>
       </section>
       <!--feedback-->
       <section class="container feedback">
@@ -479,11 +494,12 @@
         <div class="container__item">
           <label class="lbl">@Acsi</label>
           <ul class="notes">
-            <li>"Az a jó CSS, ha nincs CSS" - Acsi</li>
+            <li>"Az a jó CSS, ha nincs CSS"</li>
             <li>
               box-shadow optikai csalodasok. /* ezen még töröm a fejem! -- Tbg
               */
-            </li>
+			</li>
+			<li>"Rájöttem miért van kisebb bal padding a material gombokon ha van benne ikon" "Az ikonok nem faltól falig mennek ezért magán az ikon belül is van üres tér, ezt ellensúlyozzák azzal, hogy csökkentik a bal paddingot" / ez most akkor bug v feature?</li>
           </ul>
           <label class="lbl">@István</label>
           <ul class="notes">
@@ -501,8 +517,9 @@
               <br />
               2:) a hover effekt a hi buttonon szintén box shadow, amely
               keveredik az outline:focus-szal. amit nem tudok lekezelni külön,
-              az all meg túlzás <br />
-              3:) offon vannak most.
+			  az all meg túlzás 
+			  <br />
+			  3:) offon vannak most.
             </li>
           </ul>
         </div>

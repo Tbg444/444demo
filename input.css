@@ -38,7 +38,7 @@ https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-a
   ;
 }
 .in--filled {
-  border-width: 1px;
+  border-width: var(--border__width--on);
 }
 .in__area {
  display: grid;
@@ -52,6 +52,7 @@ https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-a
 }
 .in--warning {
   border-color: var(--color__warning);
+  border-width: var(--border__width);
 }
 
 .caption, .display {

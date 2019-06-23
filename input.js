@@ -1,75 +1,52 @@
-
-
 function fillInput(event) {
 
-    var x = event.target.value;
-    if (x === "") {
+    var inputValue = event.target.value;
+    var isRequired = event.target.required;
+    var isEmail = event.target.email;
+
+    if (inputValue === "") {
         event.target.className = "in";
     }
     else {
-        event.target.className = "in in--filled";
+        event.target.classList.add("in--filled");
+        event.target.classList.remove("in--warning");
         event.target.style = "transition: border-width 100ms ease-out, border-color 100ms ease-out";
+        event.target.parentElement.className = "in__area";
     }
 }
 
 function leaveInput(event) {
-   
-    var x = event.target.value;
-    var y = event.target.required;
-    console.log(y,x);
+
+    var inputValue = event.target.value;
+    var isRequired = event.target.required;
+    var isEmail = event.target.name;
 
     if (
-        y === true &&  x === "" 
+        isRequired === true && inputValue === "" 
         ) {
-        event.target.className = "in in--warning";
+        event.target.classList.add("in--warning");
         event.target.style = "transition: border-width 100ms ease-out, border-color 100ms ease-out";
-        document.getElementById("input02").className = "in in--warning";
-        document.getElementById("input02Area").className =
-            "in__area in--warning";
-        console.log('ures',x,'de-kell',y);
+        event.target.parentElement.classList.add("in--warning");
     }
     else if (
-        y === false &&  x === "" 
+        isRequired === false &&  inputValue === "" 
     ) {
-        event.target.className = "in";
+        event.target.classList.add("in");
         event.target.style = "transition: border-width 100ms ease-out, border-color 100ms ease-out";
-        console.log('ures',x,'nem-kell',y);
+
+    }
+    else if (
+        isEmail.includes('inputEmail') === true && inputValue.includes('@') === false 
+    ) {
+        event.target.classList.add("in--warning");
+        event.target.style = "transition: border-width 100ms ease-out, border-color 100ms ease-out";
+        event.target.parentElement.classList.add("in--warning");
+
     }
     else {
         event.target.className = "in in--filled";
+        event.target.classList.remove("in--warning");
         event.target.style = "transition: border-width 100ms ease-out, border-color 100ms ease-out";
-        document.getElementById("input02").className = "in in--filled";
-        document.getElementById("input02Area").className =
-            "in__area";
-        console.log('nem-ures',x,'nem-kell',y);
-    }
-}
 
-
-function emptiedInput() {
-    var empt = document.getElementById("input01").value;
-    if (empt == "") {
-        document.getElementById("input01").className = "in";
-    }
-}
-function requiredInput() {
-    var empt = document.getElementById("input02").value;
-    if (empt == "") {
-
-    }
-    else {
-        document.getElementById("input02").className = "in in--filled";
-        document.getElementById("input02Area").className =
-            "in__area";
-    }
-}
-function normalizeInput() {
-    document.getElementById("input03").className = "in in--filled";
-    document.getElementById("input03Area").className = "in__area";
-    document.getElementById("input03Info").style =
-        "opacity:0; transition: opacity 350ms ease-out";
-    var empt = document.getElementById("input02").value;
-    if (empt == "") {
-        document.getElementById("input02").className = "in";
     }
 }

@@ -32,6 +32,7 @@ CHCKX
 
     --border__style:solid;
     --border__width:calc(var(--icon-size) / 6);
+    --border__width--on:1px;
 
     --line-height: 1.4;
     --line-height__null: 1;
