@@ -1,0 +1,91 @@
+
+.wrapper__in--internal {
+    padding: 
+    var(--pad__horizontal--sync);
+    padding-bottom: 0;
+  }
+  .wrapper__in--internal:focus {
+  
+    box-shadow: inset 0 0 0 0.25rem 
+    hsla(
+      calc(var(--color__hue) * 1.01357466063),
+      calc(var(--color__sat) * 0 + 100%),
+      calc(var(--color__ltn) * 0 + 74%),
+      calc(var(--color__ap) * .5)
+    );
+  }
+  .in--internal {
+    border-width: 1px;
+    border-radius: 0;
+    padding: 0 calc(var(--pad__vertical--sync) / 2);
+    border-bottom-width: 4px;
+    border-color: var(--color);
+    height: calc(var(--button__height) - 8px);
+    background-color: var(--color__bg);
+  }
+  .in--internal:focus {
+    box-shadow: 0 0 .125rem  .0625rem
+    hsla(
+      calc(var(--color__hue) * 1.01357466063),
+      calc(var(--color__sat) * 0 + 100%),
+      calc(var(--color__ltn) * 0 + 74%),
+      calc(var(--color__ap) * .5)
+    );
+  }
+  .sel--selected {
+    border-width: var(--border__width--on);
+  }
+  .sel__trigger--triggering {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-width: 1px;
+}
+
+    .sel__list {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-top-width: 0;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+
+      background-color: hsla( var(--color__hue), calc(var(--color__sat) * 0 + 100%), calc(var(--color__ltn) * 0 + 80%), calc(var(--color__ap) * 0) );
+      
+    }
+    .sel__list--triggered {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-width: calc(var(--border__width) * var(--bordered));
+      border-width: 1px;
+      border-top-width: 0;
+      height: auto;
+      opacity: 1;
+
+      background-color: hsla( var(--color__hue), calc(var(--color__sat) * 0 + 100%), calc(var(--color__ltn) * 0 + 80%), calc(var(--color__ap) * 0.1) );
+    }
+    .list--select {
+      list-style: none;
+      list-style-position: inside;
+      font: var(--font);
+      color: var(--color__fg);
+      line-height: 1.2;
+      padding:
+      var(--pad__horizontal--sync);
+    }
+    .list--select li {
+      padding: calc(var(--pad__vertical--sync) / 2) calc(var(--pad__horizontal--sync) / 2);
+      border-radius: var(--border-radius);
+      font-size: .9375em;
+    }
+    .list--select li:hover {
+      
+        background-color: hsla(
+          var(--color__hue),
+          calc(var(--color__sat) * 0 + 100%),
+          calc(var(--color__ltn) * 0 + 80%),
+          calc(var(--color__ap) * 0.3)
+        );
+      
+        transition: background-color 50ms ease-out;
+      }
+    

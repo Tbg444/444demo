@@ -7,8 +7,8 @@ CHCKX
 :root {
     --size: 1rem;
     --icon-size: 1.5rem;
-    
     --rounded:1;
+    --border-radius:calc(var(--rounded) * 1.5rem);
     --bordered:1;
     
     /* button/input size: icon + vertical padding @input: ++border /w border-box */
@@ -17,13 +17,14 @@ CHCKX
     
     /* padding: full sync, vertical-horizontal 1:2, top/bottom async solution @btns, @inputs(?): top/bottom equal! */
     /* ratios */
-    --pad_icon-size__ratio: calc(2 / 3);
+    --pad_icon-size__ratio: calc(2 / 3); /* 16:24px */
     --pad_vertical_horizontal__ratio: calc(1 / 2);
     /* pads */
     --pad: calc(var(--icon-size) * var(--pad_icon-size__ratio));
     --pad__vertical--sync: calc(var(--icon-size) * calc(var(--pad_icon-size__ratio) * var(--pad_vertical_horizontal__ratio)));
     --pad__horizontal--sync: calc(var(--icon-size) * var(--pad_icon-size__ratio));
-
+    /* pads depends on border roundness */
+    --pad__horizontal--roundness: calc(var(--border-radius) * var(--pad_icon-size__ratio));
     /* ASYNC PAD FOR BTNS
     i.e. in case of 24 px icon size, and vertical-horizontal 1:2, top is 9px, bottom is 7px --> 24/9, 24/7; 
     2 async pads = 1 vertical sync pad */

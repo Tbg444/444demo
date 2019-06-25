@@ -35,7 +35,7 @@ svg.icon {
   color: var(--color);
   border-color: var(--color);
   border: 1px solid;
-  border-radius: calc(var(--icon-size) * var(--rounded));
+  border-radius: var(--border-radius);
   text-transform: uppercase;
   height: var(--button__height);
 
@@ -115,7 +115,7 @@ transition: background-color 0ms ease-out, box-shadow 350ms ease-out;
     var(--color__hue),
     calc(var(--color__sat) * 0 + 100%),
     calc(var(--color__ltn) * 0 + 80%),
-    calc(var(--color__ap) * 0.2)
+    calc(var(--color__ap) * 0.3)
   );
 
   transition: background-color 200ms ease-out;

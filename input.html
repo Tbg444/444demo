@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>input</title>
-
     <link
       href="https://fonts.googleapis.com/css?family=Noticia+Text&amp;subset=latin-ext"
       rel="stylesheet"
@@ -24,13 +23,12 @@
 
     <link rel="stylesheet" type="text/css" href="root.css" />
     <link rel="stylesheet" type="text/css" href="input.css" />
+    <link rel="stylesheet" type="text/css" href="select.css" />
     <link rel="stylesheet" type="text/css" href="show.css" />
     <link rel="stylesheet" type="text/css" href="color.css" />
     <link rel="stylesheet" type="text/css" href="button.css" />
-	<link rel="stylesheet" type="text/css" href="typo.css" />
-	
-	<script src="input.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="typo.css" />
+    <script src="input.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -69,59 +67,174 @@
             class="color"
             d="M120,20A100,100,0,1,0,220,120,100,100,0,0,0,120,20Zm12.23,149.31a12.43,12.43,0,1,1-24.85,0V120.08a12.43,12.43,0,1,1,24.85,0Zm.15-98.7A12.35,12.35,0,0,1,120,83h0a12.35,12.35,0,0,1-12.35-12.35h0A12.35,12.35,0,0,1,120,58.26h0a12.35,12.35,0,0,1,12.35,12.35Z"
           />
-		</symbol>
-		
-		<symbol
-		id="icon__warning--filled"
-		viewBox="0 0 240 240"
-        xmlns="http://www.w3.org/2000/svg"
-		>
-		<title>icon__warning</title>
-		<path class="color"
-		d="M120,20A100,100,0,1,0,220,120,100,100,0,0,0,120,20Zm-7.5,48a7.5,7.5,0,1,1,15,0v60a7.5,7.5,0,1,1-15,0Zm20,98.63a12.5,12.5,0,0,1-12.5,12.5h0a12.5,12.5,0,0,1-12.5-12.5h0a12.5,12.5,0,0,1,12.5-12.5h0a12.5,12.5,0,0,1,12.5,12.5Z"
-		/>
-		</symbol>
+        </symbol>
+
+        <symbol
+          id="icon__warning--filled"
+          viewBox="0 0 240 240"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>icon__warning</title>
+          <path
+            class="color"
+            d="M120,20A100,100,0,1,0,220,120,100,100,0,0,0,120,20Zm-7.5,48a7.5,7.5,0,1,1,15,0v60a7.5,7.5,0,1,1-15,0Zm20,98.63a12.5,12.5,0,0,1-12.5,12.5h0a12.5,12.5,0,0,1-12.5-12.5h0a12.5,12.5,0,0,1,12.5-12.5h0a12.5,12.5,0,0,1,12.5,12.5Z"
+          />
+        </symbol>
       </defs>
     </svg>
   </head>
-
   <body>
     <main>
+      <!--inputs-->
       <section class="container">
-        <label class="lbl">Szinek</label>
+        <label class="notes">Inputok</label>
         <div class="container__item">
-          <label class="lbl">Primary</label>
-          <div class="wrapper color">1</div>
-          <div class="wrapper color color--light">L</div>
-          <div class="wrapper color color--dark">D</div>
+          <label class="notes">Empty</label>
+          <div class="wrapper">
+            <div class="in__area">
+              <label class="caption">Név</label>
+              <input
+                class="in"
+                type="text"
+                value=""
+                oninput="fillInput(event)"
+                onchange="leaveInput(event)"
+              />
+            </div>
+          </div>
+        </div>
+        <label class="notes">ICONOS INPUT</label>
+        <div class="container__item">
+          <label class="notes">Filled</label>
+          <div class="wrapper">
+            <div class="in__area">
+              <label class="caption">Számlázási cím</label>
+              <input
+                class="in in--filled"
+                type="text"
+                value="nemakarokregisztralni@gmail.com"
+                oninput="fillInput(event)"
+                onchange="leaveInput(event)"
+              />
+            </div>
+          </div>
         </div>
         <div class="container__item">
-          <label class="lbl">Secondary</label>
-          <div class="wrapper color color-2ry">2</div>
-          <div class="wrapper color color-2ry--light">L</div>
-          <div class="wrapper color color-2ry--dark">D</div>
+          <label class="notes">Filled /w info</label>
+          <div class="wrapper">
+            <div class="in__area">
+              <label class="caption">Email</label>
+              <input
+                class="in"
+                type="text"
+                required
+                value=""
+                oninput="fillInput(event)"
+                onchange="leaveInput(event)"
+              />
+              <div class="info">
+                <span class="info__icon">
+                  <svg
+                    class="icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    preserveAspectRatio="xMidYMid"
+                    class=""
+                  >
+                    <use xlink:href="#icon__info--filled"></use>
+                  </svg>
+                </span>
+                <span class="display">
+                  Kötelező mező, kitöltése kötelező. Töltsd ki, kérlek, sok a
+                  szöveg.</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
         <div class="container__item">
-          <label class="lbl">Grounds</label>
-          <div class="wrapper color color__fg">F</div>
-          <div class="wrapper color color__mg">M</div>
-          <div class="wrapper color color__bg">B</div>
+          <label class="notes">Warning</label>
+          <div class="wrapper">
+            <div class="in__area in--warning" id="input03Area">
+              <label class="caption">Születési jelszó</label>
+              <input
+                value="nemadom"
+                type="email"
+                class="in in--warning"
+                oninput="fillInput(event)"
+                onchange="leaveInput(event)"
+              />
+              <div class="info">
+                <span class="info__icon">
+                  <svg
+                    class="icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    preserveAspectRatio="xMidYMid"
+                    class=""
+                  >
+                    <use xlink:href="#icon__warning--filled"></use>
+                  </svg>
+                </span>
+                <span class="display">Nem talált, legyen benne @!</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="container__item">
-          <label class="lbl">Warning</label>
-          <div class="wrapper color color__warning">W</div>
-        </div>
-        <label class="lbl"></label>
-        <label class="lbl">Eltartások (pads&gaps)</label>
-        <div class="container__item">
-          <label class="lbl">Pads (dead space inside)</label>
-          <label class="lbl">Gaps (dead space outside)</label>
+          <label class="notes">onchange on Input vagy Form?</label>
+          <ul class="notes">
+            <li class="notes">
+              UX szempontból nem mindegy, mikor és mivel kapcsolatban kötekedünk
+              a userrel: rögtön egy input elhagyása vagy a form submit
+              eseménynél.
+            </li>
+          </ul>
         </div>
       </section>
+      <!--selects-->
       <section class="container">
-        <label class="lbl">Gombok</label>
+        <label class="notes">Select</label>
         <div class="container__item">
-          <label class="lbl">Low /wo icon</label>
+          <label class="notes">Standard</label>
+          <div class="wrapper">
+            <div class="sel__area">
+              <label class="caption">Kedvenc csapat</label>
+              <div class="sel">
+                <div class="sel__trigger sel--selected" onclick="trigList(event)">
+                  <span onclick="trigList2(event)">Mogyi Agrárnektár SE</span>
+                  <span></span>
+                </div>
+                <div class="sel__list" id="selectList">
+                  <div class="wrapper__in--internal">
+                    <input
+                      name="internal"
+                      placeholder="Keres..."
+                      class="in in--internal"
+                      value=""
+                      oninput="fillInput(event)"
+                      onchange="leaveInput(event)"
+                    />
+                  </div>
+                  <ul class="list--select">
+                    <li>Közép-Németország</li>
+                    <li>Magyarország</li>
+                    <li>USA</li>
+                    <li>Jamaika</li>
+                    <li>Franciaország</li>
+                    <li>UEFA</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--buttons-->
+      <section class="container">
+        <label class="notes">Gombok</label>
+        <div class="container__item">
+          <label class="notes">Low /wo icon</label>
           <div class="wrapper">
             <div class="btn__area">
               <button class="btn btn--lo">
@@ -133,7 +246,7 @@
           </div>
         </div>
         <div class="container__item">
-          <label class="lbl">Low</label>
+          <label class="notes">Low</label>
           <div class="wrapper">
             <div class="btn__area">
               <button class="btn btn--lo">
@@ -156,7 +269,7 @@
           </div>
         </div>
         <div class="container__item">
-          <label class="lbl">Low only icon</label>
+          <label class="notes">Low only icon</label>
           <div class="wrapper">
             <div class="btn__area">
               <button class="btn btn--lo btn--only-icon">
@@ -178,7 +291,22 @@
           </div>
         </div>
         <div class="container__item">
-          <label class="lbl">Medium</label>
+          <label class="notes">DISABLED</label>
+          <div class="wrapper">
+            <div class="btn__area">
+              <button
+                class="btn btn--hi"
+                style="background-color: var(--color__mg)"
+              >
+                <div class="btn__content">
+                  <span class="btn__text">Nyomógomb</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="container__item">
+          <label class="notes">Medium</label>
           <div class="wrapper">
             <div class="btn__area">
               <button class="btn">
@@ -201,7 +329,7 @@
           </div>
         </div>
         <div class="container__item">
-          <label class="lbl">Hi</label>
+          <label class="notes">Hi</label>
           <div class="wrapper">
             <div class="btn__area">
               <button class="btn btn--hi">
@@ -225,7 +353,7 @@
         </div>
 
         <div class="container__item">
-          <label class="lbl">Low</label>
+          <label class="notes">Low</label>
           <div class="wrapper inverse">
             <div class="btn__area">
               <button class="btn btn--lo">
@@ -248,7 +376,7 @@
           </div>
         </div>
         <div class="container__item">
-          <label class="lbl">Medium</label>
+          <label class="notes">Medium</label>
           <div class="wrapper inverse">
             <div class="btn__area">
               <button class="btn">
@@ -270,8 +398,9 @@
             </div>
           </div>
         </div>
+
         <div class="container__item">
-          <label class="lbl">Hi /wo icon</label>
+          <label class="notes">Hi /wo icon</label>
           <div class="wrapper inverse">
             <div class="btn__area">
               <button class="btn btn--hi">
@@ -283,7 +412,7 @@
           </div>
         </div>
         <div class="container__item">
-          <label class="lbl">Hi</label>
+          <label class="notes">Hi</label>
           <div class="wrapper inverse">
             <div class="btn__area">
               <button class="btn btn--hi">
@@ -306,7 +435,7 @@
           </div>
         </div>
         <div class="container__item">
-          <label class="lbl">Hi only icon</label>
+          <label class="notes">Hi only icon</label>
           <div class="wrapper inverse">
             <div class="btn__area">
               <button class="btn btn--hi btn--only-icon">
@@ -328,7 +457,7 @@
           </div>
         </div>
         <div class="container__item">
-          <label class="lbl">Warning</label>
+          <label class="notes">Warning</label>
           <div class="wrapper warning">
             <div class="btn__area">
               <button class="btn btn--hi btn--warning">
@@ -371,155 +500,97 @@
               </button>
             </div>
           </div>
-		</div>
-		<div class="container__item">
-				<label class="lbl">alap-, funkcionális és esztétitkai Dizájn szintek (aD, fD, eD)</label>
-			<ul><li>
-				a box-shadow nem vehet részt az esztétikaiDizájnban, csak a funkcionálisDizájnban.
-				A hi emphasis btn árnykolás eD, a :focus outline-boxshadowja fD.
-				Ezért eD-re inkább svg filtert kéne használni, feGaussian pl. de ezt nehéz lesz olyanná csinálni h kövesse a dizájn (pl. roundness)de nem biztos, mert lehet vágja a html box átlátszó részeit (mint a filter drop shadow vs box shadow)
-			</li></ul>
-		</div>
+        </div>
+        <div class="container__item">
+          <label class="notes"
+            >alap-, funkcionális és esztétitkai Dizájn szintek (aD, fD,
+            eD)</label
+          >
+          <ul class="notes">
+            <li class="notes">
+              a box-shadow nem vehet részt az esztétikaiDizájnban, csak a
+              funkcionálisDizájnban. A hi emphasis btn árnykolás eD, a :focus
+              outline-boxshadowja fD. Ezért eD-re inkább svg filtert kéne
+              használni, feGaussian pl. de ezt nehéz lesz olyanná csinálni h
+              kövesse a dizájn (pl. roundness)de nem biztos, mert lehet vágja a
+              html box átlátszó részeit (mint a filter drop shadow vs box
+              shadow)
+            </li>
+          </ul>
+        </div>
       </section>
-
-      <!--inputs-->
+      <!--basics-->
       <section class="container">
-        <label class="lbl">Inputok</label>
+        <label class="notes">Szinek</label>
         <div class="container__item">
-          <label class="lbl">Empty</label>
-          <div class="wrapper">
-            <div class="in__area">
-              <label class="caption">Név</label>
-              <input
-                class="in"
-                id="input01"
-				value=""
-
-                oninput="fillInput(event)"
-                onchange="leaveInput(event)"
-              />
-            </div>
-          </div>
+          <label class="notes">Primary</label>
+          <div class="wrapper color">1</div>
+          <div class="wrapper color color--light">L</div>
+          <div class="wrapper color color--dark">D</div>
         </div>
         <div class="container__item">
-          <label class="lbl">Filled</label>
-          <div class="wrapper">
-            <div class="in__area">
-              <label class="caption">Számlázási cím</label>
-              <input
-				class="in in--filled"
-
-				value="nemakarokregisztralni@gmail.com"
-				oninput="fillInput(event)"
-				onchange="leaveInput(event)" 
-              />
-            </div>
-          </div>
+          <label class="notes">Secondary</label>
+          <div class="wrapper color color-2ry">2</div>
+          <div class="wrapper color color-2ry--light">L</div>
+          <div class="wrapper color color-2ry--dark">D</div>
         </div>
         <div class="container__item">
-          <label class="lbl">Filled /w info</label>
-          <div class="wrapper">
-            <div class="in__area" id="input02Area">
-              <label class="caption">Email</label>
-			  <input 
-			  class="in" 
-			  id="input02" 
-			  required
-			  value="" 
-			  oninput="fillInput(event)"
-			  onchange="leaveInput(event)" 
-			  />
-              <div class="info" id="input02Info">
-                <span class="info__icon">
-                  <svg
-                    class="icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    preserveAspectRatio="xMidYMid"
-                    class=""
-                  >
-                    <use xlink:href="#icon__info--filled"></use>
-                  </svg>
-                </span>
-                <span class="display"
-                  >Kötelező mező, kitöltése kötelező. Töltsd ki, kérlek, sok a
-                  szöveg.</span
-                >
-              </div>
-            </div>
-          </div>
+          <label class="notes">Grounds</label>
+          <div class="wrapper color color__fg">F</div>
+          <div class="wrapper color color__mg">M</div>
+          <div class="wrapper color color__bg">B</div>
         </div>
         <div class="container__item">
-          <label class="lbl">Warning</label>
-          <div class="wrapper">
-            <div class="in__area in--warning" id="input03Area">
-              <label class="caption">Születési jelszó</label>
-			  <input
-			  	value="nemadom"
-			  	name="inputEmail"
-                class="in in--warning"
-				oninput="fillInput(event)"
-                onchange="leaveInput(event)"
-
-              />
-              <div class="info" id="input03Info">
-                <span class="info__icon">
-                  <svg
-                    class="icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    preserveAspectRatio="xMidYMid"
-                    class=""
-                  >
-                    <use xlink:href="#icon__warning--filled"></use>
-                  </svg>
-                </span>
-                <span class="display"
-                  >Nem talált, legyen benne @!</span
-                >
-              </div>
-            </div>
-          </div>
-		</div>
-		<div class="container__item">
-				<label class="lbl">onchange on Input vagy Form?</label>
-			<ul><li>
-				UX szempontból nem mindegy, mikor és mivel kapcsolatban kötekedünk a userrel: rögtön egy input elhagyása vagy a form submit eseménynél. 
-			</li></ul>
-		</div>
+          <label class="notes">Warning</label>
+          <div class="wrapper color color__warning">W</div>
+        </div>
+        <label class="notes"></label>
+        <label class="notes">Eltartások (pads&gaps)</label>
+        <div class="container__item">
+          <label class="notes">Pads (dead space inside)</label>
+          <label class="notes">Gaps (dead space outside)</label>
+        </div>
       </section>
       <!--feedback-->
-      <section class="container feedback">
-        <label class="lbl">Feedback</label>
+      <section class="container" id="feedback">
+        <label class="notes">Feedback</label>
         <div class="container__item">
-          <label class="lbl">@Acsi</label>
+          <label class="notes">@Acsi</label>
           <ul class="notes">
-            <li>"Az a jó CSS, ha nincs CSS"</li>
-            <li>
+            <li class="notes">
+              inpute feletti captonök eltartása rounded 0 esetén
+            </li>
+            <li class="notes">"Az a jó CSS, ha nincs CSS"</li>
+            <li class="notes">
               box-shadow optikai csalodasok. /* ezen még töröm a fejem! -- Tbg
               */
-			</li>
-			<li>"Rájöttem miért van kisebb bal padding a material gombokon ha van benne ikon" "Az ikonok nem faltól falig mennek ezért magán az ikon belül is van üres tér, ezt ellensúlyozzák azzal, hogy csökkentik a bal paddingot" / ez most akkor bug v feature?</li>
+            </li>
+            <li class="notes">
+              "Rájöttem miért van kisebb bal padding a material gombokon ha van
+              benne ikon" "Az ikonok nem faltól falig mennek ezért magán az ikon
+              belül is van üres tér, ezt ellensúlyozzák azzal, hogy csökkentik a
+              bal paddingot" / ez most akkor bug v feature?
+            </li>
           </ul>
-          <label class="lbl">@István</label>
+          <label class="notes">@István</label>
           <ul class="notes">
-            <li>
+            <li class="notes">
               document.documentElement.style.setProperty('--your-variable',
               '#YOURCOLOR');
             </li>
           </ul>
-          <label class="lbl">@Tbg</label>
+          <label class="notes">@Tbg</label>
           <ul class="notes">
-            <li>
+            <li class="notes">
               box-shadow transition 2x probléma:
               <br />
               1:) oda vissza esetben page reloadnál villognak a transiitionök.
               <br />
               2:) a hover effekt a hi buttonon szintén box shadow, amely
               keveredik az outline:focus-szal. amit nem tudok lekezelni külön,
-			  az all meg túlzás 
-			  <br />
-			  3:) offon vannak most.
+              az all meg túlzás
+              <br />
+              3:) offon vannak most.
             </li>
           </ul>
         </div>

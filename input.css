@@ -8,47 +8,51 @@ https://www.geeksforgeeks.org/css-to-put-icon-inside-an-input-element-in-a-form/
 https://dev.to/neshaz/input-text-everything-you-should-know-7b4
 https://www.w3schools.com/js/js_htmldom_events.asp
 */
+.in__area, .sel__area {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: calc(var(--icon-size) / 3);
+  width: 100%;
+  color: var(--color);
+ }
+ .in__area.in--warning {
+   color: var(--color__warning);
+ }
 
-.in {
+.in, .sel__trigger, .sel__list {
   transition: box-shadow 100ms ease-out;
-  -webkit-appearance: none;
+
   box-sizing: border-box;
+
   border-style: var(--border__style);
   border-width: calc(var(--border__width) * var(--bordered));
   border-color: var(--color);
   height: calc(var(--button__height) + var(--border__width));
-  border-radius: calc(var(--icon-size) * var(--rounded));
+  border-radius: calc(var(--border-radius) * var(--rounded));
   width: 100%;
 
   font:var(--font);
   color:var(--color__fg);
   background-color: var(--color__bg);
+}
+  .in {
 /*
 nálam ez volt, régi vlt a chrome-om
 https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-aaf66c7ba3f8
 */
+  
+  -webkit-appearance: none;
   -webkit-text-fill-color:var(--color__fg);
   opacity: 1; 
   text-rendering: optimizeSpeed;
   transform: translateZ(0);
 }
-.in {
+.in, .sel__trigger {
   padding: var(--pad__vertical--sync) 
-  var(--pad__horizontal--sync)
-  ;
+  var(--pad__horizontal--sync);
 }
 .in--filled {
   border-width: var(--border__width--on);
-}
-.in__area {
- display: grid;
- grid-auto-flow: row;
- grid-gap: calc(var(--icon-size) / 3);
- width: 100%;
- color: var(--color);
-}
-.in__area.in--warning {
-  color: var(--color__warning);
 }
 .in--warning {
   border-color: var(--color__warning);
@@ -59,17 +63,14 @@ https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-a
   color:var(--color__fg--light);
 }
 .caption {
-
   height: calc(var(--size) * .75);
   font: var(--font__caption);
   text-transform: uppercase;
-  padding: 0 var(--pad__horizontal--sync);
+  padding: 0 var(--pad__horizontal--roundness);
 }
 .info {
-  padding: 0 var(--pad__horizontal--sync);
-  justify-content: start;
-  align-items: start;
-
+  padding: 0 var(--pad__horizontal--roundness);
+  place-content: start;
 }
 .info__icon svg.icon {
   /* 24px --> 16px */
@@ -81,3 +82,9 @@ https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-a
 .display {
   font: var(--font__display);
 }
+
+
+
+
+
+/*****/
