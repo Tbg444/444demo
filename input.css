@@ -1,13 +1,11 @@
 
-
-
-
 /*
 ICON, in text, scripts
 https://www.geeksforgeeks.org/css-to-put-icon-inside-an-input-element-in-a-form/
 https://dev.to/neshaz/input-text-everything-you-should-know-7b4
 https://www.w3schools.com/js/js_htmldom_events.asp
 */
+
 .in__area, .sel__area {
   display: grid;
   grid-auto-flow: row;
@@ -47,7 +45,7 @@ https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-a
   text-rendering: optimizeSpeed;
   transform: translateZ(0);
 }
-.in, .sel__trigger {
+.in {
   padding: var(--pad__vertical--sync) 
   var(--pad__horizontal--sync);
 }
@@ -58,8 +56,7 @@ https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-a
   border-color: var(--color__warning);
   border-width: var(--border__width);
 }
-
-.caption, .display {
+.caption, .display, .placeholder__text {
   color:var(--color__fg--light);
 }
 .caption {
@@ -72,19 +69,12 @@ https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-a
   padding: 0 var(--pad__horizontal--roundness);
   place-content: start;
 }
-.info__icon svg.icon {
+.info__icon svg.icon, .placeholder__icon svg.icon {
   /* 24px --> 16px */
   width: calc(var(--icon-size) * calc(4 / 6));
   height: calc(var(--icon-size) * calc(4 / 6));
   fill:currentColor;
 }
-
 .display {
   font: var(--font__display);
 }
-
-
-
-
-
-/*****/

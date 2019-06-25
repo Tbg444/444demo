@@ -19,8 +19,7 @@ svg.icon {
 
 .btn__area {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  place-content: center;
 }
 .btn {
   padding:
@@ -47,7 +46,7 @@ svg.icon {
 
 }
 .btn--only-icon {
-  padding: calc(var(--icon-size) / 3);
+  padding: var(--pad__vertical--sync);
 }
 .btn--hi  {
   box-shadow: inset 
@@ -90,7 +89,7 @@ transition: background-color 0ms ease-out, box-shadow 350ms ease-out;
   border-color: var(--color__bg);
   border: 1px solid;
 }
-.btn__content, .info {
+.btn__content, .info, .placeholder {
   display: grid;
   grid-auto-flow: column;
   grid-gap: calc(var(--icon-size) / 6);
@@ -175,8 +174,9 @@ textarea:focus,
     calc(var(--color__ap) * .5)
   );
   */
-
-  
   outline: 1px solid var(--color__null);
   transition: box-shadow 50ms ease-out;
+}
+.btn--internal:focus{
+  box-shadow: 0 0 0 0 var(--color__null);
 }

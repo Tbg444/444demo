@@ -80,6 +80,32 @@
             d="M120,20A100,100,0,1,0,220,120,100,100,0,0,0,120,20Zm-7.5,48a7.5,7.5,0,1,1,15,0v60a7.5,7.5,0,1,1-15,0Zm20,98.63a12.5,12.5,0,0,1-12.5,12.5h0a12.5,12.5,0,0,1-12.5-12.5h0a12.5,12.5,0,0,1,12.5-12.5h0a12.5,12.5,0,0,1,12.5,12.5Z"
           />
         </symbol>
+        <symbol
+          id="icon__select-arrow--filled"
+          viewBox="0 0 240 240"
+          xmlns="http://www.w3.org/2000/svg">
+
+          <title>icon__select-arrow-filled</title>
+          <polygon 
+          class="color"
+          points="116.99 166.31 156.99 96.31 76.99 96.31 116.99 166.31"/>
+
+        </symbol>
+
+        <symbol
+        id="icon__add--filled"
+        viewBox="0 0 240 240"
+        xmlns="http://www.w3.org/2000/svg">
+
+        <title>icon__add--filled</title>
+        <path 
+        class="color"
+        d="M120,20A100,100,0,1,0,220,120,100,100,0,0,0,120,20Zm50,110H130v40a10,10,0,0,1-20,0V130H70a10,10,0,0,1,0-20h40V70a10,10,0,0,1,20,0v40h40a10,10,0,0,1,0,20Z"/>
+
+      </symbol>
+
+
+       
       </defs>
     </svg>
   </head>
@@ -200,31 +226,79 @@
           <div class="wrapper">
             <div class="sel__area">
               <label class="caption">Kedvenc csapat</label>
-              <div class="sel">
+              <div class="sel" id="formSelect">
+                <div class="wrapper--sel__trigger">
                 <div class="sel__trigger" onclick="trigList(event)">
-                  <span id="selectedItem" onclick="trigList2(event)"></span>
-                  <span></span>
+                  <span id="selectedItem" class="selected">Mógyi Agrárnektár SE
+                  </span>
                 </div>
+                <span class="sel__arrow" id="selectArrow">
+                  <button class="btn btn--lo btn--only-icon btn--internal">
+                    <svg
+                      class="icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      preserveAspectRatio="xMidYMid"
+                      class=""
+                    >
+                      <use xlink:href="#icon__select-arrow--filled"></use>
+                    </svg>
+                  </button>
+                 </span>
+                </div>
+                <div class="wrapper__sel__list">
                 <div class="sel__list" id="selectList">
                   <div class="wrapper__in--internal">
+                    <div class="placeholder placeholder--internal">
+                      <span class="placeholder__icon">
+                        <svg
+                        class="icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        version="1.1"
+                        preserveAspectRatio="xMidYMid"
+                        class=""
+                      >
+                        <use xlink:href="#icon__add--filled"></use>
+                      </svg>
+                    </span>
+                      <span class="placeholder__text">Keresés</span>
+                    </div>
                     <input
                       name="internal"
-                      placeholder="Keres..."
+                      placeholder=""
                       class="in in--internal"
                       value=""
+                      onclick="erasePlaceholder(event)"
                       oninput="fillInput(event)"
                       onchange="leaveInput(event)"
                     />
                   </div>
+                  <div class="wrapper__list--select">
                   <ul class="list--select">
+                      <li class="list__item" onclick="selectItem(event)">del!</li>
                     <li class="list__item" onclick="selectItem(event)">Közép-Németország</li>
                     <li class="list__item" onclick="selectItem(event)">Magyarország</li>
                     <li class="list__item" onclick="selectItem(event)">USA</li>
                     <li class="list__item" onclick="selectItem(event)">Jamaika</li>
                     <li class="list__item" onclick="selectItem(event)">Franciaország</li>
-                    <li class="list__item" onclick="selectItem(event)">del!</li>
+                    <li class="list__item" onclick="selectItem(event)">Észak-Rajna-Vesztfália-alsó</li>
+                    <li class="list__item" onclick="selectItem(event)">Közép-Németország</li>
+                    <li class="list__item" onclick="selectItem(event)">Magyarország</li>
+                    <li class="list__item" onclick="selectItem(event)">USA</li>
+                    <li class="list__item" onclick="selectItem(event)">Jamaika</li>
+                    <li class="list__item" onclick="selectItem(event)">Franciaország</li>
+                    <li class="list__item" onclick="selectItem(event)">Észak-Rajna-Vesztfália-alsó</li>
+                    <li class="list__item" onclick="selectItem(event)">Közép-Németország</li>
+                    <li class="list__item" onclick="selectItem(event)">Magyarország</li>
+                    <li class="list__item" onclick="selectItem(event)">USA</li>
+                    <li class="list__item" onclick="selectItem(event)">Jamaika</li>
+                    <li class="list__item" onclick="selectItem(event)">Franciaország</li>
+                    <li class="list__item" onclick="selectItem(event)">Észak-Rajna-Vesztfália-alsó</li>
+                    
                   </ul>
                 </div>
+                </div>
+               </div>
               </div>
             </div>
           </div>

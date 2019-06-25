@@ -1,10 +1,17 @@
-/*document.documentElement.addEventListener("click", function(e) {
-    console.log(e.target.className);
-});*/
+// clickchecker
+document.documentElement.addEventListener("click", function(event) {
+    console.log(event.target.className);
+});
+
+function erasePlaceholder(event) {
+    event.target.placeholder = '';
+    
+}
 function fillInput(event) {
 
     var isInternal = event.target.name;
     var inputValue = event.target.value;
+    
 
     if (isInternal == 'internal') {
         return;
@@ -66,40 +73,35 @@ function trigList(event) {
     var isTriggered = event.target.classList.value;
     var isFilled = document.getElementById('selectedItem').innerHTML;
     var selTriggerTransition = "transition: border-width 100ms ease-out, border-bottom-left-radius 100ms ease-out, border-bottom-right-radius 100ms ease-out, background-color 100ms ease-out;"
-    console.log(isFilled);
+    
 
-        if ( isTriggered.includes("triggering") === true ) 
+        if ( isTriggered.includes("triggered") === true ) 
         {
             if (
                 isFilled === ''
                 ) {
                     event.target.classList.remove("sel--selected");
                 }
-            event.target.classList.remove("sel__trigger--triggering");
+            event.target.classList.remove("sel__trigger--triggered");
             event.target.style = selTriggerTransition;
             document.getElementById("selectList").classList.remove("sel__list--triggered");
             document.getElementById("selectList").style = "transition: height 100ms ease-out;";
+            document.getElementById("selectArrow").classList.remove("sel__arrow--triggered");
+
 
         }
         else {
-        event.target.classList.add("sel__trigger--triggering");
+        event.target.classList.add("sel__trigger--triggered");
         event.target.style = selTriggerTransition;
         document.getElementById("selectList").classList.add("sel__list--triggered");
         document.getElementById("selectList").style = "transition: height 100ms ease-out;";
         event.target.classList.add("sel--selected");
+        document.getElementById("selectArrow").classList.add("sel__arrow--triggered");
+        document.getElementById("selectArrow").style = selTriggerTransition;
+
     }
 }
 
-/*function trigList2(event) {
-
-        var selTriggerTransition = "transition: border-width 100ms ease-out, border-bottom-left-radius 100ms ease-out, border-bottom-right-radius 100ms ease-out, background-color 100ms ease-out;"
-
-        event.target.parentElement.classList.toggle("sel__trigger--triggering");
-        event.target.parentElement.style = selTriggerTransition;
-        document.getElementById("selectList").classList.toggle("sel__list--triggered");
-        document.getElementById("selectList").style = "transition: height 100ms ease-out;";
-    
-}*/
 
 function selectItem(event) {
 
@@ -110,3 +112,4 @@ function selectItem(event) {
     }
     document.getElementById('selectedItem').innerHTML = selection;
 }
+

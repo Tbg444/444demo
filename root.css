@@ -8,16 +8,13 @@ CHCKX
     --size: 1rem;
     --icon-size: 1.5rem;
     --rounded:1;
-    --border-radius:calc(var(--rounded) * 1.5rem);
+    /* border radius 22px! es nem 24px! */
+    --border-radius:calc(var(--rounded) * 1.375rem); 
     --bordered:1;
-    
-    /* button/input size: icon + vertical padding @input: ++border /w border-box */
-    
-    --button__height: calc(var(--icon-size) + var(--icon-size) / 1.5) ;
     
     /* padding: full sync, vertical-horizontal 1:2, top/bottom async solution @btns, @inputs(?): top/bottom equal! */
     /* ratios */
-    --pad_icon-size__ratio: calc(2 / 3); /* 16:24px */
+    --pad_icon-size__ratio: calc(1 / 2); /* 12:24px */
     --pad_vertical_horizontal__ratio: calc(1 / 2);
     /* pads */
     --pad: calc(var(--icon-size) * var(--pad_icon-size__ratio));
@@ -34,6 +31,11 @@ CHCKX
     --border__style:solid;
     --border__width:calc(var(--icon-size) / 6);
     --border__width--on:1px;
+
+    /* button/input size: icon + vertical padding @input: ++border /w border-box */
+
+    --button__height: /*calc(var(--icon-size) + calc(var(--pad__vertical--sync) * 2))*/ 40px;
+    --button__height--internal: calc(var(--icon-size) + calc(var(--pad__vertical--sync) * 2));
 
     --line-height: 1.4;
     --line-height__null: 1;
