@@ -1,8 +1,6 @@
-document.documentElement.addEventListener("click", function(e) {
+/*document.documentElement.addEventListener("click", function(e) {
     console.log(e.target.className);
-});
-
-
+});*/
 function fillInput(event) {
 
     var isInternal = event.target.name;
@@ -65,29 +63,50 @@ function leaveInput(event) {
 
 function trigList(event) {
 
-        var isEmail = event.target.classList.value;
+    var isTriggered = event.target.classList.value;
+    var isFilled = document.getElementById('selectedItem').innerHTML;
+    var selTriggerTransition = "transition: border-width 100ms ease-out, border-bottom-left-radius 100ms ease-out, border-bottom-right-radius 100ms ease-out, background-color 100ms ease-out;"
+    console.log(isFilled);
 
-        if ( isEmail.includes("triggering") === true ) 
+        if ( isTriggered.includes("triggering") === true ) 
         {
+            if (
+                isFilled === ''
+                ) {
+                    event.target.classList.remove("sel--selected");
+                }
             event.target.classList.remove("sel__trigger--triggering");
-            event.target.style = "transition: border-width 100ms ease-out, border-bottom-left-radius 100ms ease-out, border-bottom-right-radius 100ms ease-out, background-color 100ms ease-out;";
+            event.target.style = selTriggerTransition;
             document.getElementById("selectList").classList.remove("sel__list--triggered");
             document.getElementById("selectList").style = "transition: height 100ms ease-out;";
+
         }
         else {
         event.target.classList.add("sel__trigger--triggering");
-        event.target.style = "transition: border-width 100ms ease-out, border-bottom-left-radius 100ms ease-out, border-bottom-right-radius 100ms ease-out, background-color 100ms ease-out;" ;
+        event.target.style = selTriggerTransition;
         document.getElementById("selectList").classList.add("sel__list--triggered");
         document.getElementById("selectList").style = "transition: height 100ms ease-out;";
+        event.target.classList.add("sel--selected");
     }
 }
 
-function trigList2(event) {
+/*function trigList2(event) {
 
+        var selTriggerTransition = "transition: border-width 100ms ease-out, border-bottom-left-radius 100ms ease-out, border-bottom-right-radius 100ms ease-out, background-color 100ms ease-out;"
 
         event.target.parentElement.classList.toggle("sel__trigger--triggering");
-        event.target.parentElement.style = "transition: border-width 100ms ease-out, border-bottom-left-radius 100ms ease-out, border-bottom-right-radius 100ms ease-out";
+        event.target.parentElement.style = selTriggerTransition;
         document.getElementById("selectList").classList.toggle("sel__list--triggered");
         document.getElementById("selectList").style = "transition: height 100ms ease-out;";
     
+}*/
+
+function selectItem(event) {
+
+    var selection = event.target.innerHTML;
+
+    if (selection === 'del!') {
+        selection = '';
+    }
+    document.getElementById('selectedItem').innerHTML = selection;
 }

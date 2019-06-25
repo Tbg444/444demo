@@ -35,6 +35,7 @@
   .sel--selected {
     border-width: var(--border__width--on);
   }
+
   .sel__trigger--triggering {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -62,6 +63,14 @@
       opacity: 1;
 
       background-color: hsla( var(--color__hue), calc(var(--color__sat) * 0 + 100%), calc(var(--color__ltn) * 0 + 80%), calc(var(--color__ap) * 0.1) );
+
+      box-shadow: 0 .125rem .25rem  .125rem
+    hsla(
+      calc(var(--color__hue) * 1.01357466063),
+      calc(var(--color__sat) * 0 + 100%),
+      calc(var(--color__ltn) * 0 + 74%),
+      calc(var(--color__ap) * .2)
+    );
     }
     .list--select {
       list-style: none;

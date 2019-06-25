@@ -201,8 +201,8 @@
             <div class="sel__area">
               <label class="caption">Kedvenc csapat</label>
               <div class="sel">
-                <div class="sel__trigger sel--selected" onclick="trigList(event)">
-                  <span onclick="trigList2(event)">Mogyi Agrárnektár SE</span>
+                <div class="sel__trigger" onclick="trigList(event)">
+                  <span id="selectedItem" onclick="trigList2(event)"></span>
                   <span></span>
                 </div>
                 <div class="sel__list" id="selectList">
@@ -217,12 +217,12 @@
                     />
                   </div>
                   <ul class="list--select">
-                    <li>Közép-Németország</li>
-                    <li>Magyarország</li>
-                    <li>USA</li>
-                    <li>Jamaika</li>
-                    <li>Franciaország</li>
-                    <li>UEFA</li>
+                    <li class="list__item" onclick="selectItem(event)">Közép-Németország</li>
+                    <li class="list__item" onclick="selectItem(event)">Magyarország</li>
+                    <li class="list__item" onclick="selectItem(event)">USA</li>
+                    <li class="list__item" onclick="selectItem(event)">Jamaika</li>
+                    <li class="list__item" onclick="selectItem(event)">Franciaország</li>
+                    <li class="list__item" onclick="selectItem(event)">del!</li>
                   </ul>
                 </div>
               </div>
