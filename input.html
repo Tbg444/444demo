@@ -1,280 +1,175 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>input</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Noticia+Text&amp;subset=latin-ext"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400|Nunito:700,900"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;subset=latin-ext"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Ubuntu+Mono"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" type="text/css" href="root.css" />
-    <link rel="stylesheet" type="text/css" href="input.css" />
-    <link rel="stylesheet" type="text/css" href="select.css" />
-    <link rel="stylesheet" type="text/css" href="show.css" />
-    <link rel="stylesheet" type="text/css" href="color.css" />
-    <link rel="stylesheet" type="text/css" href="button.css" />
-    <link rel="stylesheet" type="text/css" href="typo.css" />
-    <script src="input.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      http-equiv="Content-Type"
-      content="text/plain; charset=dropbox-cors-hack"
-    />
-    <meta
-      name="viewport"
-      content="height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi"
-    />
-    <svg
-      style="display: none;"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-    >
-      <defs>
-        <symbol
-          id="icon__donation--filled"
-          viewBox="0 0 240 240"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>icon__donation</title>
-          <path
-            class="color"
-            d="M161.76,35.42A57.69,57.69,0,0,0,120.22,53a58.13,58.13,0,1,0-79.81,84.45l79.81,72.12L200,137.48A58.32,58.32,0,0,0,161.76,35.42Zm-11.93,93.75H129.17v20.66a9.17,9.17,0,1,1-18.34,0V129.17H90.17a9.17,9.17,0,0,1,0-18.34h20.66V90.17a9.17,9.17,0,1,1,18.34,0v20.66h20.66a9.17,9.17,0,0,1,0,18.34Z"
-          ></path>
-        </symbol>
-        <symbol
-          id="icon__info--filled"
-          viewBox="0 0 240 240"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>icon__info</title>
-          <path
-            class="color"
-            d="M120,20A100,100,0,1,0,220,120,100,100,0,0,0,120,20Zm12.23,149.31a12.43,12.43,0,1,1-24.85,0V120.08a12.43,12.43,0,1,1,24.85,0Zm.15-98.7A12.35,12.35,0,0,1,120,83h0a12.35,12.35,0,0,1-12.35-12.35h0A12.35,12.35,0,0,1,120,58.26h0a12.35,12.35,0,0,1,12.35,12.35Z"
-          />
-        </symbol>
+<head>
+  <title>input</title>
+  <link href="https://fonts.googleapis.com/css?family=Noticia+Text&amp;subset=latin-ext" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400|Nunito:700,900" rel="stylesheet" type="text/css"
+    media="all" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&amp;subset=latin-ext" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" />
 
-        <symbol
-          id="icon__warning--filled"
-          viewBox="0 0 240 240"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>icon__warning</title>
-          <path
-            class="color"
-            d="M120,20A100,100,0,1,0,220,120,100,100,0,0,0,120,20Zm-7.5,48a7.5,7.5,0,1,1,15,0v60a7.5,7.5,0,1,1-15,0Zm20,98.63a12.5,12.5,0,0,1-12.5,12.5h0a12.5,12.5,0,0,1-12.5-12.5h0a12.5,12.5,0,0,1,12.5-12.5h0a12.5,12.5,0,0,1,12.5,12.5Z"
-          />
-        </symbol>
-        <symbol
-          id="icon__select-arrow--filled"
-          viewBox="0 0 240 240"
-          xmlns="http://www.w3.org/2000/svg">
-
-          <title>icon__select-arrow-filled</title>
-          <polygon 
-          class="color"
-          points="116.99 166.31 156.99 96.31 76.99 96.31 116.99 166.31"/>
-
-        </symbol>
-
-        <symbol
-        id="icon__add--filled"
-        viewBox="0 0 240 240"
-        xmlns="http://www.w3.org/2000/svg">
-
-        <title>icon__add--filled</title>
-        <path 
-        class="color"
-        d="M120,20A100,100,0,1,0,220,120,100,100,0,0,0,120,20Zm50,110H130v40a10,10,0,0,1-20,0V130H70a10,10,0,0,1,0-20h40V70a10,10,0,0,1,20,0v40h40a10,10,0,0,1,0,20Z"/>
-
+  <link rel="stylesheet" type="text/css" href="root.css" />
+  <link rel="stylesheet" type="text/css" href="input.css" />
+  <link rel="stylesheet" type="text/css" href="select.css" />
+  <link rel="stylesheet" type="text/css" href="show.css" />
+  <link rel="stylesheet" type="text/css" href="color.css" />
+  <link rel="stylesheet" type="text/css" href="button.css" />
+  <link rel="stylesheet" type="text/css" href="checkbox.css" />
+  <link rel="stylesheet" type="text/css" href="typo.css" />
+  <script src="input.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/plain; charset=dropbox-cors-hack" />
+  <meta name="viewport"
+    content="height=device-height, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+  <svg style="display: none;" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon__donation--filled" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+        <title>icon__donation</title>
+        <path class="color"
+          d="M161.76,35.42A57.69,57.69,0,0,0,120.22,53a58.13,58.13,0,1,0-79.81,84.45l79.81,72.12L200,137.48A58.32,58.32,0,0,0,161.76,35.42Zm-11.93,93.75H129.17v20.66a9.17,9.17,0,1,1-18.34,0V129.17H90.17a9.17,9.17,0,0,1,0-18.34h20.66V90.17a9.17,9.17,0,1,1,18.34,0v20.66h20.66a9.17,9.17,0,0,1,0,18.34Z">
+        </path>
+      </symbol>
+      <symbol id="icon__info--filled" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+        <title>icon__info</title>
+        <path class="color"
+          d="M120,20A100,100,0,1,0,220,120,100,100,0,0,0,120,20Zm12.23,149.31a12.43,12.43,0,1,1-24.85,0V120.08a12.43,12.43,0,1,1,24.85,0Zm.15-98.7A12.35,12.35,0,0,1,120,83h0a12.35,12.35,0,0,1-12.35-12.35h0A12.35,12.35,0,0,1,120,58.26h0a12.35,12.35,0,0,1,12.35,12.35Z" />
       </symbol>
 
+      <symbol id="icon__warning--filled" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+        <title>icon__warning</title>
+        <path class="color"
+          d="M120,20A100,100,0,1,0,220,120,100,100,0,0,0,120,20Zm-7.5,48a7.5,7.5,0,1,1,15,0v60a7.5,7.5,0,1,1-15,0Zm20,98.63a12.5,12.5,0,0,1-12.5,12.5h0a12.5,12.5,0,0,1-12.5-12.5h0a12.5,12.5,0,0,1,12.5-12.5h0a12.5,12.5,0,0,1,12.5,12.5Z" />
+      </symbol>
+      <symbol id="icon__select-arrow--filled" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+        <title>icon__select-arrow-filled</title>
+        <polygon class="color" points="116.99 166.31 156.99 96.31 76.99 96.31 116.99 166.31" />
+      </symbol>
+      <symbol id="icon__add--filled" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
 
-       
-      </defs>
-    </svg>
-  </head>
-  <body>
-    <main>
-      <!--inputs-->
-      <section class="container">
-        <label class="notes">Inputok</label>
-        <div class="container__item">
-          <label class="notes">Empty</label>
-          <div class="wrapper">
-            <div class="in__area">
-              <label class="caption">Név</label>
-              <input
-                class="in"
-                type="text"
-                value=""
-                oninput="fillInput(event)"
-                onchange="leaveInput(event)"
-              />
-            </div>
-          </div>
-        </div>
-        <label class="notes">ICONOS INPUT</label>
-        <div class="container__item">
-          <label class="notes">Filled</label>
-          <div class="wrapper">
-            <div class="in__area">
-              <label class="caption">Számlázási cím</label>
-              <input
-                class="in in--filled"
-                type="text"
-                value="nemakarokregisztralni@gmail.com"
-                oninput="fillInput(event)"
-                onchange="leaveInput(event)"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="container__item">
-          <label class="notes">Filled /w info</label>
-          <div class="wrapper">
-            <div class="in__area">
-              <label class="caption">Email</label>
-              <input
-                class="in"
-                type="text"
-                required
-                value=""
-                oninput="fillInput(event)"
-                onchange="leaveInput(event)"
-              />
-              <div class="info">
-                <span class="info__icon">
-                  <svg
-                    class="icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    preserveAspectRatio="xMidYMid"
-                    class=""
-                  >
-                    <use xlink:href="#icon__info--filled"></use>
+        <title>icon__add--filled</title>
+        <path class="color" d="M120,20A100,100,0,1,0,220,120,100,100,0,0,0,120,20Zm50,110H130v40a10,10,0,0,1-20,0V130H70a10,10,0,0,1,0-20h40V70a10,10,0,0,1,20,0v40h40a10,10,0,0,1,0,20Z"></path>
+
+      </symbol>
+      <symbol id="icon__checkbox--checked" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+        <title>icon__checkbox--checked</title>
+        <path class="color"
+          d="M91.27,99.68l21.51,21.51L162.57,71.4a17,17,0,0,1,24,0h0a17,17,0,0,1,0,24l-49.79,49.79-24,24-24-24L67.23,123.72a17,17,0,0,1,0-24h0A17,17,0,0,1,91.27,99.68Z" />
+      </symbol>
+      <symbol id="icon__checkbox--indeterminate" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+        <title>icon__checkbox--indeterminate</title>
+        <path class="color"
+        d="M76.53,120.19a17,17,0,0,1,17-17h53.44a17,17,0,0,1,0,33.94H93.5a17,17,0,0,1-17-17Z"/>
+      </symbol>
+    </defs>
+  </svg>
+</head>
+
+<body>
+  <main>
+    <!--selects-->
+    <section class="container">
+      <label class="notes">Checkbox</label>
+      <div class="container__item">
+        <label class="notes">Unchecked, checked, indeterminate</label>
+        <div class="wrapper">
+          <div class="chk__area">
+              <input type="checkbox" id="chk__user-agent">
+              <div class="chk chk--unchecked">
+                <span class="chk__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
+                    >
+                    <use xlink:href="#icon__checkbox--checked"></use>
                   </svg>
                 </span>
-                <span class="display">
-                  Kötelező mező, kitöltése kötelező. Töltsd ki, kérlek, sok a
-                  szöveg.</span
-                >
+                <span class="chk__text"></span>
               </div>
-            </div>
           </div>
-        </div>
-        <div class="container__item">
-          <label class="notes">Warning</label>
-          <div class="wrapper">
-            <div class="in__area in--warning" id="input03Area">
-              <label class="caption">Születési jelszó</label>
-              <input
-                value="nemadom"
-                type="email"
-                class="in in--warning"
-                oninput="fillInput(event)"
-                onchange="leaveInput(event)"
-              />
-              <div class="info">
-                <span class="info__icon">
-                  <svg
-                    class="icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    preserveAspectRatio="xMidYMid"
-                    class=""
-                  >
-                    <use xlink:href="#icon__warning--filled"></use>
+          <div class="chk__area">
+              <input type="checkbox" id="chk__user-agent">
+              <div class="chk chk--checked">
+                <span class="chk__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
+                    >
+                    <use xlink:href="#icon__checkbox--checked"></use>
                   </svg>
                 </span>
-                <span class="display">Nem talált, legyen benne @!</span>
+                <span class="chk__text"></span>
+              </div>
+          </div>
+          <div class="chk__area">
+              <input type="checkbox" id="chk__user-agent">
+              <div class="chk chk--indeterminate">
+                <span class="chk__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
+                    >
+                    <use xlink:href="#icon__checkbox--indeterminate"></use>
+                  </svg>
+                </span>
+                <span class="chk__text"></span>
               </div>
             </div>
+        </div>
+      </div>
+      <div class="container__item">
+          <label class="notes">Checkbox /w text</label>
+          <div class="wrapper">
+            <div class="checkbox">
+              <div class="chk__area">
+                  <input type="checkbox" id="chk__user-agent">
+                  <div class="chk chk--unchecked">
+                    <span class="chk__icon">
+                      <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
+                        >
+                        <use xlink:href="#icon__checkbox--checked"></use>
+                      </svg>
+                    </span>
+                    <span class="chk__text"></span>
+                  </div>
+              </div>
+              <span class="chk__text">
+                Elfogadom a feltételeket, bár nem én szabtam őket, jóllehet mesterségem szabó, nevem Szabó. Ehh...
+              </span>
+          </div>
           </div>
         </div>
-        <div class="container__item">
-          <label class="notes">onchange on Input vagy Form?</label>
-          <ul class="notes">
-            <li class="notes">
-              UX szempontból nem mindegy, mikor és mivel kapcsolatban kötekedünk
-              a userrel: rögtön egy input elhagyása vagy a form submit
-              eseménynél.
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!--selects-->
-      <section class="container">
-        <label class="notes">Select</label>
-        <div class="container__item">
-          <label class="notes">Standard</label>
-          <div class="wrapper">
-            <div class="sel__area">
-              <label class="caption">Kedvenc csapat</label>
-              <div class="sel" id="formSelect">
-                <div class="wrapper--sel__trigger">
+      <label class="notes">Select</label>
+      <div class="container__item">
+        <label class="notes">Standard /w searh bar</label>
+        <div class="wrapper">
+          <div class="sel__area">
+            <label class="caption">Kedvenc csapat</label>
+            <div class="sel">
+              <div class="wrapper--sel__trigger">
                 <div class="sel__trigger" onclick="trigList(event)">
                   <span id="selectedItem" class="selected">Mógyi Agrárnektár SE
                   </span>
                 </div>
                 <span class="sel__arrow" id="selectArrow">
-                  <button class="btn btn--lo btn--only-icon btn--internal">
-                    <svg
-                      class="icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      preserveAspectRatio="xMidYMid"
-                      class=""
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
                     >
-                      <use xlink:href="#icon__select-arrow--filled"></use>
-                    </svg>
-                  </button>
-                 </span>
-                </div>
-                <div class="wrapper__sel__list">
+                    <use xlink:href="#icon__select-arrow--filled"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="wrapper__sel__list">
                 <div class="sel__list" id="selectList">
-                  <div class="wrapper__in--internal">
-                    <div class="placeholder placeholder--internal">
-                      <span class="placeholder__icon">
-                        <svg
-                        class="icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        version="1.1"
-                        preserveAspectRatio="xMidYMid"
-                        class=""
-                      >
-                        <use xlink:href="#icon__add--filled"></use>
-                      </svg>
-                    </span>
-                      <span class="placeholder__text">Keresés</span>
-                    </div>
-                    <input
-                      name="internal"
-                      placeholder=""
-                      class="in in--internal"
-                      value=""
-                      onclick="erasePlaceholder(event)"
-                      oninput="fillInput(event)"
-                      onchange="leaveInput(event)"
-                    />
-                  </div>
+                    <div class="wrapper__in--internal">
+                        <div class="placeholder placeholder--internal">
+                          <span class="placeholder__icon">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid">
+                            <use xlink:href="#icon__add--filled"></use>
+                          </svg>
+                        </span>
+                          <span class="placeholder__text">Keresés</span>
+                        </div>
+                        <input name="internal" placeholder="" class="in in--internal" value="" onclick="erasePlaceholder(event)" oninput="fillInput(event)" onchange="leaveInput(event)">
+                      </div>
+                 
                   <div class="wrapper__list--select">
-                  <ul class="list--select">
+                    <ul class="list--select">
                       <li class="list__item" onclick="selectItem(event)">del!</li>
                     <li class="list__item" onclick="selectItem(event)">Közép-Németország</li>
                     <li class="list__item" onclick="selectItem(event)">Magyarország</li>
@@ -294,381 +189,399 @@
                     <li class="list__item" onclick="selectItem(event)">Jamaika</li>
                     <li class="list__item" onclick="selectItem(event)">Franciaország</li>
                     <li class="list__item" onclick="selectItem(event)">Észak-Rajna-Vesztfália-alsó</li>
-                    
                   </ul>
                 </div>
                 </div>
-               </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!--buttons-->
-      <section class="container">
-        <label class="notes">Gombok</label>
-        <div class="container__item">
-          <label class="notes">Low /wo icon</label>
-          <div class="wrapper">
-            <div class="btn__area">
-              <button class="btn btn--lo">
-                <div class="btn__content">
-                  <span class="btn__text">Gomb</span>
-                </div>
-              </button>
+      </div>
+    </section>
+    <!--inputs-->
+    <section class="container">
+      <label class="notes">Inputok</label>
+      <div class="container__item">
+        <label class="notes">Empty</label>
+        <div class="wrapper">
+          <div class="in__area">
+            <label class="caption">Név</label>
+            <input class="in" type="text" value="" oninput="fillInput(event)" onchange="leaveInput(event)" />
+          </div>
+        </div>
+      </div>
+      <label class="notes">ICONOS INPUT</label>
+      <div class="container__item">
+        <label class="notes">Filled</label>
+        <div class="wrapper">
+          <div class="in__area">
+            <label class="caption">Számlázási cím</label>
+            <input class="in in--filled" type="text" value="nemakarokregisztralni@gmail.com" oninput="fillInput(event)"
+              onchange="leaveInput(event)" />
+          </div>
+        </div>
+      </div>
+      <div class="container__item">
+        <label class="notes">Filled /w info</label>
+        <div class="wrapper">
+          <div class="in__area">
+            <label class="caption">Email</label>
+            <input class="in" type="text" required value="" oninput="fillInput(event)" onchange="leaveInput(event)" />
+            <div class="info">
+              <span class="info__icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
+                  >
+                  <use xlink:href="#icon__info--filled"></use>
+                </svg>
+              </span>
+              <span class="display">
+                Kötelező mező, kitöltése kötelező. Töltsd ki, kérlek, sok a
+                szöveg.</span>
             </div>
           </div>
         </div>
-        <div class="container__item">
-          <label class="notes">Low</label>
-          <div class="wrapper">
-            <div class="btn__area">
-              <button class="btn btn--lo">
-                <div class="btn__content">
-                  <span class="btn__icon">
-                    <svg
-                      class="icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      preserveAspectRatio="xMidYMid"
-                      class=""
+      </div>
+      <div class="container__item">
+        <label class="notes">Warning</label>
+        <div class="wrapper">
+          <div class="in__area in--warning" id="input03Area">
+            <label class="caption">Születési jelszó</label>
+            <input value="nemadom" type="email" class="in in--warning" oninput="fillInput(event)"
+              onchange="leaveInput(event)" />
+            <div class="info">
+              <span class="info__icon">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
+                  >
+                  <use xlink:href="#icon__warning--filled"></use>
+                </svg>
+              </span>
+              <span class="display">Nem talált, legyen benne @!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container__item">
+        <label class="notes">onchange on Input vagy Form?</label>
+        <ul class="notes">
+          <li class="notes">
+            UX szempontból nem mindegy, mikor és mivel kapcsolatban kötekedünk
+            a userrel: rögtön egy input elhagyása vagy a form submit
+            eseménynél.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--buttons-->
+    <section class="container">
+      <label class="notes">Gombok</label>
+      <div class="container__item">
+        <label class="notes">Low /wo icon</label>
+        <div class="wrapper">
+          <div class="btn__area">
+            <button class="btn btn--lo">
+              <div class="btn__content">
+                <span class="btn__text">Gomb</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container__item">
+        <label class="notes">Low</label>
+        <div class="wrapper">
+          <div class="btn__area">
+            <button class="btn btn--lo">
+              <div class="btn__content">
+                <span class="btn__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
                     >
-                      <use xlink:href="#icon__donation--filled"></use>
-                    </svg>
-                  </span>
-                  <span class="btn__text">Gomb</span>
-                </div>
-              </button>
-            </div>
+                    <use xlink:href="#icon__donation--filled"></use>
+                  </svg>
+                </span>
+                <span class="btn__text">Gomb</span>
+              </div>
+            </button>
           </div>
         </div>
-        <div class="container__item">
-          <label class="notes">Low only icon</label>
-          <div class="wrapper">
-            <div class="btn__area">
-              <button class="btn btn--lo btn--only-icon">
-                <div class="btn__content">
-                  <span class="btn__icon">
-                    <svg
-                      class="icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      preserveAspectRatio="xMidYMid"
-                      class=""
+      </div>
+      <div class="container__item">
+        <label class="notes">Low only icon</label>
+        <div class="wrapper">
+          <div class="btn__area">
+            <button class="btn btn--lo btn--only-icon">
+              <div class="btn__content">
+                <span class="btn__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
                     >
-                      <use xlink:href="#icon__donation--filled"></use>
-                    </svg>
-                  </span>
-                </div>
-              </button>
-            </div>
+                    <use xlink:href="#icon__donation--filled"></use>
+                  </svg>
+                </span>
+              </div>
+            </button>
           </div>
         </div>
-        <div class="container__item">
-          <label class="notes">DISABLED</label>
-          <div class="wrapper">
-            <div class="btn__area">
-              <button
-                class="btn btn--hi"
-                style="background-color: var(--color__mg)"
-              >
-                <div class="btn__content">
-                  <span class="btn__text">Nyomógomb</span>
-                </div>
-              </button>
-            </div>
+      </div>
+      <div class="container__item">
+        <label class="notes">DISABLED</label>
+        <div class="wrapper">
+          <div class="btn__area">
+            <button class="btn btn--hi" style="background-color: var(--color__mg)">
+              <div class="btn__content">
+                <span class="btn__text">Nyomógomb</span>
+              </div>
+            </button>
           </div>
         </div>
-        <div class="container__item">
-          <label class="notes">Medium</label>
-          <div class="wrapper">
-            <div class="btn__area">
-              <button class="btn">
-                <div class="btn__content">
-                  <span class="btn__icon">
-                    <svg
-                      class="icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      preserveAspectRatio="xMidYMid"
-                      class=""
+      </div>
+      <div class="container__item">
+        <label class="notes">Medium</label>
+        <div class="wrapper">
+          <div class="btn__area">
+            <button class="btn">
+              <div class="btn__content">
+                <span class="btn__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
                     >
-                      <use xlink:href="#icon__donation--filled"></use>
-                    </svg>
-                  </span>
-                  <span class="btn__text">Gomb</span>
-                </div>
-              </button>
-            </div>
+                    <use xlink:href="#icon__donation--filled"></use>
+                  </svg>
+                </span>
+                <span class="btn__text">Gomb</span>
+              </div>
+            </button>
           </div>
         </div>
-        <div class="container__item">
-          <label class="notes">Hi</label>
-          <div class="wrapper">
-            <div class="btn__area">
-              <button class="btn btn--hi">
-                <div class="btn__content">
-                  <span class="btn__icon">
-                    <svg
-                      class="icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      preserveAspectRatio="xMidYMid"
-                      class=""
+      </div>
+      <div class="container__item">
+        <label class="notes">Hi</label>
+        <div class="wrapper">
+          <div class="btn__area">
+            <button class="btn btn--hi">
+              <div class="btn__content">
+                <span class="btn__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
                     >
-                      <use xlink:href="#icon__donation--filled"></use>
-                    </svg>
-                  </span>
-                  <span class="btn__text">Gomb</span>
-                </div>
-              </button>
-            </div>
+                    <use xlink:href="#icon__donation--filled"></use>
+                  </svg>
+                </span>
+                <span class="btn__text">Gomb</span>
+              </div>
+            </button>
           </div>
         </div>
+      </div>
 
-        <div class="container__item">
-          <label class="notes">Low</label>
-          <div class="wrapper inverse">
-            <div class="btn__area">
-              <button class="btn btn--lo">
-                <div class="btn__content">
-                  <span class="btn__icon">
-                    <svg
-                      class="icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      preserveAspectRatio="xMidYMid"
-                      class=""
+      <div class="container__item">
+        <label class="notes">Low</label>
+        <div class="wrapper inverse">
+          <div class="btn__area">
+            <button class="btn btn--lo">
+              <div class="btn__content">
+                <span class="btn__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
                     >
-                      <use xlink:href="#icon__donation--filled"></use>
-                    </svg>
-                  </span>
-                  <span class="btn__text">Gomb</span>
-                </div>
-              </button>
-            </div>
+                    <use xlink:href="#icon__donation--filled"></use>
+                  </svg>
+                </span>
+                <span class="btn__text">Gomb</span>
+              </div>
+            </button>
           </div>
         </div>
-        <div class="container__item">
-          <label class="notes">Medium</label>
-          <div class="wrapper inverse">
-            <div class="btn__area">
-              <button class="btn">
-                <div class="btn__content">
-                  <span class="btn__icon">
-                    <svg
-                      class="icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      preserveAspectRatio="xMidYMid"
-                      class=""
+      </div>
+      <div class="container__item">
+        <label class="notes">Medium</label>
+        <div class="wrapper inverse">
+          <div class="btn__area">
+            <button class="btn">
+              <div class="btn__content">
+                <span class="btn__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
                     >
-                      <use xlink:href="#icon__donation--filled"></use>
-                    </svg>
-                  </span>
-                  <span class="btn__text">Gomb</span>
-                </div>
-              </button>
-            </div>
+                    <use xlink:href="#icon__donation--filled"></use>
+                  </svg>
+                </span>
+                <span class="btn__text">Gomb</span>
+              </div>
+            </button>
           </div>
         </div>
+      </div>
 
-        <div class="container__item">
-          <label class="notes">Hi /wo icon</label>
-          <div class="wrapper inverse">
-            <div class="btn__area">
-              <button class="btn btn--hi">
-                <div class="btn__content">
-                  <span class="btn__text">Nyomógomb</span>
-                </div>
-              </button>
-            </div>
+      <div class="container__item">
+        <label class="notes">Hi /wo icon</label>
+        <div class="wrapper inverse">
+          <div class="btn__area">
+            <button class="btn btn--hi">
+              <div class="btn__content">
+                <span class="btn__text">Nyomógomb</span>
+              </div>
+            </button>
           </div>
         </div>
-        <div class="container__item">
-          <label class="notes">Hi</label>
-          <div class="wrapper inverse">
-            <div class="btn__area">
-              <button class="btn btn--hi">
-                <div class="btn__content">
-                  <span class="btn__icon">
-                    <svg
-                      class="icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      preserveAspectRatio="xMidYMid"
-                      class=""
+      </div>
+      <div class="container__item">
+        <label class="notes">Hi</label>
+        <div class="wrapper inverse">
+          <div class="btn__area">
+            <button class="btn btn--hi">
+              <div class="btn__content">
+                <span class="btn__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
                     >
-                      <use xlink:href="#icon__donation--filled"></use>
-                    </svg>
-                  </span>
-                  <span class="btn__text">Nyomógomb</span>
-                </div>
-              </button>
-            </div>
+                    <use xlink:href="#icon__donation--filled"></use>
+                  </svg>
+                </span>
+                <span class="btn__text">Nyomógomb</span>
+              </div>
+            </button>
           </div>
         </div>
-        <div class="container__item">
-          <label class="notes">Hi only icon</label>
-          <div class="wrapper inverse">
-            <div class="btn__area">
-              <button class="btn btn--hi btn--only-icon">
-                <div class="btn__content">
-                  <span class="btn__icon">
-                    <svg
-                      class="icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      preserveAspectRatio="xMidYMid"
-                      class=""
+      </div>
+      <div class="container__item">
+        <label class="notes">Hi only icon</label>
+        <div class="wrapper inverse">
+          <div class="btn__area">
+            <button class="btn btn--hi btn--only-icon">
+              <div class="btn__content">
+                <span class="btn__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
                     >
-                      <use xlink:href="#icon__donation--filled"></use>
-                    </svg>
-                  </span>
-                </div>
-              </button>
-            </div>
+                    <use xlink:href="#icon__donation--filled"></use>
+                  </svg>
+                </span>
+              </div>
+            </button>
           </div>
         </div>
-        <div class="container__item">
-          <label class="notes">Warning</label>
-          <div class="wrapper warning">
-            <div class="btn__area">
-              <button class="btn btn--hi btn--warning">
-                <div class="btn__content">
-                  <span class="btn__icon">
-                    <svg
-                      class="icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      preserveAspectRatio="xMidYMid"
-                      class=""
+      </div>
+      <div class="container__item">
+        <label class="notes">Warning</label>
+        <div class="wrapper warning">
+          <div class="btn__area">
+            <button class="btn btn--hi btn--warning">
+              <div class="btn__content">
+                <span class="btn__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
                     >
-                      <use xlink:href="#icon__donation--filled"></use>
-                    </svg>
-                  </span>
-                  <span class="btn__text">Gomb</span>
-                </div>
-              </button>
-            </div>
+                    <use xlink:href="#icon__donation--filled"></use>
+                  </svg>
+                </span>
+                <span class="btn__text">Gomb</span>
+              </div>
+            </button>
           </div>
         </div>
-        <div class="container__item">
-          <div class="wrapper inverse warning">
-            <div class="btn__area">
-              <button class="btn btn--hi btn--warning">
-                <div class="btn__content">
-                  <span class="btn__icon">
-                    <svg
-                      class="icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      preserveAspectRatio="xMidYMid"
-                      class=""
+      </div>
+      <div class="container__item">
+        <div class="wrapper inverse warning">
+          <div class="btn__area">
+            <button class="btn btn--hi btn--warning">
+              <div class="btn__content">
+                <span class="btn__icon">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid"
                     >
-                      <use xlink:href="#icon__donation--filled"></use>
-                    </svg>
-                  </span>
-                  <span class="btn__text">Pánikgomb</span>
-                </div>
-              </button>
-            </div>
+                    <use xlink:href="#icon__donation--filled"></use>
+                  </svg>
+                </span>
+                <span class="btn__text">Pánikgomb</span>
+              </div>
+            </button>
           </div>
         </div>
-        <div class="container__item">
-          <label class="notes"
-            >alap-, funkcionális és esztétitkai Dizájn szintek (aD, fD,
-            eD)</label
-          >
-          <ul class="notes">
-            <li class="notes">
-              a box-shadow nem vehet részt az esztétikaiDizájnban, csak a
-              funkcionálisDizájnban. A hi emphasis btn árnykolás eD, a :focus
-              outline-boxshadowja fD. Ezért eD-re inkább svg filtert kéne
-              használni, feGaussian pl. de ezt nehéz lesz olyanná csinálni h
-              kövesse a dizájn (pl. roundness)de nem biztos, mert lehet vágja a
-              html box átlátszó részeit (mint a filter drop shadow vs box
-              shadow)
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!--basics-->
-      <section class="container">
-        <label class="notes">Szinek</label>
-        <div class="container__item">
-          <label class="notes">Primary</label>
-          <div class="wrapper color">1</div>
-          <div class="wrapper color color--light">L</div>
-          <div class="wrapper color color--dark">D</div>
-        </div>
-        <div class="container__item">
-          <label class="notes">Secondary</label>
-          <div class="wrapper color color-2ry">2</div>
-          <div class="wrapper color color-2ry--light">L</div>
-          <div class="wrapper color color-2ry--dark">D</div>
-        </div>
-        <div class="container__item">
-          <label class="notes">Grounds</label>
-          <div class="wrapper color color__fg">F</div>
-          <div class="wrapper color color__mg">M</div>
-          <div class="wrapper color color__bg">B</div>
-        </div>
-        <div class="container__item">
-          <label class="notes">Warning</label>
-          <div class="wrapper color color__warning">W</div>
-        </div>
-        <label class="notes"></label>
-        <label class="notes">Eltartások (pads&gaps)</label>
-        <div class="container__item">
-          <label class="notes">Pads (dead space inside)</label>
-          <label class="notes">Gaps (dead space outside)</label>
-        </div>
-      </section>
-      <!--feedback-->
-      <section class="container" id="feedback">
-        <label class="notes">Feedback</label>
-        <div class="container__item">
-          <label class="notes">@Acsi</label>
-          <ul class="notes">
-            <li class="notes">
-              inpute feletti captonök eltartása rounded 0 esetén
-            </li>
-            <li class="notes">"Az a jó CSS, ha nincs CSS"</li>
-            <li class="notes">
-              box-shadow optikai csalodasok. /* ezen még töröm a fejem! -- Tbg
-              */
-            </li>
-            <li class="notes">
-              "Rájöttem miért van kisebb bal padding a material gombokon ha van
-              benne ikon" "Az ikonok nem faltól falig mennek ezért magán az ikon
-              belül is van üres tér, ezt ellensúlyozzák azzal, hogy csökkentik a
-              bal paddingot" / ez most akkor bug v feature?
-            </li>
-          </ul>
-          <label class="notes">@István</label>
-          <ul class="notes">
-            <li class="notes">
-              document.documentElement.style.setProperty('--your-variable',
-              '#YOURCOLOR');
-            </li>
-          </ul>
-          <label class="notes">@Tbg</label>
-          <ul class="notes">
-            <li class="notes">
-              box-shadow transition 2x probléma:
-              <br />
-              1:) oda vissza esetben page reloadnál villognak a transiitionök.
-              <br />
-              2:) a hover effekt a hi buttonon szintén box shadow, amely
-              keveredik az outline:focus-szal. amit nem tudok lekezelni külön,
-              az all meg túlzás
-              <br />
-              3:) offon vannak most.
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-  </body>
+      </div>
+      <div class="container__item">
+        <label class="notes">alap-, funkcionális és esztétitkai Dizájn szintek (aD, fD,
+          eD)</label>
+        <ul class="notes">
+          <li class="notes">
+            a box-shadow nem vehet részt az esztétikaiDizájnban, csak a
+            funkcionálisDizájnban. A hi emphasis btn árnykolás eD, a :focus
+            outline-boxshadowja fD. Ezért eD-re inkább svg filtert kéne
+            használni, feGaussian pl. de ezt nehéz lesz olyanná csinálni h
+            kövesse a dizájn (pl. roundness)de nem biztos, mert lehet vágja a
+            html box átlátszó részeit (mint a filter drop shadow vs box
+            shadow)
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--basics-->
+    <section class="container">
+      <label class="notes">Szinek</label>
+      <div class="container__item">
+        <label class="notes">Primary</label>
+        <div class="wrapper color">1</div>
+        <div class="wrapper color color--light">L</div>
+        <div class="wrapper color color--dark">D</div>
+      </div>
+      <div class="container__item">
+        <label class="notes">Secondary</label>
+        <div class="wrapper color color-2ry">2</div>
+        <div class="wrapper color color-2ry--light">L</div>
+        <div class="wrapper color color-2ry--dark">D</div>
+      </div>
+      <div class="container__item">
+        <label class="notes">Grounds</label>
+        <div class="wrapper color color__fg">F</div>
+        <div class="wrapper color color__mg">M</div>
+        <div class="wrapper color color__bg">B</div>
+      </div>
+      <div class="container__item">
+        <label class="notes">Warning</label>
+        <div class="wrapper color color__warning">W</div>
+      </div>
+      <label class="notes"></label>
+      <label class="notes">Eltartások (pads&gaps)</label>
+      <div class="container__item">
+        <label class="notes">Pads (dead space inside)</label>
+        <label class="notes">Gaps (dead space outside)</label>
+      </div>
+    </section>
+    <!--feedback-->
+    <section class="container" id="feedback">
+      <label class="notes">Feedback</label>
+      <div class="container__item">
+        <label class="notes">@Acsi</label>
+        <ul class="notes">
+          <li class="notes">
+            inpute feletti captonök eltartása rounded 0 esetén
+          </li>
+          <li class="notes">"Az a jó CSS, ha nincs CSS"</li>
+          <li class="notes">
+            box-shadow optikai csalodasok. /* ezen még töröm a fejem! -- Tbg
+            */
+          </li>
+          <li class="notes">
+            "Rájöttem miért van kisebb bal padding a material gombokon ha van
+            benne ikon" "Az ikonok nem faltól falig mennek ezért magán az ikon
+            belül is van üres tér, ezt ellensúlyozzák azzal, hogy csökkentik a
+            bal paddingot" / ez most akkor bug v feature?
+          </li>
+        </ul>
+        <label class="notes">@István</label>
+        <ul class="notes">
+          <li class="notes">
+            document.documentElement.style.setProperty('--your-variable',
+            '#YOURCOLOR');
+          </li>
+        </ul>
+        <label class="notes">@Tbg</label>
+        <ul class="notes">
+          <li class="notes">
+            box-shadow transition 2x probléma:
+            <br />
+            1:) oda vissza esetben page reloadnál villognak a transiitionök.
+            <br />
+            2:) a hover effekt a hi buttonon szintén box shadow, amely
+            keveredik az outline:focus-szal. amit nem tudok lekezelni külön,
+            az all meg túlzás
+            <br />
+            3:) offon vannak most.
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>

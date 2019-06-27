@@ -1,0 +1,47 @@
+#chk__user-agent {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+}
+
+.chk__area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: var(--pad__vertical--sync);
+}
+.chk {
+    height: calc(var(--icon-size) + var(--border__width));
+    width: calc(var(--icon-size) + var(--border__width));
+
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-style: var(--border__style);
+    border-width: var(--border__width--on);
+    border-color: var(--color);
+    border-radius: var(--border-radius);
+
+    color: var(--color__fg);
+}
+
+.chk.chk--unchecked {
+    border-width: var(--border__width);
+}
+
+.chk svg.icon {
+    width: calc(var(--icon-size) * calc(4 / 6));
+    height: calc(var(--icon-size) * calc(4 / 6));
+}
+.chk.chk--unchecked svg.icon {
+    display: none;
+}
+
+.checkbox {
+    justify-content: start;
+    align-items: start;
+}

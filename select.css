@@ -126,9 +126,9 @@
   }
 .placeholder {
     position: absolute;
-    height: var(--button__height--internal);
-    place-content: start;
-    place-items: center;
+    height: 32px, var(--button__height--internal);
+    justify-content: start;
+    align-items:center;
 }
 .placeholder__text {
     font:var(--font);

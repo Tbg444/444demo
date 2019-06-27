@@ -19,7 +19,8 @@ svg.icon {
 
 .btn__area {
   display: flex;
-  place-content: center;
+  justify-content: center;
+  align-items:center;
 }
 .btn {
   padding:
@@ -47,6 +48,7 @@ svg.icon {
 }
 .btn--only-icon {
   padding: var(--pad__vertical--sync);
+  width: var(--button__height);
 }
 .btn--hi  {
   box-shadow: inset 
@@ -89,7 +91,7 @@ transition: background-color 0ms ease-out, box-shadow 350ms ease-out;
   border-color: var(--color__bg);
   border: 1px solid;
 }
-.btn__content, .info, .placeholder {
+.btn__content, .info, .placeholder, .checkbox {
   display: grid;
   grid-auto-flow: column;
   grid-gap: calc(var(--icon-size) / 6);
@@ -109,7 +111,7 @@ transition: background-color 0ms ease-out, box-shadow 350ms ease-out;
   letter-spacing: 0.03125rem;
 }
 /* HOVER */
-.btn:hover {
+.btn:hover, .chk:hover {
   background-color: hsla(
     var(--color__hue),
     calc(var(--color__sat) * 0 + 100%),
@@ -154,7 +156,7 @@ button:focus,
 a:focus,
 input:focus,
 textarea:focus,
-.btn:focus {
+.btn:focus, .chk:focus, .chk:active {
   /* full solid -- szép */
   box-shadow: 0 0 0 0.25rem var(--color--light);
 /* 1/3 solid -- szebb */

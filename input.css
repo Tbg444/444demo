@@ -21,12 +21,12 @@ https://www.w3schools.com/js/js_htmldom_events.asp
   transition: box-shadow 100ms ease-out;
 
   box-sizing: border-box;
-
   border-style: var(--border__style);
   border-width: calc(var(--border__width) * var(--bordered));
   border-color: var(--color);
+  border-radius: var(--border-radius);
+
   height: calc(var(--button__height) + var(--border__width));
-  border-radius: calc(var(--border-radius) * var(--rounded));
   width: 100%;
 
   font:var(--font);
@@ -67,7 +67,8 @@ https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-a
 }
 .info {
   padding: 0 var(--pad__horizontal--roundness);
-  place-content: start;
+  justify-content: start;
+  align-items:start;
 }
 .info__icon svg.icon, .placeholder__icon svg.icon {
   /* 24px --> 16px */
@@ -75,6 +76,6 @@ https://hackernoon.com/how-to-fix-the-ios-11-input-element-in-fixed-modals-bug-a
   height: calc(var(--icon-size) * calc(4 / 6));
   fill:currentColor;
 }
-.display {
+.display, .chk__text {
   font: var(--font__display);
 }

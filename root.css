@@ -9,7 +9,7 @@ CHCKX
     --icon-size: 1.5rem;
     --rounded:1;
     /* border radius 22px! es nem 24px! */
-    --border-radius:calc(var(--rounded) * 1.375rem); 
+    --border-radius:calc(var(--rounded) * 1.5rem); 
     --bordered:1;
     
     /* padding: full sync, vertical-horizontal 1:2, top/bottom async solution @btns, @inputs(?): top/bottom equal! */
@@ -35,7 +35,7 @@ CHCKX
     /* button/input size: icon + vertical padding @input: ++border /w border-box */
 
     --button__height: /*calc(var(--icon-size) + calc(var(--pad__vertical--sync) * 2))*/ 40px;
-    --button__height--internal: calc(var(--icon-size) + calc(var(--pad__vertical--sync) * 2));
+    --button__height--internal: calc(var(--icon-size) + var(--pad__vertical--sync));
 
     --line-height: 1.4;
     --line-height__null: 1;
