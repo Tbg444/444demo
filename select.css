@@ -56,13 +56,13 @@
   height: 0;
   opacity: 0;
   overflow: hidden;
-
   background-color: hsla(
     var(--color__hue),
     calc(var(--color__sat) * 0 + 100%),
     calc(var(--color__ltn) * 0 + 80%),
     calc(var(--color__ap) * 0)
   );
+
 }
 .sel__list--triggered {
   border-top-left-radius: 0;
@@ -79,6 +79,8 @@
     calc(var(--color__ltn) * 0 + 97.5%),
     calc(var(--color__ap) * 1)
   );
+
+  background-color: var(--color__bg);
 
   box-shadow: 0 0.125rem 0.25rem 0.125rem
     hsla(
@@ -166,7 +168,7 @@
 .list--select::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-    background-color: var(--color);
+    background-color: var(--color--light);
     /* box-shadow: inset 0 0 6px rgba(0,0,0,.3); */
 }
 

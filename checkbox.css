@@ -1,20 +1,18 @@
-#chk__user-agent {
+.chk__user-agent {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-
 }
-
 .chk__area {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    padding: var(--pad__vertical--sync);
+    padding: 0 var(--pad__vertical--sync);
 }
 .chk {
-    height: calc(var(--icon-size) + var(--border__width));
-    width: calc(var(--icon-size) + var(--border__width));
+    height: calc(calc(var(--icon-size) * calc(4 / 6)) + var(--border__width));
+    width: calc(calc(var(--icon-size) * calc(4 / 6)) + var(--border__width));
 
     box-sizing: border-box;
     display: flex;

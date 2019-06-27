@@ -1,8 +1,55 @@
-// clickchecker
+/* clickchecker
 document.documentElement.addEventListener("click", function(event) {
     console.log(event.target.className);
 });
+*/
 
+document.querySelectorAll('.chk').forEach((checkChecker) => {
+    checkChecker.addEventListener('click', (checker) => {
+        checker.stopPropagation();
+        var checkerState = checker.currentTarget.getAttribute('data-state');
+        var svgUchk = document.getElementById('svg-uchk');
+        var svgChk = document.getElementById('svg-chk');
+        var svgIchk = document.getElementById('svg-ichk');
+
+        switch (checkerState) {
+            case  'unchecked': {
+                checker.currentTarget.classList.remove('chk--unchecked');
+                checker.currentTarget.classList.toggle('chk--checked');
+                checker.currentTarget.setAttribute('data-state', 'checked');
+                svgUchk.innerHTML = "<use xlink:href=\"#icon__checkbox--checked\" id=\"svg--unchecked\"></use>"
+                console.log(checkerState);
+                break; }
+            case  'checked': {
+                console.log(checkerState);
+                checker.currentTarget.classList.remove('chk--checked');
+                checker.currentTarget.classList.toggle('chk--unchecked');
+                checker.currentTarget.setAttribute('data-state', 'unchecked');
+                svgChk.innerHTML = "<use xlink:href=\"#icon__checkbox--unchecked\" id=\"svg--unchecked\"></use>"
+                break; }
+            
+    /*        case  'indeterminate': {
+                checker.currentTarget.classList.toggle('chk--unchecked');
+            break;}*/
+        }
+    })
+})
+
+
+document.querySelector('.btn--internal').addEventListener('click', (e) => {
+    console.log(e.currentTarget, e.target)
+    e.stopPropagation();
+    trigList(e)
+    })
+/*
+document.querySelectorAll('.in').forEach(function (el) {
+    //console.log("el",el);
+    el.addEventListener('click', function (ev) {
+    ev.stopPropagation();
+    ev.currentTarget.style.background = 'red';
+    })
+    });
+*/
 function erasePlaceholder(event) {
     event.target.placeholder = '';
     
