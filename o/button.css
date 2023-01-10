@@ -1,0 +1,184 @@
+::-moz-focus-inner {
+  border: 0;
+}
+
+
+a {
+  text-decoration: none;
+  border-radius: var(--icon-size);
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+svg.icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.btn__area {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.btn {
+  padding:
+  var(--pad__top--async) 
+  var(--pad__horizontal--sync)
+  var(--pad__bottom--async) 
+  var(--pad__horizontal--sync)
+  ;
+}
+.btn {
+  background-color: var(--color__null);
+  color: var(--color);
+  border-color: var(--color);
+  border: 1px solid;
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  height: var(--button__height);
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+.btn--only-icon {
+  padding: var(--pad__vertical--sync);
+  width: var(--button__height);
+}
+.btn--hi  {
+  box-shadow: inset 
+  0 
+  0
+  calc(var(--icon-size) / 3)
+  calc(var(--icon-size) / 24)
+          hsla(calc(var(--color__hue) * 1), calc(var(
+            --color__sat
+          ) * 0 + 77%), calc(var(--color__ltn) * 0 + 30%), 0.5);
+
+  background-color: var(--color);
+  background-size: 100%;
+  background-position-x: 50%;
+  color: var(--color__bg);
+  border: 0px solid;
+  border-color: var(--color__null);
+
+}
+
+.btn--warning {
+  background-color: var(--color__warning);
+  box-shadow: inset 0 
+  calc(var(--icon-size) / 12 * -1)
+  calc(var(--icon-size) / 3)
+  calc(var(--icon-size) / 24)
+hsla(353, 97%, 36%, 0.5);
+transition: background-color 0ms ease-out, box-shadow 350ms ease-out;
+}
+.btn--lo {
+  background: var(--color--null);
+  color: var(--color);
+  border-color: var(--color--null);
+  border: 1px solid var(--color--null);
+}
+.inverse .btn {
+  color: var(--color__bg);
+}
+.inverse .btn--hi {
+  border-color: var(--color__bg);
+  border: 1px solid;
+}
+.btn__content, .info, .placeholder, .checkbox {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: calc(var(--icon-size) / 6);
+}
+.btn__content {
+  border-bottom: 0px solid;
+  height: var(--icon-size);
+  justify-content: center;
+  align-items: center;
+}
+.btn__icon {
+  /*width: var(--icon-size);
+  height: var(--icon-size);*/
+}
+.btn__text {
+  font: var(--font__action);
+  letter-spacing: 0.03125rem;
+}
+/* HOVER */
+.btn:hover, .chk:hover {
+  background-color: hsla(
+    var(--color__hue),
+    calc(var(--color__sat) * 0 + 100%),
+    calc(var(--color__ltn) * 0 + 80%),
+    calc(var(--color__ap) * 0.3)
+  );
+
+  transition: background-color 200ms ease-out;
+}
+.btn--hi:hover {
+  background-color: hsla(
+    var(--color__hue),
+    calc(var(--color__sat) * 0 + 88%),
+    calc(var(--color__ltn) * 0 + 60%),
+    var(--color__ap)
+  );
+  box-shadow: inset 
+  0 
+  0
+  calc(var(--icon-size) / 3)
+  calc(var(--icon-size) / 24)
+    hsla(
+      calc(var(--color__hue) * 1),
+      calc(var(--color__sat) * 0 + 77%),
+      calc(var(--color__ltn) * 0 + 30%),
+      0.3
+    );
+  transition: background-color 200ms ease-out;
+}
+
+.btn--warning:hover {
+  background-color: hsla(353, 100%, 68%, 1);
+  box-shadow: inset 
+  0 
+  0
+  calc(var(--icon-size) / 3)
+  calc(var(--icon-size) / 24)
+  hsla(353, 97%, 36%, 0.3);
+  transition: background-color 200ms ease-out;
+}
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+.btn:focus, .chk:focus, .chk:active {
+  /* full solid -- szép */
+  box-shadow: 0 0 0 0.25rem var(--color--light);
+/* 1/3 solid -- szebb */
+  box-shadow: 0 0 0 0.25rem 
+  hsla(
+    calc(var(--color__hue) * 1.01357466063),
+    calc(var(--color__sat) * 0 + 100%),
+    calc(var(--color__ltn) * 0 + 74%),
+    calc(var(--color__ap) * .5)
+  );
+  /* full solid, blur4px -- korrektebb a border miatt 
+  box-shadow: 0 0 .25rem 0.125rem 
+  hsla(
+    calc(var(--color__hue) * 1.01357466063),
+    calc(var(--color__sat) * 0 + 100%),
+    calc(var(--color__ltn) * 0 + 74%),
+    calc(var(--color__ap) * .5)
+  );
+  */
+  outline: 1px solid var(--color__null);
+  transition: box-shadow 50ms ease-out;
+}
+.btn--internal:focus{
+  box-shadow: 0 0 0 0 var(--color__null);
+}
