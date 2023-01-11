@@ -50,12 +50,13 @@
   justify-content: center;
   align-content: center;
   grid-auto-flow: column;
-
+  
   width: max-content;
   position: relative;
 }
 
 .button {
+  margin-left: 8px;
   padding: 0 16px;
   height: 40px;
   box-sizing: border-box;
@@ -69,8 +70,8 @@
 
 @media (prefers-color-scheme: light) {
   .filled.qubit {
-    --color-button-container: 153, 50, 204;
-    --color-button-paint: 224, 255, 255;
+    --color-button-container: 131, 14, 226;
+    --color-button-paint: 255, 255, 255;
     --opacity-color-layer: 1;
     --elevation-button-container:  var(--elevated-button-effect);
   }
@@ -79,7 +80,7 @@
     --color-button-outline: 136, 136, 136;
     --opacity-color-layer: 0;
     --border-width-button: 1px;
-    --color-button-paint: 0, 0, 0;
+    --color-button-paint: 131, 14, 226;
   }
 }
 
@@ -110,7 +111,7 @@
 }
 
 .icon {
-  min-width: 16px;
+  width: 16px;
   height:16px;
 }
 
