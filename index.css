@@ -1,0 +1,100 @@
+body * {
+  outline: 0.1px solid #FF00FF22;
+}
+
+
+.theme {
+/* common */
+  --font-button-label: -apple-system, BlinkMacSystemFont,
+"Segoe UI", "Roboto", "Oxygen",
+"Ubuntu", "Cantarell", "Fira Sans",
+"Droid Sans", "Helvetica Neue", sans-serif;
+
+/* by theme, type, state, color-scheme */
+  --color-button-container: 44, 44, 44;
+  --color-button-paint: 222, 222, 222;
+  --color-button-outline: 0, 0, 0;
+  --color-state-layer: black;
+  --border-radius-button: 0px;
+  --border-width-button: 0px;
+  --opacity-color-layer: 1;
+  --opacity-state-layer: 0;
+  --elevation-button-container: 
+    0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.layout {
+  display: inline-grid;
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: column;
+
+  width: max-content;
+  position: relative;
+}
+
+.button {
+  padding: 0 16px;
+  height: 40px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  color: rgba(var(--color-button-paint), 1);
+  background-color: rgba(var(--color-button-container), var(--opacity-color-layer));
+  border: var(--border-width-button) solid rgba(var(--color-button-outline), 1);
+  border-radius: var(--border-radius-button);
+}
+
+.filled.qubit.day {
+  --color-button-container: 153, 50, 204;
+  --color-button-paint: 224, 255, 255;
+  --color-button-outline: 105, 105, 105;
+}
+
+.outlined.qubit.day {
+  --border-width-button: 0px;
+  --opacity-color-layer: 0;
+  --border-width-button: 1px;
+  --color-button-paint: 0, 0, 0;
+  --elevation-button-container: none;
+}
+
+.tonal {
+
+}
+
+.label {
+  padding: 0 8px;
+  font-family: var(--font-button-label);
+  font-size: 14px;
+}
+
+.icon {
+  min-width: 16px;
+  height:16px;
+}
+
+@media (hover: hover) {
+    .theme:hover {
+        --opacity-state-layer: 0.08;
+    }
+
+    .button:hover {
+        box-shadow: var(--elevation-button-container);
+    }
+    
+    .button::after {
+      background-color: var(--color-state-layer);
+      border-radius: inherit;
+      content: "";
+      inset: 0;
+      opacity: var(--opacity-state-layer);
+      position: absolute;
+  }
+}
+
+.theme:active {
+  --opacity-state-layer: 0.12;
+}
