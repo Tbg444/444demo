@@ -1,14 +1,20 @@
+
+/* megnézni a gombokat 32/36px hei, border rad
+elevationnek külön wrapperrel kell kiemelni */
+
 :root {
   color-scheme: light dark;
 }
 
-/* body * {
+body * {
   outline: 0.1px solid #FF00FF22;
-} */
+}
 
+.wrapper {
+  height: 44px;
+}
 
 .theme {
-/* common */
   --font-button-label: -apple-system, BlinkMacSystemFont,
 "Segoe UI", "Roboto", "Oxygen",
 "Ubuntu", "Cantarell", "Fira Sans",
@@ -18,8 +24,8 @@
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-/* by theme, type, state, color-scheme */
-
+  --button-size: 36px;
+  --button-padding-size: 16px;
   --border-radius-button: 0px;
   --border-width-button: 0px;
   --opacity-color-layer: 0;
@@ -56,9 +62,9 @@
 }
 
 .button {
-  margin-left: 8px;
-  padding: 0 16px;
-  height: 40px;
+  margin: 0 4px;
+  padding: 0 var(--button-padding-size);
+  height: var(--button-size);
   box-sizing: border-box;
   cursor: pointer;
 
@@ -113,6 +119,11 @@
 .icon {
   width: 16px;
   height:16px;
+  display: none;
+}
+
+.has-icon .icon {
+  display: grid;
 }
 
 @media (hover: hover) {
