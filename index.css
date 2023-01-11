@@ -1,6 +1,10 @@
-body * {
-  outline: 0.1px solid #FF00FF22;
+:root {
+  color-scheme: light dark;
 }
+
+/* body * {
+  outline: 0.1px solid #FF00FF22;
+} */
 
 
 .theme {
@@ -9,20 +13,36 @@ body * {
 "Segoe UI", "Roboto", "Oxygen",
 "Ubuntu", "Cantarell", "Fira Sans",
 "Droid Sans", "Helvetica Neue", sans-serif;
-
-/* by theme, type, state, color-scheme */
-  --color-button-container: 44, 44, 44;
-  --color-button-paint: 222, 222, 222;
-  --color-button-outline: 0, 0, 0;
-  --color-state-layer: black;
-  --border-radius-button: 0px;
-  --border-width-button: 0px;
-  --opacity-color-layer: 1;
-  --opacity-state-layer: 0;
-  --elevation-button-container: 
+  --elevated-button-effect:
     0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+/* by theme, type, state, color-scheme */
+
+  --border-radius-button: 0px;
+  --border-width-button: 0px;
+  --opacity-color-layer: 0;
+  --opacity-state-layer: 0;
+  --elevation-button-container: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .theme {
+    --color-button-container: 44, 44, 44;
+    --color-button-paint: 0, 0, 0;
+    --color-button-outline: 0, 0, 0;
+    --color-state-layer: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme {
+    --color-button-container: 211, 211, 211;
+    --color-button-paint: 255, 255, 255;
+    --color-button-outline: 255, 255, 255;
+    --color-state-layer: white;
+  }
 }
 
 .layout {
@@ -47,18 +67,36 @@ body * {
   border-radius: var(--border-radius-button);
 }
 
-.filled.qubit.day {
-  --color-button-container: 153, 50, 204;
-  --color-button-paint: 224, 255, 255;
-  --color-button-outline: 105, 105, 105;
+@media (prefers-color-scheme: light) {
+  .filled.qubit {
+    --color-button-container: 153, 50, 204;
+    --color-button-paint: 224, 255, 255;
+    --opacity-color-layer: 1;
+    --elevation-button-container:  var(--elevated-button-effect);
+  }
+
+  .outlined.qubit {
+    --color-button-outline: 136, 136, 136;
+    --opacity-color-layer: 0;
+    --border-width-button: 1px;
+    --color-button-paint: 0, 0, 0;
+  }
 }
 
-.outlined.qubit.day {
-  --border-width-button: 0px;
-  --opacity-color-layer: 0;
-  --border-width-button: 1px;
-  --color-button-paint: 0, 0, 0;
-  --elevation-button-container: none;
+@media (prefers-color-scheme: dark) {
+  .filled.qubit {
+    --color-button-container: 217, 185, 255;
+    --color-button-paint: 70, 0, 133;
+    --opacity-color-layer: 1;
+    --elevation-button-container:  var(--elevated-button-effect);
+  }
+
+  .outlined.qubit {
+    --color-button-outline: 73, 73, 73;
+    --opacity-color-layer: 0;
+    --border-width-button: 1px;
+    --color-button-paint: 217, 185, 255;
+  }
 }
 
 .tonal {
@@ -85,7 +123,7 @@ body * {
         box-shadow: var(--elevation-button-container);
     }
     
-    .button::after {
+    .theme::after {
       background-color: var(--color-state-layer);
       border-radius: inherit;
       content: "";
