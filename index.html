@@ -10,58 +10,18 @@
 <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-
-    .theme {
-        --c-fg: darkorchid;
-        --c-bg: lightcyan;
-
-        --f-ui: -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
-    }
-
-    .layout-center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        max-width: max-content;
-    }
-
-    .button {
-        padding: 0 16px;
-        height: 40px;
-
-        color: var(--c-fg);
-        background: var(--c-bg);
-        border: 1px solid var(--c-fg);
-
-        box-sizing: border-box;
-    }
-
-    .label {
-        padding: 0 8px;
-        font-family: var(--f-ui);
-        font-size: 14px;
-    }
-
-    .icon {
-        min-width: 16px;
-        height:16px;
-    }
-
-</style>
-
-
 </head>
 
 <body>
 
-<div class="button layout-center theme">
-    <div class="icon layout-center">♣</div>
-    <div class="label layout-center">Gomb</div>
+<div class="button layout theme filled qubit day">
+    <div class="icon layout">♣</div>
+    <div class="label layout">Gomb</div>
+</div>
+
+<div class="button layout theme outlined qubit day">
+    <div class="icon layout">♣</div>
+    <div class="label layout">Gomb</div>
 </div>
 </body>
 </html>
