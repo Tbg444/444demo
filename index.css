@@ -47,7 +47,7 @@ body * {
     --color-button-container: 211, 211, 211;
     --color-button-paint: 255, 255, 255;
     --color-button-outline: 255, 255, 255;
-    --color-state-layer: white;
+    --color-state-layer: black;
   }
 }
 
