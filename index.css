@@ -30,69 +30,36 @@ body * {
   --elevation-button-container: none;
 }
 
-@media (prefers-color-scheme: light) {
-  .theme {
-    --color-button-container: 44, 44, 44;
-    --color-button-paint: 0, 0, 0;
-    --color-button-outline: 0, 0, 0;
-    --color-state-layer: black;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .theme {
-    --color-button-container: 211, 211, 211;
-    --color-button-paint: 255, 255, 255;
-    --color-button-outline: 255, 255, 255;
-    --color-state-layer: black;
-  }
+:root[data-theme="light"] .theme {
+	--color-button-container: 44, 44, 44;
+	--color-button-paint: 0, 0, 0;
+	--color-button-outline: 0, 0, 0;
+	--color-state-layer: black;
 }
 
 @media (prefers-color-scheme: light) {
+	:root:not([data-theme]) .theme {
+		--color-button-container: 44, 44, 44;
+		--color-button-paint: 0, 0, 0;
+		--color-button-outline: 0, 0, 0;
+		--color-state-layer: black;
+	}
+}
 
-  .theme {
-    --color-button-container: 44, 44, 44;
-    --color-button-paint: 0, 0, 0;
-    --color-button-outline: 0, 0, 0;
-    --color-state-layer: black;
-  }
-
-  html[data-theme="light"] .theme {
-    --color-button-container: 44, 44, 44;
-    --color-button-paint: 0, 0, 0;
-    --color-button-outline: 0, 0, 0;
-    --color-state-layer: black;
-  }
-
-  html[data-theme="dark"] .theme {
-    --color-button-container: 211, 211, 211;
-    --color-button-paint: 255, 255, 255;
-    --color-button-outline: 255, 255, 255;
-    --color-state-layer: black;
-  }
+:root[data-theme="dark"] .theme {
+	--color-button-container: 211, 211, 211;
+	--color-button-paint: 255, 255, 255;
+	--color-button-outline: 255, 255, 255;
+	--color-state-layer: black;
 }
 
 @media (prefers-color-scheme: dark) {
-  .theme {
-    --color-button-container: 211, 211, 211;
-    --color-button-paint: 255, 255, 255;
-    --color-button-outline: 255, 255, 255;
-    --color-state-layer: black;
-  }
-
-  html[data-theme="light"] .theme {
-    --color-button-container: 44, 44, 44;
-    --color-button-paint: 0, 0, 0;
-    --color-button-outline: 0, 0, 0;
-    --color-state-layer: black;
-  }
-
-  html[data-theme="dark"] .theme {
-    --color-button-container: 211, 211, 211;
-    --color-button-paint: 255, 255, 255;
-    --color-button-outline: 255, 255, 255;
-    --color-state-layer: black;
-  }
+	:root:not([data-theme]) .theme {
+		--color-button-container: 211, 211, 211;
+		--color-button-paint: 255, 255, 255;
+		--color-button-outline: 255, 255, 255;
+		--color-state-layer: black;
+	}
 }
 
 .layout {
@@ -118,102 +85,77 @@ body * {
   border-radius: var(--border-radius-button);
 }
 
+.button:any-link {
+  text-decoration: none;
+}
+
+:root[data-theme="light"] .filled.qubit {
+  --color-button-container: 131, 14, 226;
+  --color-button-paint: 255, 255, 255;
+  --opacity-color-layer: 1;
+  --elevation-button-container:  var(--effect-elevated-button);
+}
+
+:root[data-theme="light"] .outlined.qubit {
+  --color-button-outline: 136, 136, 136;
+  --opacity-color-layer: 0;
+  --border-width-button: 1px;
+  --color-button-paint: 131, 14, 226;
+}
+
 @media (prefers-color-scheme: light) {
-  .filled.qubit {
+	:root:not([data-theme]) .filled.qubit {
     --color-button-container: 131, 14, 226;
     --color-button-paint: 255, 255, 255;
     --opacity-color-layer: 1;
     --elevation-button-container:  var(--effect-elevated-button);
   }
 
-  .outlined.qubit {
+  :root:not([data-theme]) .outlined.qubit {
     --color-button-outline: 136, 136, 136;
     --opacity-color-layer: 0;
     --border-width-button: 1px;
     --color-button-paint: 131, 14, 226;
   }
+}
 
-  html[data-theme="light"] .filled.qubit {
-    --color-button-container: 131, 14, 226;
-    --color-button-paint: 255, 255, 255;
-    --opacity-color-layer: 1;
-    --elevation-button-container:  var(--effect-elevated-button);
-  }
+:root[data-theme="dark"] .filled.qubit {
+  --color-button-container: 217, 185, 255;
+  --color-button-paint: 70, 0, 133;
+  --opacity-color-layer: 1;
+  --elevation-button-container:  var(--effect-elevated-button);
+}
 
-  html[data-theme="dark"] .filled.qubit {
+:root[data-theme="dark"] .outlined.qubit {
+  --color-button-outline: 73, 73, 73;
+  --opacity-color-layer: 0;
+  --border-width-button: 1px;
+  --color-button-paint: 217, 185, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme]) .filled.qubit {
     --color-button-container: 217, 185, 255;
     --color-button-paint: 70, 0, 133;
     --opacity-color-layer: 1;
     --elevation-button-container:  var(--effect-elevated-button);
-  }
-
-  html[data-theme="light"] .outlined.qubit {
-    --color-button-outline: 136, 136, 136;
-    --opacity-color-layer: 0;
-    --border-width-button: 1px;
-    --color-button-paint: 131, 14, 226;
-  }
-
-  html[data-theme="dark"] .outlined.qubit {
-    --color-button-outline: 73, 73, 73;
-    --opacity-color-layer: 0;
-    --border-width-button: 1px;
-    --color-button-paint: 217, 185, 255;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .filled.qubit {
-    --color-button-container: 217, 185, 255;
-    --color-button-paint: 70, 0, 133;
-    --opacity-color-layer: 1;
-    --elevation-button-container:  var(--effect-elevated-button);
-  }
-
-  .outlined.qubit {
+	:root:not([data-theme]) .outlined.qubit {
     --color-button-outline: 73, 73, 73;
     --opacity-color-layer: 0;
     --border-width-button: 1px;
     --color-button-paint: 217, 185, 255;
   }
-
-  html[data-theme="light"] .filled.qubit {
-    --color-button-container: 131, 14, 226;
-    --color-button-paint: 255, 255, 255;
-    --opacity-color-layer: 1;
-    --elevation-button-container:  var(--effect-elevated-button);
-  }
-
-  html[data-theme="dark"] .filled.qubit {
-    --color-button-container: 217, 185, 255;
-    --color-button-paint: 70, 0, 133;
-    --opacity-color-layer: 1;
-    --elevation-button-container:  var(--effect-elevated-button);
-  }
-
-  html[data-theme="light"] .outlined.qubit {
-    --color-button-outline: 136, 136, 136;
-    --opacity-color-layer: 0;
-    --border-width-button: 1px;
-    --color-button-paint: 131, 14, 226;
-  }
-
-  html[data-theme="dark"] .outlined.qubit {
-    --color-button-outline: 73, 73, 73;
-    --opacity-color-layer: 0;
-    --border-width-button: 1px;
-    --color-button-paint: 217, 185, 255;
-  }
-}
-
-.tonal {
-
 }
 
 .label {
   padding: 0 8px;
   font-family: var(--font-button-label);
   font-size: 14px;
+  color: var(--color-button-paint);
 }
 
 .icon {

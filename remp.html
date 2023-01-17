@@ -9,13 +9,13 @@
 "Segoe UI", "Roboto", "Oxygen",
 "Ubuntu", "Cantarell", "Fira Sans",
 "Droid Sans", "Helvetica Neue", sans-serif;
-  --elevated-button-effect:
+  --effect-elevated-button:
     0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-  --button-size: 36px;
-  --button-padding-size: 16px;
+  --size-button: 36px;
+  --inline-padding-button: 16px;
   --border-radius-button: 0px;
   --border-width-button: 0px;
   --opacity-color-layer: 0;
@@ -23,22 +23,36 @@
   --elevation-button-container: none;
 }
 
+:root[data-theme="light"] .theme {
+	--color-button-container: 44, 44, 44;
+	--color-button-paint: 0, 0, 0;
+	--color-button-outline: 0, 0, 0;
+	--color-state-layer: black;
+}
+
 @media (prefers-color-scheme: light) {
-  .theme {
-    --color-button-container: 44, 44, 44;
-    --color-button-paint: 0, 0, 0;
-    --color-button-outline: 0, 0, 0;
-    --color-state-layer: black;
-  }
+	:root:not([data-theme]) .theme {
+		--color-button-container: 44, 44, 44;
+		--color-button-paint: 0, 0, 0;
+		--color-button-outline: 0, 0, 0;
+		--color-state-layer: black;
+	}
+}
+
+:root[data-theme="dark"] .theme {
+	--color-button-container: 211, 211, 211;
+	--color-button-paint: 255, 255, 255;
+	--color-button-outline: 255, 255, 255;
+	--color-state-layer: black;
 }
 
 @media (prefers-color-scheme: dark) {
-  .theme {
-    --color-button-container: 211, 211, 211;
-    --color-button-paint: 255, 255, 255;
-    --color-button-outline: 255, 255, 255;
-    --color-state-layer: white;
-  }
+	:root:not([data-theme]) .theme {
+		--color-button-container: 211, 211, 211;
+		--color-button-paint: 255, 255, 255;
+		--color-button-outline: 255, 255, 255;
+		--color-state-layer: black;
+	}
 }
 
 .layout {
@@ -53,8 +67,8 @@
 
 .button {
   margin: 0 4px;
-  padding: 0 var(--button-padding-size);
-  height: var(--button-size);
+  padding: 0 var(--inline-padding-button);
+  height: var(--size-button);
   box-sizing: border-box;
   cursor: pointer;
 
@@ -64,15 +78,30 @@
   border-radius: var(--border-radius-button);
 }
 
+
+:root[data-theme="light"] .filled.qubit {
+  --color-button-container: 131, 14, 226;
+  --color-button-paint: 255, 255, 255;
+  --opacity-color-layer: 1;
+  --elevation-button-container:  var(--effect-elevated-button);
+}
+
+:root[data-theme="light"] .outlined.qubit {
+  --color-button-outline: 136, 136, 136;
+  --opacity-color-layer: 0;
+  --border-width-button: 1px;
+  --color-button-paint: 131, 14, 226;
+}
+
 @media (prefers-color-scheme: light) {
-  .filled.qubit {
+	:root:not([data-theme]) .filled.qubit {
     --color-button-container: 131, 14, 226;
     --color-button-paint: 255, 255, 255;
     --opacity-color-layer: 1;
-    --elevation-button-container:  var(--elevated-button-effect);
+    --elevation-button-container:  var(--effect-elevated-button);
   }
 
-  .outlined.qubit {
+  :root:not([data-theme]) .outlined.qubit {
     --color-button-outline: 136, 136, 136;
     --opacity-color-layer: 0;
     --border-width-button: 1px;
@@ -80,15 +109,31 @@
   }
 }
 
+:root[data-theme="dark"] .filled.qubit {
+  --color-button-container: 217, 185, 255;
+  --color-button-paint: 70, 0, 133;
+  --opacity-color-layer: 1;
+  --elevation-button-container:  var(--effect-elevated-button);
+}
+
+:root[data-theme="dark"] .outlined.qubit {
+  --color-button-outline: 73, 73, 73;
+  --opacity-color-layer: 0;
+  --border-width-button: 1px;
+  --color-button-paint: 217, 185, 255;
+}
+
 @media (prefers-color-scheme: dark) {
-  .filled.qubit {
+	:root:not([data-theme]) .filled.qubit {
     --color-button-container: 217, 185, 255;
     --color-button-paint: 70, 0, 133;
     --opacity-color-layer: 1;
-    --elevation-button-container:  var(--elevated-button-effect);
+    --elevation-button-container:  var(--effect-elevated-button);
   }
+}
 
-  .outlined.qubit {
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme]) .outlined.qubit {
     --color-button-outline: 73, 73, 73;
     --opacity-color-layer: 0;
     --border-width-button: 1px;
@@ -96,14 +141,11 @@
   }
 }
 
-.tonal {
-
-}
-
 .label {
   padding: 0 8px;
   font-family: var(--font-button-label);
   font-size: 14px;
+  color: var(--color-button-paint);
 }
 
 .icon {
@@ -141,8 +183,7 @@
 </style>
 
 <div class="wrapper layout">
-  <div class="button layout theme outlined qubit">
-    <div class="icon layout">♣</div>
-    <div class="label layout">Podcast</div>
-  </div>
+    <a href="/category/live" class="button layout theme outlined qubit">
+        <div class="label layout">Live</div>
+      </a>
 </div>
