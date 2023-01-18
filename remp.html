@@ -78,9 +78,12 @@
   border-radius: var(--border-radius-button);
 }
 
+.button:any-link {
+  text-decoration: none;
+}
 
 :root[data-theme="light"] .filled.qubit {
-  --color-button-container: 131, 14, 226;
+  --color-button-container: 99, 56, 147;
   --color-button-paint: 255, 255, 255;
   --opacity-color-layer: 1;
   --elevation-button-container:  var(--effect-elevated-button);
@@ -90,12 +93,12 @@
   --color-button-outline: 136, 136, 136;
   --opacity-color-layer: 0;
   --border-width-button: 1px;
-  --color-button-paint: 131, 14, 226;
+  --color-button-paint: 99, 56, 147;
 }
 
 @media (prefers-color-scheme: light) {
 	:root:not([data-theme]) .filled.qubit {
-    --color-button-container: 131, 14, 226;
+    --color-button-container: 99, 56, 147;
     --color-button-paint: 255, 255, 255;
     --opacity-color-layer: 1;
     --elevation-button-container:  var(--effect-elevated-button);
@@ -105,7 +108,7 @@
     --color-button-outline: 136, 136, 136;
     --opacity-color-layer: 0;
     --border-width-button: 1px;
-    --color-button-paint: 131, 14, 226;
+    --color-button-paint: 99, 56, 147;
   }
 }
 
@@ -180,10 +183,12 @@
 .theme:active {
   --opacity-state-layer: 0.12;
 }
+
+
 </style>
 
 <div class="wrapper layout">
-    <a href="/category/live" class="button layout theme outlined qubit">
-        <div class="label layout">Live</div>
-      </a>
+  <a href="/category/newsletter" class="button layout theme filled qubit">
+    <div class="label layout">Segíts!</div>
+  </a>
 </div>

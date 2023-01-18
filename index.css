@@ -90,7 +90,7 @@ body * {
 }
 
 :root[data-theme="light"] .filled.qubit {
-  --color-button-container: 131, 14, 226;
+  --color-button-container: 99, 56, 147;
   --color-button-paint: 255, 255, 255;
   --opacity-color-layer: 1;
   --elevation-button-container:  var(--effect-elevated-button);
@@ -100,12 +100,12 @@ body * {
   --color-button-outline: 136, 136, 136;
   --opacity-color-layer: 0;
   --border-width-button: 1px;
-  --color-button-paint: 131, 14, 226;
+  --color-button-paint: 99, 56, 147;
 }
 
 @media (prefers-color-scheme: light) {
 	:root:not([data-theme]) .filled.qubit {
-    --color-button-container: 131, 14, 226;
+    --color-button-container: 99, 56, 147;
     --color-button-paint: 255, 255, 255;
     --opacity-color-layer: 1;
     --elevation-button-container:  var(--effect-elevated-button);
@@ -115,7 +115,7 @@ body * {
     --color-button-outline: 136, 136, 136;
     --opacity-color-layer: 0;
     --border-width-button: 1px;
-    --color-button-paint: 131, 14, 226;
+    --color-button-paint: 99, 56, 147;
   }
 }
 
