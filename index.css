@@ -2,7 +2,7 @@
   color-scheme: light dark;
 }
 
-body {
+.page {
   display: grid;
   gap: 32px;
   padding: 32px;
