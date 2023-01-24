@@ -31,6 +31,7 @@
 .article-bottom :any-link {
   font-weight: 700;
   text-decoration: underline;
+  color: rgba(var(--primary));
 }
 
 @media (hover: hover) {
