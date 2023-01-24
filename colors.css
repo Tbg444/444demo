@@ -1,0 +1,96 @@
+
+/* light */
+
+:root[data-theme="light"] .colors {
+  --surface: 255, 255, 255;
+  --on-surface: 0, 0, 0;
+  --outline-variant: 0, 0, 0;
+  --primary: 255, 255, 255;
+  --on-primary: 0, 0, 0;
+  --secondary-container: 255, 255, 255;
+  --on-secondary-container: 0, 0, 0;
+}
+
+:root[data-theme="light"] .colors.qubit {
+  --surface: 255, 255, 255;
+  --on-surface: 0, 0, 0;
+  --outline-variant: 217, 217, 217;
+  --primary: 99, 56, 147;
+  --on-primary: 255, 255, 255;
+  --secondary-container: 226, 223, 236;
+  --on-secondary-container: 47, 37, 86;
+  --primary-container: 248, 237, 255;
+  --on-primary-container: 52, 17, 85;
+}
+
+@media (prefers-color-scheme: light) {
+	:root:not([data-theme]) .colors {
+    --surface: 255, 255, 255;
+    --on-surface: 0, 0, 0;
+    --outline-variant: 0, 0, 0;
+    --primary: 255, 255, 255;
+    --on-primary: 0, 0, 0;
+    --secondary-container: 255, 255, 255;
+    --on-secondary-container: 0, 0, 0;
+  }
+
+  :root:not([data-theme]) .colors.qubit {
+    --surface: 255, 255, 255;
+    --on-surface: 0, 0, 0;
+    --outline-variant: 217, 217, 217;
+    --primary: 99, 56, 147;
+    --on-primary: 255, 255, 255;
+    --secondary-container: 226, 223, 236;
+    --on-secondary-container: 47, 37, 86;
+    --primary-container: 248, 237, 255;
+    --on-primary-container: 52, 17, 85;
+  }
+}
+
+/* dark */
+
+:root[data-theme="dark"] .colors {
+  --surface: 0, 0, 0;
+  --on-surface: 255, 255, 255;
+  --outline-variant: 255, 255, 255;
+  --primary: 0, 0, 0;
+  --on-primary: 255, 255, 255;
+  --secondary-container: 0, 0, 0;
+  --on-secondary-container: 255, 255, 255;
+}
+
+:root[data-theme="dark"] .colors.qubit {
+  --surface: 32, 32, 32;
+  --on-surface: 217, 217, 217;
+  --outline-variant: 73, 73, 73;
+  --primary: 196, 165, 243;
+  --on-primary: 52, 17, 85;
+  --secondary-container: 47, 37, 86;
+  --on-secondary-container: 226, 223, 236;
+  --primary-container: 74, 37, 116;
+  --on-primary-container: 235, 219, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme]) .colors {
+    --surface: 0, 0, 0;
+    --on-surface: 255, 255, 255;
+    --outline-variant: 255, 255, 255;
+    --primary: 0, 0, 0;
+    --on-primary: 255, 255, 255;
+    --secondary-container: 0, 0, 0;
+    --on-secondary-container: 255, 255, 255;
+  }
+
+  :root:not([data-theme]) .colors.qubit {
+    --surface: 32, 32, 32;
+    --on-surface: 217, 217, 217;
+    --outline-variant: 73, 73, 73;
+    --primary: 196, 165, 243;
+    --on-primary: 52, 17, 85;
+    --secondary-container: 47, 37, 86;
+    --on-secondary-container: 226, 223, 236;
+    --primary-container: 74, 37, 116;
+    --on-primary-container: 235, 219, 255;
+  }
+}

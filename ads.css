@@ -1,0 +1,42 @@
+.article-top {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+
+  padding: 8px 16px;
+
+  background-color: rgba(var(--primary-container), 1);
+  color: rgba(var(--on-primary-container));
+  border-bottom: solid 4px rgba(var(--primary));
+}
+
+.article-bottom {
+  font-family: 'Noto Serif', system-ui-serif, serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+
+  padding: 8px 16px;
+
+  background-color: rgba(var(--primary-container), 1);
+  color: rgba(var(--on-primary-container));
+  border-top: solid 4px rgba(var(--primary));
+}
+
+.article-top :any-link,
+.article-bottom :any-link {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@media (hover: hover) {
+
+  .article-top :any-link:hover,
+  .article-bottom :any-link:hover {
+    text-decoration: none;
+  }
+}
