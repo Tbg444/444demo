@@ -1,14 +1,121 @@
 <style>
 
+/* light */
+
+:root[data-theme="light"] .colors {
+  --surface: 255, 255, 255;
+  --on-surface: 0, 0, 0;
+  --outline-variant: 0, 0, 0;
+  --primary: 255, 255, 255;
+  --on-primary: 0, 0, 0;
+  --secondary-container: 255, 255, 255;
+  --on-secondary-container: 0, 0, 0;
+}
+
+:root[data-theme="light"] .colors.qubit {
+  --surface: 255, 255, 255;
+  --on-surface: 0, 0, 0;
+  --outline-variant: 217, 217, 217;
+  --primary: 99, 56, 147;
+  --on-primary: 255, 255, 255;
+  --secondary-container: 226, 223, 236;
+  --on-secondary-container: 47, 37, 86;
+  --primary-container: 248, 237, 255;
+  --on-primary-container: 52, 17, 85;
+}
+
+@media (prefers-color-scheme: light) {
+	:root:not([data-theme]) .colors {
+    --surface: 255, 255, 255;
+    --on-surface: 0, 0, 0;
+    --outline-variant: 0, 0, 0;
+    --primary: 255, 255, 255;
+    --on-primary: 0, 0, 0;
+    --secondary-container: 255, 255, 255;
+    --on-secondary-container: 0, 0, 0;
+  }
+
+  :root:not([data-theme]) .colors.qubit {
+    --surface: 255, 255, 255;
+    --on-surface: 0, 0, 0;
+    --outline-variant: 217, 217, 217;
+    --primary: 99, 56, 147;
+    --on-primary: 255, 255, 255;
+    --secondary-container: 226, 223, 236;
+    --on-secondary-container: 47, 37, 86;
+    --primary-container: 248, 237, 255;
+    --on-primary-container: 52, 17, 85;
+  }
+}
+
+/* dark */
+
+:root[data-theme="dark"] .colors {
+  --surface: 0, 0, 0;
+  --on-surface: 255, 255, 255;
+  --outline-variant: 255, 255, 255;
+  --primary: 0, 0, 0;
+  --on-primary: 255, 255, 255;
+  --secondary-container: 0, 0, 0;
+  --on-secondary-container: 255, 255, 255;
+}
+
+:root[data-theme="dark"] .colors.qubit {
+  --surface: 32, 32, 32;
+  --on-surface: 217, 217, 217;
+  --outline-variant: 73, 73, 73;
+  --primary: 196, 165, 243;
+  --on-primary: 52, 17, 85;
+  --secondary-container: 47, 37, 86;
+  --on-secondary-container: 226, 223, 236;
+  --primary-container: 52, 17, 85;
+  --on-primary-container: 235, 219, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme]) .colors {
+    --surface: 0, 0, 0;
+    --on-surface: 255, 255, 255;
+    --outline-variant: 255, 255, 255;
+    --primary: 0, 0, 0;
+    --on-primary: 255, 255, 255;
+    --secondary-container: 0, 0, 0;
+    --on-secondary-container: 255, 255, 255;
+  }
+
+  :root:not([data-theme]) .colors.qubit {
+    --surface: 32, 32, 32;
+    --on-surface: 217, 217, 217;
+    --outline-variant: 73, 73, 73;
+    --primary: 196, 165, 243;
+    --on-primary: 52, 17, 85;
+    --secondary-container: 47, 37, 86;
+    --on-secondary-container: 226, 223, 236;
+    --primary-container: 52, 17, 85;
+    --on-primary-container: 235, 219, 255;
+  }
+}
+
+
+/* button */
+
 .wrapper {
   height: 44px;
 }
 
-.theme {
-  --font-button-label: -apple-system, BlinkMacSystemFont,
-"Segoe UI", "Roboto", "Oxygen",
-"Ubuntu", "Cantarell", "Fira Sans",
-"Droid Sans", "Helvetica Neue", sans-serif;
+.layout {
+  display: inline-grid;
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: column;
+  width: max-content;
+  position: relative;
+}
+
+.button {
+  --font-button-label: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans",
+  "Droid Sans", "Helvetica Neue", sans-serif;
   --effect-elevated-button:
     0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -21,56 +128,19 @@
   --opacity-color-layer: 0;
   --opacity-state-layer: 0;
   --elevation-button-container: none;
-}
 
-:root[data-theme="light"] .theme {
-	--color-button-container: 44, 44, 44;
-	--color-button-paint: 0, 0, 0;
-	--color-button-outline: 0, 0, 0;
-	--color-state-layer: black;
-}
-
-@media (prefers-color-scheme: light) {
-	:root:not([data-theme]) .theme {
-		--color-button-container: 44, 44, 44;
-		--color-button-paint: 0, 0, 0;
-		--color-button-outline: 0, 0, 0;
-		--color-state-layer: black;
-	}
-}
-
-:root[data-theme="dark"] .theme {
-	--color-button-container: 211, 211, 211;
-	--color-button-paint: 255, 255, 255;
-	--color-button-outline: 255, 255, 255;
-	--color-state-layer: black;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root:not([data-theme]) .theme {
-		--color-button-container: 211, 211, 211;
-		--color-button-paint: 255, 255, 255;
-		--color-button-outline: 255, 255, 255;
-		--color-state-layer: black;
-	}
-}
-
-.layout {
-  display: inline-grid;
-  justify-content: center;
-  align-content: center;
-  grid-auto-flow: column;
-  
-  width: max-content;
-  position: relative;
-}
-
-.button {
   margin: 0 4px;
   padding: 0 var(--inline-padding-button);
   height: var(--size-button);
   box-sizing: border-box;
   cursor: pointer;
+
+  /* default theme load up */
+
+	--color-button-container: var(--surface);
+	--color-button-paint: var(--on-surface);
+	--color-button-outline: var(--outline-variant);
+	--color-state-layer: var(--on-surface);
 
   color: rgba(var(--color-button-paint), 1);
   background-color: rgba(var(--color-button-container), var(--opacity-color-layer));
@@ -82,66 +152,31 @@
   text-decoration: none;
 }
 
-:root[data-theme="light"] .filled.qubit {
-  --color-button-container: 99, 56, 147;
-  --color-button-paint: 255, 255, 255;
+ /* button recipes */
+
+.filled.qubit.button {
+  --color-button-container: var(--primary);
+  --color-button-paint: var(--on-primary);
   --opacity-color-layer: 1;
   --elevation-button-container:  var(--effect-elevated-button);
+  --color-state-layer: var(--on-primary);
 }
 
-:root[data-theme="light"] .outlined.qubit {
-  --color-button-outline: 136, 136, 136;
-  --opacity-color-layer: 0;
-  --border-width-button: 1px;
-  --color-button-paint: 99, 56, 147;
-}
-
-@media (prefers-color-scheme: light) {
-	:root:not([data-theme]) .filled.qubit {
-    --color-button-container: 99, 56, 147;
-    --color-button-paint: 255, 255, 255;
-    --opacity-color-layer: 1;
-    --elevation-button-container:  var(--effect-elevated-button);
-  }
-
-  :root:not([data-theme]) .outlined.qubit {
-    --color-button-outline: 136, 136, 136;
-    --opacity-color-layer: 0;
-    --border-width-button: 1px;
-    --color-button-paint: 99, 56, 147;
-  }
-}
-
-:root[data-theme="dark"] .filled.qubit {
-  --color-button-container: 217, 185, 255;
-  --color-button-paint: 70, 0, 133;
+.filled-tonal.qubit.button {
+  --color-button-container: var(--secondary-container);
+  --color-button-paint: var(--on-secondary-container);
   --opacity-color-layer: 1;
   --elevation-button-container:  var(--effect-elevated-button);
+  --color-state-layer: var(--on-secondary-container);
 }
 
-:root[data-theme="dark"] .outlined.qubit {
-  --color-button-outline: 73, 73, 73;
-  --opacity-color-layer: 0;
+.outlined.qubit.button {
+  --color-button-container: transparent;
+  --color-button-paint: var(--primary);
+  --opacity-color-layer: 1;
+  --elevation-button-container: none;
   --border-width-button: 1px;
-  --color-button-paint: 217, 185, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root:not([data-theme]) .filled.qubit {
-    --color-button-container: 217, 185, 255;
-    --color-button-paint: 70, 0, 133;
-    --opacity-color-layer: 1;
-    --elevation-button-container:  var(--effect-elevated-button);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-	:root:not([data-theme]) .outlined.qubit {
-    --color-button-outline: 73, 73, 73;
-    --opacity-color-layer: 0;
-    --border-width-button: 1px;
-    --color-button-paint: 217, 185, 255;
-  }
+  --color-state-layer: var(--primary);
 }
 
 .label {
@@ -153,7 +188,7 @@
 
 .icon {
   width: 16px;
-  height:16px;
+  height: 16px;
   display: none;
 }
 
@@ -162,7 +197,7 @@
 }
 
 @media (hover: hover) {
-    .theme:hover {
+    .button:hover {
         --opacity-state-layer: 0.08;
     }
 
@@ -170,25 +205,23 @@
         box-shadow: var(--elevation-button-container);
     }
     
-    .theme::after {
-      background-color: var(--color-state-layer);
+    .button::after {
+      background-color: rgba(var(--color-state-layer), var(--opacity-state-layer));
       border-radius: inherit;
       content: "";
       inset: 0;
-      opacity: var(--opacity-state-layer);
       position: absolute;
   }
 }
 
-.theme:active {
+.button:active {
   --opacity-state-layer: 0.12;
 }
-
 
 </style>
 
 <div class="wrapper layout">
-  <a href="/category/newsletter" class="button layout theme filled qubit">
-    <div class="label layout">Segíts!</div>
+  <a href="/category/podcast" class="button layout colors qubit filled-tonal">
+    <div class="label layout">Podcast</div>
   </a>
 </div>

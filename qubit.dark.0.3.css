@@ -1,12 +1,12 @@
 /* Color styles */
---on-background: rgba(236, 236, 236, 1);
+--on-background: rgba(255, 255, 255, 1);
 --background: rgba(0, 0, 0, 1);
 --outline: rgba(168, 168, 168, 1);
---inverse-on-surface: rgba(52, 52, 52, 1);
---inverse-surface: rgba(195, 195, 195, 1);
---on-surface-variant: rgba(232, 224, 235, 1);
---surface-variant: rgba(74, 69, 78, 1);
---on-surface: rgba(217, 217, 217, 1);
+--inverse-on-surface: rgba(0, 0, 0, 1);
+--inverse-surface: rgba(236, 236, 236, 1);
+--on-surface-variant: rgba(255, 255, 255, 1);
+--surface-variant: rgba(52, 52, 52, 1);
+--on-surface: rgba(255, 255, 255, 1);
 --surface: rgba(32, 32, 32, 1);
 --on-tertiary-container: rgba(170, 229, 233, 1);
 --on-tertiary: rgba(28, 81, 84, 1);
@@ -18,11 +18,13 @@
 --secondary: rgba(204, 196, 222, 1);
 --on-primary-container: rgba(235, 219, 255, 1);
 --on-primary: rgba(52, 17, 85, 1);
---primary-container: rgba(74, 37, 116, 1);
---inverse-primary: rgba(238, 219, 255, 1);
+--primary-container: rgba(52, 17, 85, 1);
+--inverse-primary: rgba(99, 56, 147, 1);
 --primary: rgba(196, 165, 243, 1);
 --on-error-container: rgba(255, 218, 217, 1);
 --on-error: rgba(104, 0, 23, 1);
 --error-container: rgba(146, 0, 36, 1);
 --error: rgba(255, 179, 180, 1);
 --outline-variant: rgba(73, 73, 73, 1);
+--scrim: rgba(0, 0, 0, 1);
+--surface-tint: rgba(196, 165, 243, 1);
